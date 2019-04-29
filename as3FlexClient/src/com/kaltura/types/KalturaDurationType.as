@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaDurationType
+	public class VidiunDurationType
 	{
 		public static const NOT_AVAILABLE : String = 'notavailable';
 		public static const SHORT : String = 'short';

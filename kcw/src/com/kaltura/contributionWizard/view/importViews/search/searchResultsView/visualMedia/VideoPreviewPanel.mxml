@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -26,12 +26,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	creationComplete="init()"
 	title="{importUrlVo.metaData.title || ''}" styleName="videoPreview" titleStyleName="videoPreviewTitle"
 	horizontalAlign="center" showCloseButton="true" close="closeMe()"
-	xmlns:audio="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.audio.*"
-	xmlns:searchResultsView="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.*"
+	xmlns:audio="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.audio.*"
+	xmlns:searchResultsView="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.*"
 	xmlns:mx="http://www.adobe.com/2006/mxml" height="346" width="414" xmlns:filters="flash.filters.*" xmlns:spinner="com.grakl.spinner.*">
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.vo.importees.ImportURLVO;
+			import com.vidiun.vo.importees.ImportURLVO;
 			
 			import mx.events.VideoEvent;
 			import mx.managers.PopUpManager;

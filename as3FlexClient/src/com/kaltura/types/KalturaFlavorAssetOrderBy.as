@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaFlavorAssetOrderBy
+	public class VidiunFlavorAssetOrderBy
 	{
 	}
 }

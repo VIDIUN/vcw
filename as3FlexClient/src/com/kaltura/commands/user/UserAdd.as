@@ -1,13 +1,13 @@
-package com.kaltura.commands.user
+package com.vidiun.commands.user
 {
-	import com.kaltura.vo.KalturaUser;
-	import com.kaltura.delegates.user.UserAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunUser;
+	import com.vidiun.delegates.user.UserAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UserAdd extends KalturaCall
+	public class UserAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function UserAdd( user : KalturaUser )
+		public function UserAdd( user : VidiunUser )
 		{
 			service= 'user';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.user
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(user,'user');
+ 			keyValArr = vidiunObject2Arrays(user,'user');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

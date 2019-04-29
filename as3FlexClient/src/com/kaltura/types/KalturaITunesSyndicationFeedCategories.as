@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaITunesSyndicationFeedCategories
+	public class VidiunITunesSyndicationFeedCategories
 	{
 		public static const ARTS : String = 'Arts';
 		public static const ARTS_DESIGN : String = 'Arts/Design';

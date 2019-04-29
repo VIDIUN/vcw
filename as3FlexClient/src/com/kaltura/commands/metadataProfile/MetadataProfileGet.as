@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadataProfile
+package com.vidiun.commands.metadataProfile
 {
-	import com.kaltura.delegates.metadataProfile.MetadataProfileGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadataProfile.MetadataProfileGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataProfileGet extends KalturaCall
+	public class MetadataProfileGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataProfileGet( id : int )

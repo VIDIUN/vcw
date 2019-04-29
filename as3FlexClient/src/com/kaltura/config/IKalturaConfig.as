@@ -1,8 +1,8 @@
-package com.kaltura.config {
+package com.vidiun.config {
 	
 	import flash.events.IEventDispatcher;
 	
-	public interface IKalturaConfig extends IEventDispatcher 
+	public interface IVidiunConfig extends IEventDispatcher 
 	{	
 		function get partnerId():String; 
 		function set partnerId(value:String):void;
@@ -13,8 +13,8 @@ package com.kaltura.config {
 		function get domain():String;
 		function set domain(value:String):void;
 	
-		function get ks():String;
-		function set ks(value:String):void;
+		function get vs():String;
+		function set vs(value:String):void;
 
 	    function get ignoreNull():int;
 	    function set ignoreNull(value:int):void;

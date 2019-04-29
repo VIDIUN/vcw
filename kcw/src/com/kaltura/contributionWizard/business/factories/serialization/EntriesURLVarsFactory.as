@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,16 +20,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.business.factories.serialization
+package com.vidiun.contributionWizard.business.factories.serialization
 {
 	import com.adobe.cairngorm.vo.IValueObject;
-	import com.kaltura.contributionWizard.business.Services;
-	import com.kaltura.contributionWizard.business.factories.serialization.importUrlVo.concrete.ImportFileDecoder;
-	import com.kaltura.contributionWizard.business.factories.serialization.importUrlVo.concrete.ImportURLDecoder;
-	import com.kaltura.contributionWizard.model.Context;
-	import com.kaltura.net.TemplateURLVariables;
-	import com.kaltura.vo.importees.ImportFileVO;
-	import com.kaltura.vo.importees.ImportURLVO;
+	import com.vidiun.contributionWizard.business.Services;
+	import com.vidiun.contributionWizard.business.factories.serialization.importUrlVo.concrete.ImportFileDecoder;
+	import com.vidiun.contributionWizard.business.factories.serialization.importUrlVo.concrete.ImportURLDecoder;
+	import com.vidiun.contributionWizard.model.Context;
+	import com.vidiun.net.TemplateURLVariables;
+	import com.vidiun.vo.importees.ImportFileVO;
+	import com.vidiun.vo.importees.ImportURLVO;
 	
 	import flash.net.URLVariables;
 	import flash.utils.getDefinitionByName;

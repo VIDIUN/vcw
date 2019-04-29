@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaFileSyncType
+	public class VidiunFileSyncType
 	{
 		public static const FILE : int = 1;
 		public static const LINK : int = 2;

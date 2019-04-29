@@ -24,7 +24,7 @@ package com.hurlant.crypto.symmetric
 			0x082EFA98, 0xEC4E6C89, 0x452821E6, 0x38D01377, 0xBE5466CF, 0x34E90C6C, 0xC0AC29B7, 0xC97C50DD, 0x3F84D5B5,
 			0xB5470917, 0x9216D5D9, 0x8979FB1B ];
 
-		private static const KS0:Array = [ 0xD1310BA6, 0x98DFB5AC, 0x2FFD72DB, 0xD01ADFB7, 0xB8E1AFED, 0x6A267E96, 0xBA7C9045, 0xF12C7F99, 0x24A19947,
+		private static const VS0:Array = [ 0xD1310BA6, 0x98DFB5AC, 0x2FFD72DB, 0xD01ADFB7, 0xB8E1AFED, 0x6A267E96, 0xBA7C9045, 0xF12C7F99, 0x24A19947,
 			0xB3916CF7, 0x0801F2E2, 0x858EFC16, 0x636920D8, 0x71574E69, 0xA458FEA3, 0xF4933D7E, 0x0D95748F, 0x728EB658,
 			0x718BCD58, 0x82154AEE, 0x7B54A41D, 0xC25A59B5, 0x9C30D539, 0x2AF26013, 0xC5D1B023, 0x286085F0, 0xCA417918,
 			0xB8DB38EF, 0x8E79DCB0, 0x603A180E, 0x6C9E0E8B, 0xB01E8A3E, 0xD71577C1, 0xBD314B27, 0x78AF2FDA, 0x55605C60,
@@ -248,7 +248,7 @@ package com.hurlant.crypto.symmetric
 			 * (1) Initialise the S-boxes and the P-array, with a fixed string This
 			 * string contains the hexadecimal digits of pi (3.141...)
 			 */
-			S0 = KS0.concat();
+			S0 = VS0.concat();
 			S1 = KS1.concat();
 			S2 = KS2.concat();
 			S3 = KS3.concat();

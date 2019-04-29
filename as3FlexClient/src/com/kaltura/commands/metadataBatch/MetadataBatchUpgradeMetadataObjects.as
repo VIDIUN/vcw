@@ -1,15 +1,15 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.metadataBatch.MetadataBatchUpgradeMetadataObjectsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchUpgradeMetadataObjectsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchUpgradeMetadataObjects extends KalturaCall
+	public class MetadataBatchUpgradeMetadataObjects extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MetadataBatchUpgradeMetadataObjects( metadataProfileId : int,srcVersion : int,destVersion : int,pager : KalturaFilterPager=null )
+		public function MetadataBatchUpgradeMetadataObjects( metadataProfileId : int,srcVersion : int,destVersion : int,pager : VidiunFilterPager=null )
 		{
-			if(pager== null)pager= new KalturaFilterPager();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'metadata_metadatabatch';
 			action= 'upgradeMetadataObjects';
 
@@ -22,7 +22,7 @@ package com.kaltura.commands.metadataBatch
 			valueArr.push( srcVersion );
 			keyArr.push( 'destVersion' );
 			valueArr.push( destVersion );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

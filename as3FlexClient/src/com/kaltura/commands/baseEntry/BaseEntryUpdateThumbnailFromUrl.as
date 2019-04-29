@@ -1,9 +1,9 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.delegates.baseEntry.BaseEntryUpdateThumbnailFromUrlDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.baseEntry.BaseEntryUpdateThumbnailFromUrlDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryUpdateThumbnailFromUrl extends KalturaCall
+	public class BaseEntryUpdateThumbnailFromUrl extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BaseEntryUpdateThumbnailFromUrl( entryId : String,url : String )

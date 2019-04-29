@@ -1,12 +1,12 @@
-package com.kaltura.delegates.data
+package com.vidiun.delegates.data
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class DataDeleteDelegate extends WebDelegateBase
 	{
-		public function DataDeleteDelegate(call:KalturaCall, config:KalturaConfig)
+		public function DataDeleteDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

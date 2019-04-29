@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.model.importTypesConfiguration.tagging
+package com.vidiun.contributionWizard.model.importTypesConfiguration.tagging
 {
 	import de.polygonal.ds.sort.compare.compareStringCaseInSensitive;
 

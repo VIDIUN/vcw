@@ -61,8 +61,8 @@ package de.polygonal.ds
 			var node:PairNode = new PairNode();
 			_head = _tail = node;
 			
-			var k:int = _initSize + 1;
-			for (var i:int = 0; i < k; i++)
+			var v:int = _initSize + 1;
+			for (var i:int = 0; i < v; i++)
 			{
 				node.next = new PairNode();
 				node = node.next;
@@ -86,8 +86,8 @@ package de.polygonal.ds
 			
 			if (_size++ == _maxSize)
 			{
-				var k:int = (_maxSize += _initSize) + 1;
-				for (var i:int = 0; i < k; i++)
+				var v:int = (_maxSize += _initSize) + 1;
+				for (var i:int = 0; i < v; i++)
 				{
 					_tail.next = new PairNode();
 					_tail = _tail.next;
@@ -153,8 +153,8 @@ package de.polygonal.ds
 				
 				if (--_size <= (_maxSize - _initSize))
 				{
-					var k:int = (_maxSize -= _initSize) + 1;
-					for (var i:int = 0; i < k; i++)
+					var v:int = (_maxSize -= _initSize) + 1;
+					for (var i:int = 0; i < v; i++)
 						_head = _head.next;
 				}
 				

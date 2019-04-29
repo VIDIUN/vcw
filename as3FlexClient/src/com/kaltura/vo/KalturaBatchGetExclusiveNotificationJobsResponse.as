@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaBatchGetExclusiveNotificationJobsResponse extends BaseFlexVo
+	public dynamic class VidiunBatchGetExclusiveNotificationJobsResponse extends BaseFlexVo
 	{
 		public var notifications : Array = new Array();
 		public var partners : Array = new Array();

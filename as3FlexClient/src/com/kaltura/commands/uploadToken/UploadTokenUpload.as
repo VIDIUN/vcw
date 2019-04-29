@@ -1,10 +1,10 @@
-package com.kaltura.commands.uploadToken
+package com.vidiun.commands.uploadToken
 {
-	import com.kaltura.vo.File;
-	import com.kaltura.delegates.uploadToken.UploadTokenUploadDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.File;
+	import com.vidiun.delegates.uploadToken.UploadTokenUploadDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UploadTokenUpload extends KalturaCall
+	public class UploadTokenUpload extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UploadTokenUpload( uploadTokenId : String,fileData : file,resume : Boolean=false,finalChunk : Boolean=true,resumeAt : int=-1 )
@@ -17,7 +17,7 @@ package com.kaltura.commands.uploadToken
 			var keyValArr : Array = new Array();
 			keyArr.push( 'uploadTokenId' );
 			valueArr.push( uploadTokenId );
- 			keyValArr = kalturaObject2Arrays(fileData,'fileData');
+ 			keyValArr = vidiunObject2Arrays(fileData,'fileData');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'resume' );

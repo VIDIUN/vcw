@@ -1,9 +1,9 @@
-package com.kaltura.commands.mixing
+package com.vidiun.commands.mixing
 {
-	import com.kaltura.delegates.mixing.MixingAnonymousRankDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.mixing.MixingAnonymousRankDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MixingAnonymousRank extends KalturaCall
+	public class MixingAnonymousRank extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MixingAnonymousRank( entryId : String,rank : int )

@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadata
+package com.vidiun.commands.metadata
 {
-	import com.kaltura.delegates.metadata.MetadataDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadata.MetadataDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataDelete extends KalturaCall
+	public class MetadataDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataDelete( id : int )

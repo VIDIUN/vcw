@@ -213,8 +213,8 @@ package de.polygonal.ds
 			if (_count == 0) return "PriorityQueue (empty)";
 			
 			var s:String = "PriorityQueue\n{\n";
-			var k:int = _count + 1;
-			for (var i:int = 1; i < k; i++)
+			var v:int = _count + 1;
+			for (var i:int = 1; i < v; i++)
 			{
 				s += "\t" + _heap[i] + "\n";
 			}

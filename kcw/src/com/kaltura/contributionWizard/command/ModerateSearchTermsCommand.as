@@ -1,12 +1,12 @@
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.arc90.modular.ModuleSequenceCommand;
 	import com.bjorn.event.ChainEvent;
-	import com.kaltura.contributionWizard.business.ModerateSearchTermsDelegate;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.model.importTypesConfiguration.search.ModerationFilter;
-	import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+	import com.vidiun.contributionWizard.business.ModerateSearchTermsDelegate;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.importTypesConfiguration.search.ModerationFilter;
+	import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 
 	import mx.controls.Alert;
 	import mx.resources.ResourceManager;

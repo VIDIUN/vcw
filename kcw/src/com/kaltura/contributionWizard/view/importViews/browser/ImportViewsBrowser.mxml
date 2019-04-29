@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -23,16 +23,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
 <mx:VBox
-	implements="com.kaltura.utils.IDisposable"
+	implements="com.vidiun.utils.IDisposable"
 	verticalScrollPolicy="off" width="100%" height="100%" verticalGap="0"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:importViews="com.kaltura.contributionWizard.view.importViews.*"
-	xmlns:checkout="com.kaltura.contributionWizard.view.importViews.checkout.*"
-	xmlns:tagging="com.kaltura.contributionWizard.view.tagging.*"
-	xmlns:util="com.kaltura.contributionWizard.util.*"
-	xmlns:finishScreen="com.kaltura.contributionWizard.view.importViews.finishScreen.*"
-	xmlns:pending="com.kaltura.contributionWizard.view.pending.*"
-	xmlns:ac="com.adobe.ac.*" xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*">
+	xmlns:importViews="com.vidiun.contributionWizard.view.importViews.*"
+	xmlns:checkout="com.vidiun.contributionWizard.view.importViews.checkout.*"
+	xmlns:tagging="com.vidiun.contributionWizard.view.tagging.*"
+	xmlns:util="com.vidiun.contributionWizard.util.*"
+	xmlns:finishScreen="com.vidiun.contributionWizard.view.importViews.finishScreen.*"
+	xmlns:pending="com.vidiun.contributionWizard.view.pending.*"
+	xmlns:ac="com.adobe.ac.*" xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*">
 
 	<mx:creationComplete>
 		<![CDATA[
@@ -45,42 +45,42 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.events.ValidateLimitationsEvent;
+			import com.vidiun.contributionWizard.events.ValidateLimitationsEvent;
 			import mx.binding.utils.BindingUtils;
 			import flash.utils.setInterval;
 			import flash.utils.setTimeout;
-			import com.kaltura.contributionWizard.enums.KCWWorkflowState;
+			import com.vidiun.contributionWizard.enums.VCWWorkflowState;
 			import com.bjorn.event.ChainEvent;
-			import com.kaltura.contributionWizard.command.ChangeWorkflowCommand;
+			import com.vidiun.contributionWizard.command.ChangeWorkflowCommand;
 			import mx.core.FlexVersion;
-			import com.kaltura.contributionWizard.vo.ImportScreenVO;
-			import com.kaltura.contributionWizard.model.MediaTypes;
-			import com.kaltura.contributionWizard.events.MediaTypeSelectionEvent;
-			import com.kaltura.contributionWizard.events.GotoScreenEvent;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
-			import com.kaltura.contributionWizard.view.events.MediaProviderViewEvent;
-			import com.kaltura.contributionWizard.events.MediaProviderEvent;
+			import com.vidiun.contributionWizard.vo.ImportScreenVO;
+			import com.vidiun.contributionWizard.model.MediaTypes;
+			import com.vidiun.contributionWizard.events.MediaTypeSelectionEvent;
+			import com.vidiun.contributionWizard.events.GotoScreenEvent;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.view.events.MediaProviderViewEvent;
+			import com.vidiun.contributionWizard.events.MediaProviderEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.view.events.TermsOfUseEvent;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.events.TermsOfUseEvent;
 			import mx.core.IFlexDisplayObject;
 			import mx.core.Application;
-			import com.kaltura.contributionWizard.view.importViews.alerts.TermsOfUseScreen;
+			import com.vidiun.contributionWizard.view.importViews.alerts.TermsOfUseScreen;
 			import mx.managers.PopUpManager;
-			import com.kaltura.contributionWizard.model.importData.UploadCartStatusTypes;
+			import com.vidiun.contributionWizard.model.importData.UploadCartStatusTypes;
 			import mx.events.CloseEvent;
-			import com.kaltura.contributionWizard.events.ExternalInterfaceEvent;
-			import com.kaltura.contributionWizard.model.ImportTypes;
-			import com.kaltura.contributionWizard.events.ClearImportStateEvent;
-			import com.kaltura.contributionWizard.view.events.NavigationEvent;
+			import com.vidiun.contributionWizard.events.ExternalInterfaceEvent;
+			import com.vidiun.contributionWizard.model.ImportTypes;
+			import com.vidiun.contributionWizard.events.ClearImportStateEvent;
+			import com.vidiun.contributionWizard.view.events.NavigationEvent;
 			import mx.controls.Alert;
 			import com.bjorn.event.EventChainFactory;
-			import com.kaltura.contributionWizard.model.importData.ImportData;
-			import com.kaltura.contributionWizard.vo.providers.MediaInfo;
-			import com.kaltura.contributionWizard.events.ImportEvent;
-			import com.kaltura.contributionWizard.events.WorkflowEvent;
+			import com.vidiun.contributionWizard.model.importData.ImportData;
+			import com.vidiun.contributionWizard.vo.providers.MediaInfo;
+			import com.vidiun.contributionWizard.events.ImportEvent;
+			import com.vidiun.contributionWizard.events.WorkflowEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			[Bindable]
 			private var _model:WizardModelLocator = WizardModelLocator.getInstance();
@@ -101,7 +101,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			public function set workflowState(workflowState:String):void
 			{
 				_workflowState  = workflowState;
-				if (_workflowState == KCWWorkflowState.INTRO_SCREEN || _workflowState == KCWWorkflowState.IMPORT_MEDIA)
+				if (_workflowState == VCWWorkflowState.INTRO_SCREEN || _workflowState == VCWWorkflowState.IMPORT_MEDIA)
 				{
 					currentState = "";
 				}
@@ -394,7 +394,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			includeInLayout="{_model.startupDefaults.alwaysShowPermission}" />
 
 		<mx:Button id="cancelButton"
-			visible="true || {_model.startupDefaults.enableIntroScreen &amp;&amp; _workflowState != KCWWorkflowState.FINISH_SCREEN}"
+			visible="true || {_model.startupDefaults.enableIntroScreen &amp;&amp; _workflowState != VCWWorkflowState.FINISH_SCREEN}"
 			includeInLayout="{_model.startupDefaults.enableIntroScreen}"
 			label="{resourceManager.getString(ResourceBundleNames.IMPORT_BROWSER, 'CANCEL')}"
 			buttonMode="true"

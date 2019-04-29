@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntry;
+	import com.vidiun.vo.VidiunBaseEntry;
 
 	[Bindable]
-	public dynamic class KalturaPlayableEntry extends KalturaBaseEntry
+	public dynamic class VidiunPlayableEntry extends VidiunBaseEntry
 	{
 		public var plays : int = int.MIN_VALUE;
 		public var views : int = int.MIN_VALUE;

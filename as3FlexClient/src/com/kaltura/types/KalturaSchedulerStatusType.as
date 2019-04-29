@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSchedulerStatusType
+	public class VidiunSchedulerStatusType
 	{
 		public static const RUNNING_BATCHES_COUNT : int = 1;
 		public static const RUNNING_BATCHES_CPU : int = 2;

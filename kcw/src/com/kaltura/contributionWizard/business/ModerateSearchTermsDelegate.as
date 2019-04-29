@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
 	import com.adobe_cw.adobe.cairngorm.business.ServiceLocator;
 

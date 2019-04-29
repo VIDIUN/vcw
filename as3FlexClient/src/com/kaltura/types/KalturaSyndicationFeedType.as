@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSyndicationFeedType
+	public class VidiunSyndicationFeedType
 	{
 		public static const GOOGLE_VIDEO : int = 1;
 		public static const YAHOO : int = 2;

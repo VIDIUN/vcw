@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -28,21 +28,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	preinitialize="init()"
 	horizontalAlign="center" verticalAlign="middle"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:search="com.kaltura.contributionWizard.view.importViews.search.*"
-	implements="com.kaltura.contributionWizard.view.importViews.IImportModule, com.kaltura.utils.IDisposable"
-	xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*">
+	xmlns:search="com.vidiun.contributionWizard.view.importViews.search.*"
+	implements="com.vidiun.contributionWizard.view.importViews.IImportModule, com.vidiun.utils.IDisposable"
+	xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*">
 	<mx:Script>
 		<![CDATA[
 			import mx.collections.ArrayCollection;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 			import mx.binding.utils.BindingUtils;
-			import com.kaltura.contributionWizard.view.importViews.browser.NavigationButtonsMode;
+			import com.vidiun.contributionWizard.view.importViews.browser.NavigationButtonsMode;
 			import flash.utils.setTimeout;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
 			import mx.modules.ModuleManager;
 			import mx.events.FlexEvent;
 			import mx.controls.ProgressBar;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 			import mx.core.UIComponent;
 			import mx.modules.Module;
 			import mx.controls.Alert;

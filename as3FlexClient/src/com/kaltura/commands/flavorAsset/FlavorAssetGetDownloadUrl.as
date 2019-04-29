@@ -1,9 +1,9 @@
-package com.kaltura.commands.flavorAsset
+package com.vidiun.commands.flavorAsset
 {
-	import com.kaltura.delegates.flavorAsset.FlavorAssetGetDownloadUrlDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.flavorAsset.FlavorAssetGetDownloadUrlDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorAssetGetDownloadUrl extends KalturaCall
+	public class FlavorAssetGetDownloadUrl extends VidiunCall
 	{
 		public var filterFields : String;
 		public function FlavorAssetGetDownloadUrl( id : String )

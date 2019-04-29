@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaPlayableEntryOrderBy
+	public class VidiunPlayableEntryOrderBy
 	{
 		public static const PLAYS_ASC : String = '+plays';
 		public static const PLAYS_DESC : String = '-plays';

@@ -1,9 +1,9 @@
-package com.kaltura.commands.playlist
+package com.vidiun.commands.playlist
 {
-	import com.kaltura.delegates.playlist.PlaylistGetStatsFromContentDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.playlist.PlaylistGetStatsFromContentDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PlaylistGetStatsFromContent extends KalturaCall
+	public class PlaylistGetStatsFromContent extends VidiunCall
 	{
 		public var filterFields : String;
 		public function PlaylistGetStatsFromContent( playlistType : int,playlistContent : String )

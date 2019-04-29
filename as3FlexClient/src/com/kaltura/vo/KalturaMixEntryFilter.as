@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaPlayableEntryFilter;
+	import com.vidiun.vo.VidiunPlayableEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaMixEntryFilter extends KalturaPlayableEntryFilter
+	public dynamic class VidiunMixEntryFilter extends VidiunPlayableEntryFilter
 	{
 		override protected function setupPropertyList():void
 		{

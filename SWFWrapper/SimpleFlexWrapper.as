@@ -1,7 +1,7 @@
 package
 {
-	import com.kaltura.events.WrapperEvent;
-	import com.kaltura.wrapper.IFlexWrapper;
+	import com.vidiun.events.WrapperEvent;
+	import com.vidiun.wrapper.IFlexWrapper;
 	
 	import flash.display.Loader;
 	import flash.display.MovieClip;
@@ -22,7 +22,7 @@ package
 	public class SimpleFlexWrapper extends Sprite implements IFlexWrapper
 	{
 		/**
-		* A mean for the KApplication to know if it's loaded by a wrapper
+		* A mean for the VApplication to know if it's loaded by a wrapper
 		*/
 		public const NAME:String = "flexWrapper";
 		public const VERSION:String = "1.2";

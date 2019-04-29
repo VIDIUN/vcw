@@ -207,8 +207,8 @@
 					enclosure.length=Number(_rss.channel.item[i].enclosure.@length.toString());
 					enclosure.type=_rss.channel.item[i].enclosure.@type;
 
-					//kaltura patches:
-					var kalNs:Namespace = new Namespace("http://kaltura.com/playlist/1.0");
+					//vidiun patches:
+					var vidNs:Namespace = new Namespace("http://vidiun.com/playlist/1.0");
 
 
 					//patches:
@@ -219,11 +219,11 @@
 					var xmlItem:XML = _rss.channel.item[i];
 					for each (var xmlItemProperty:XML in xmlItem.children())
 					{
-						if (xmlItemProperty.namespace() == kalNs)
+						if (xmlItemProperty.namespace() == vidNs)
 							item[xmlItemProperty.localName()] = xmlItemProperty.toString();
 					}
 
-					//end of kaltura patches
+					//end of vidiun patches
 
 					item.enclosure = enclosure;
 					if (_rss.channel.item[i].mediaNs::group == undefined) {
@@ -242,14 +242,14 @@
 		}
 		private function buildMediaObject(node:XML):Media {
 				var media:Media = new Media();
-				for (var k:uint=0;k<node.mediaNs::thumbnail.length();k++) {
+				for (var v:uint=0;v<node.mediaNs::thumbnail.length();v++) {
 					// It is possible for media items to contain mutiple thumbnail definitions.
 					// Here we opt to take the first item found.
 					var thumbnail:ThumbnailTO = new ThumbnailTO();
-					thumbnail.url = node.mediaNs::thumbnail[k].@url;
-					thumbnail.height = Number(node.mediaNs::thumbnail[k].@height);
-					thumbnail.width = Number(node.mediaNs::thumbnail[k].@width);
-					thumbnail.time = node.mediaNs::thumbnail[k].@width;
+					thumbnail.url = node.mediaNs::thumbnail[v].@url;
+					thumbnail.height = Number(node.mediaNs::thumbnail[v].@height);
+					thumbnail.width = Number(node.mediaNs::thumbnail[v].@width);
+					thumbnail.time = node.mediaNs::thumbnail[v].@width;
 					media.thumbnailArray.push(thumbnail);
 				}
 				for (var i:uint=0;i<node.mediaNs::content.length();i++) {

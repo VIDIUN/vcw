@@ -1,13 +1,13 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.vo.KalturaMediaEntry;
-	import com.kaltura.delegates.media.MediaUpdateDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMediaEntry;
+	import com.vidiun.delegates.media.MediaUpdateDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaUpdate extends KalturaCall
+	public class MediaUpdate extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MediaUpdate( entryId : String,mediaEntry : KalturaMediaEntry )
+		public function MediaUpdate( entryId : String,mediaEntry : VidiunMediaEntry )
 		{
 			service= 'media';
 			action= 'update';
@@ -17,7 +17,7 @@ package com.kaltura.commands.media
 			var keyValArr : Array = new Array();
 			keyArr.push( 'entryId' );
 			valueArr.push( entryId );
- 			keyValArr = kalturaObject2Arrays(mediaEntry,'mediaEntry');
+ 			keyValArr = vidiunObject2Arrays(mediaEntry,'mediaEntry');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

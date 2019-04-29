@@ -1,4 +1,4 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
 	public class BaseFlashVo
 	{

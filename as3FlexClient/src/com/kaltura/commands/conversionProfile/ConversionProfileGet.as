@@ -1,9 +1,9 @@
-package com.kaltura.commands.conversionProfile
+package com.vidiun.commands.conversionProfile
 {
-	import com.kaltura.delegates.conversionProfile.ConversionProfileGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.conversionProfile.ConversionProfileGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ConversionProfileGet extends KalturaCall
+	public class ConversionProfileGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function ConversionProfileGet( id : int )

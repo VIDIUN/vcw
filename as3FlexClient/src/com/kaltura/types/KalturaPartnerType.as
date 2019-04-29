@@ -1,8 +1,8 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaPartnerType
+	public class VidiunPartnerType
 	{
-		public static const KMC : int = 1;
+		public static const VMC : int = 1;
 		public static const WIKI : int = 100;
 		public static const WORDPRESS : int = 101;
 		public static const DRUPAL : int = 102;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			public static const WIZARD_CONFIG_SERVICE				:String = "wizardConfigService";
 			public static const SEARCH_MEDIA_SERVICE 				:String = "searchMediaService";
@@ -98,7 +98,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 	<!--MLB Search-->
 	<mx:HTTPService id="mlbSearchService" resultFormat="e4x" showBusyCursor="true"
-		url="http://weplay.com/kaltura/search"
+		url="http://weplay.com/vidiun/search"
 		method="POST" />
 
 	<mx:HTTPService id="checkEntriesService" resultFormat="e4x" showBusyCursor="true"

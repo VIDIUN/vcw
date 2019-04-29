@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaLiveStreamEntryFilter;
+	import com.vidiun.vo.VidiunLiveStreamEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaLiveStreamAdminEntryFilter extends KalturaLiveStreamEntryFilter
+	public dynamic class VidiunLiveStreamAdminEntryFilter extends VidiunLiveStreamEntryFilter
 	{
 		override protected function setupPropertyList():void
 		{

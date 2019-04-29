@@ -75,8 +75,8 @@ package com.hurlant.util {
 				
 				// Loop through output buffer and add Base64 characters to 
 				// encoded data string for each character.
-				for (var k:uint = 0; k < outputBuffer.length; k++) {
-					output += BASE64_CHARS.charAt(outputBuffer[k]);
+				for (var v:uint = 0; v < outputBuffer.length; v++) {
+					output += BASE64_CHARS.charAt(outputBuffer[v]);
 				}
 			}
 			
@@ -114,9 +114,9 @@ package com.hurlant.util {
 				outputBuffer[2] = ((dataBuffer[2] & 0x03) << 6) + dataBuffer[3];
 				
 				// Add all non-padded bytes in output buffer to decoded data
-				for (var k:uint = 0; k < outputBuffer.length; k++) {
-					if (dataBuffer[k+1] == 64) break;
-					output.writeByte(outputBuffer[k]);
+				for (var v:uint = 0; v < outputBuffer.length; v++) {
+					if (dataBuffer[v+1] == 64) break;
+					output.writeByte(outputBuffer[v]);
 				}
 			}
 			

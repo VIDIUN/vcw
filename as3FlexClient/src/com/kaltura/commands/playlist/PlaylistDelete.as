@@ -1,9 +1,9 @@
-package com.kaltura.commands.playlist
+package com.vidiun.commands.playlist
 {
-	import com.kaltura.delegates.playlist.PlaylistDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.playlist.PlaylistDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PlaylistDelete extends KalturaCall
+	public class PlaylistDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function PlaylistDelete( id : String )

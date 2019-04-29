@@ -1,11 +1,11 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBatchJob;
+	import com.vidiun.vo.VidiunBatchJob;
 
-	import com.kaltura.vo.BaseFlexVo;
-	public dynamic class KalturaBatchJobResponse extends BaseFlexVo
+	import com.vidiun.vo.BaseFlexVo;
+	public dynamic class VidiunBatchJobResponse extends BaseFlexVo
 	{
-		public var batchJob : KalturaBatchJob;
+		public var batchJob : VidiunBatchJob;
 		public var childBatchJobs : Array = new Array();
 		override protected function setupPropertyList():void
 		{

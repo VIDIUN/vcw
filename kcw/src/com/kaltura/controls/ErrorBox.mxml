@@ -5,7 +5,7 @@
 	xmlns:mx="http://www.adobe.com/2006/mxml">
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 			import mx.effects.easing.Bounce;
 
 			private static const NO_ERROR:String 	= "noError";

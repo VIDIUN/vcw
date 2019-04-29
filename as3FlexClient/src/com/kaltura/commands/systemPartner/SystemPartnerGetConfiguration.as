@@ -1,9 +1,9 @@
-package com.kaltura.commands.systemPartner
+package com.vidiun.commands.systemPartner
 {
-	import com.kaltura.delegates.systemPartner.SystemPartnerGetConfigurationDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.systemPartner.SystemPartnerGetConfigurationDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemPartnerGetConfiguration extends KalturaCall
+	public class SystemPartnerGetConfiguration extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemPartnerGetConfiguration( partnerId : int )

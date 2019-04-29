@@ -1,9 +1,9 @@
-package com.kaltura.commands.bulkUpload
+package com.vidiun.commands.bulkUpload
 {
-	import com.kaltura.delegates.bulkUpload.BulkUploadGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.bulkUpload.BulkUploadGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BulkUploadGet extends KalturaCall
+	public class BulkUploadGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BulkUploadGet( id : int )

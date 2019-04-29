@@ -1,9 +1,9 @@
-package com.kaltura.commands.EmailIngestionProfile
+package com.vidiun.commands.EmailIngestionProfile
 {
-	import com.kaltura.delegates.EmailIngestionProfile.EmailIngestionProfileGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.EmailIngestionProfile.EmailIngestionProfileGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class EmailIngestionProfileGet extends KalturaCall
+	public class EmailIngestionProfileGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function EmailIngestionProfileGet( id : int )

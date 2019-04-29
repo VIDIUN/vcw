@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaPlayableEntry;
+	import com.vidiun.vo.VidiunPlayableEntry;
 
 	[Bindable]
-	public dynamic class KalturaMixEntry extends KalturaPlayableEntry
+	public dynamic class VidiunMixEntry extends VidiunPlayableEntry
 	{
 		public var hasRealThumbnail : Boolean;
 		public var editorType : int = int.MIN_VALUE;

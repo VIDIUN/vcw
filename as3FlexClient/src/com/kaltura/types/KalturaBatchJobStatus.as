@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaBatchJobStatus
+	public class VidiunBatchJobStatus
 	{
 		public static const PENDING : int = 0;
 		public static const QUEUED : int = 1;

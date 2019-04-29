@@ -1,16 +1,16 @@
-package com.kaltura.delegates.flavorAsset
+package com.vidiun.delegates.flavorAsset
 {
-	import com.kaltura.vo.KalturaFlavorAsset;KalturaFlavorAsset;;
+	import com.vidiun.vo.VidiunFlavorAsset;VidiunFlavorAsset;;
 
-	import com.kaltura.core.KClassFactory;
+	import com.vidiun.core.VClassFactory;
 
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class FlavorAssetGetByEntryIdDelegate extends WebDelegateBase
 	{
-		public function FlavorAssetGetByEntryIdDelegate(call:KalturaCall, config:KalturaConfig)
+		public function FlavorAssetGetByEntryIdDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}
@@ -20,8 +20,8 @@ package com.kaltura.delegates.flavorAsset
 			var arr : Array = new Array();
 			for( var i:int=0; i<result.result.children().length() ; i++)
 			{
-				var cls : Class = getDefinitionByName('com.kaltura.vo.'+ result.result.children()[i].objectType) as Class;
-				var obj : * = (new KClassFactory( cls )).newInstanceFromXML( XMLList(result.result.children()[i]) );
+				var cls : Class = getDefinitionByName('com.vidiun.vo.'+ result.result.children()[i].objectType) as Class;
+				var obj : * = (new VClassFactory( cls )).newInstanceFromXML( XMLList(result.result.children()[i]) );
 				arr.push(obj);
 			}
 			return arr;

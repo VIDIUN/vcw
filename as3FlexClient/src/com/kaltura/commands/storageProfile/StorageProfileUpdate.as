@@ -1,13 +1,13 @@
-package com.kaltura.commands.storageProfile
+package com.vidiun.commands.storageProfile
 {
-	import com.kaltura.vo.KalturaStorageProfile;
-	import com.kaltura.delegates.storageProfile.StorageProfileUpdateDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunStorageProfile;
+	import com.vidiun.delegates.storageProfile.StorageProfileUpdateDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class StorageProfileUpdate extends KalturaCall
+	public class StorageProfileUpdate extends VidiunCall
 	{
 		public var filterFields : String;
-		public function StorageProfileUpdate( storageProfileId : int,storageProfile : KalturaStorageProfile )
+		public function StorageProfileUpdate( storageProfileId : int,storageProfile : VidiunStorageProfile )
 		{
 			service= 'storageprofile_storageprofile';
 			action= 'update';
@@ -17,7 +17,7 @@ package com.kaltura.commands.storageProfile
 			var keyValArr : Array = new Array();
 			keyArr.push( 'storageProfileId' );
 			valueArr.push( storageProfileId );
- 			keyValArr = kalturaObject2Arrays(storageProfile,'storageProfile');
+ 			keyValArr = vidiunObject2Arrays(storageProfile,'storageProfile');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

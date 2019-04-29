@@ -1,15 +1,15 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.baseEntry.BaseEntryListFlagsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.baseEntry.BaseEntryListFlagsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryListFlags extends KalturaCall
+	public class BaseEntryListFlags extends VidiunCall
 	{
 		public var filterFields : String;
-		public function BaseEntryListFlags( entryId : String,pager : KalturaFilterPager=null )
+		public function BaseEntryListFlags( entryId : String,pager : VidiunFilterPager=null )
 		{
-			if(pager== null)pager= new KalturaFilterPager();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'baseentry';
 			action= 'listFlags';
 
@@ -18,7 +18,7 @@ package com.kaltura.commands.baseEntry
 			var keyValArr : Array = new Array();
 			keyArr.push( 'entryId' );
 			valueArr.push( entryId );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

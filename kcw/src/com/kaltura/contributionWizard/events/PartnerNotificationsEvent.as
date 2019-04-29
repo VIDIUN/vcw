@@ -1,7 +1,7 @@
-package com.kaltura.contributionWizard.events
+package com.vidiun.contributionWizard.events
 {
 	import com.bjorn.event.ChainEvent;
-	import com.kaltura.contributionWizard.business.AddEntriesResult;
+	import com.vidiun.contributionWizard.business.AddEntriesResult;
 
 	import flash.events.Event;
 

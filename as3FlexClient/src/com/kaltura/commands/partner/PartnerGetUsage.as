@@ -1,9 +1,9 @@
-package com.kaltura.commands.partner
+package com.vidiun.commands.partner
 {
-	import com.kaltura.delegates.partner.PartnerGetUsageDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.partner.PartnerGetUsageDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PartnerGetUsage extends KalturaCall
+	public class PartnerGetUsage extends VidiunCall
 	{
 		public var filterFields : String;
 		public function PartnerGetUsage( year : int=undefined,month : int=1,resolution : String='days' )

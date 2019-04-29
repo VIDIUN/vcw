@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaPlaylistType
+	public class VidiunPlaylistType
 	{
 		public static const DYNAMIC : int = 10;
 		public static const STATIC_LIST : int = 3;

@@ -1,16 +1,16 @@
-package com.kaltura.commands.report
+package com.vidiun.commands.report
 {
-	import com.kaltura.vo.KalturaReportInputFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.report.ReportGetUrlForReportAsCsvDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunReportInputFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.report.ReportGetUrlForReportAsCsvDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ReportGetUrlForReportAsCsv extends KalturaCall
+	public class ReportGetUrlForReportAsCsv extends VidiunCall
 	{
 		public var filterFields : String;
-		public function ReportGetUrlForReportAsCsv( reportTitle : String,reportText : String,headers : String,reportType : int,reportInputFilter : KalturaReportInputFilter,dimension : String='',pager : KalturaFilterPager=null,order : String='',objectIds : String='' )
+		public function ReportGetUrlForReportAsCsv( reportTitle : String,reportText : String,headers : String,reportType : int,reportInputFilter : VidiunReportInputFilter,dimension : String='',pager : VidiunFilterPager=null,order : String='',objectIds : String='' )
 		{
-			if(pager== null)pager= new KalturaFilterPager();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'report';
 			action= 'getUrlForReportAsCsv';
 
@@ -25,12 +25,12 @@ package com.kaltura.commands.report
 			valueArr.push( headers );
 			keyArr.push( 'reportType' );
 			valueArr.push( reportType );
- 			keyValArr = kalturaObject2Arrays(reportInputFilter,'reportInputFilter');
+ 			keyValArr = vidiunObject2Arrays(reportInputFilter,'reportInputFilter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'dimension' );
 			valueArr.push( dimension );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'order' );

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaMetadataObjectType
+	public class VidiunMetadataObjectType
 	{
 		public static const ENTRY : int = 1;
 	}

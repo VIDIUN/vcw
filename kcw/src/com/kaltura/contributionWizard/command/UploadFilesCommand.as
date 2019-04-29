@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,22 +20,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.commands.ICommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
-	import com.kaltura.commands.uploadToken.UploadTokenAdd;
-	import com.kaltura.contributionWizard.business.FileUploadDelegate;
-	import com.kaltura.contributionWizard.events.ReportErrorEvent;
-	import com.kaltura.contributionWizard.model.UploadModelLocator;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.model.importData.UploadCartStatusTypes;
-	import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-	import com.kaltura.contributionWizard.vo.ErrorVO;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.vo.KalturaUploadToken;
-	import com.kaltura.vo.importees.ImportFileVO;
-	import com.kaltura.vo.importees.UploadStatusTypes;
+	import com.vidiun.commands.uploadToken.UploadTokenAdd;
+	import com.vidiun.contributionWizard.business.FileUploadDelegate;
+	import com.vidiun.contributionWizard.events.ReportErrorEvent;
+	import com.vidiun.contributionWizard.model.UploadModelLocator;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.importData.UploadCartStatusTypes;
+	import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+	import com.vidiun.contributionWizard.vo.ErrorVO;
+	import com.vidiun.events.VidiunEvent;
+	import com.vidiun.vo.VidiunUploadToken;
+	import com.vidiun.vo.importees.ImportFileVO;
+	import com.vidiun.vo.importees.UploadStatusTypes;
 	
 	import de.polygonal.ds.ArrayedQueue;
 	
@@ -72,8 +72,8 @@ package com.kaltura.contributionWizard.command
 			var result:Object = (data as ResultEvent).result;
 			//builds the thumbURL, temporary solution to display thumb after "upload"
 			result.thumbURL = _model.context.protocol + _model.context.hostName + "/p/"+_model.context.partnerId+"/sp/"+ _model.context.subPartnerId+ "/thumbnail/upload_token_id/"+result.importFileVO.token;		
-			if (_model.loadThumbsWithKS) {
-				result.thumbURL += "/ks/"+_model.context.kc.ks;
+			if (_model.loadThumbsWithVS) {
+				result.thumbURL += "/vs/"+_model.context.kc.vs;
 			}
 			var targetImportFileVO:ImportFileVO = result.importFileVO as ImportFileVO;
 			targetImportFileVO.token = result.importFileVO.token;
@@ -82,7 +82,7 @@ package com.kaltura.contributionWizard.command
 
 			targetImportFileVO.uploadStatus = UploadStatusTypes.UPLOAD_COMPLETE;
 			
-			//REPORT TO KALTURA TO TRACE PROBLEMS WITH UPLOAD
+			//REPORT TO VIDIUN TO TRACE PROBLEMS WITH UPLOAD
 			///////////////////////////////////////////////////
 			var errorVo : ErrorVO = new ErrorVO();
 			errorVo.reportingObj = "UploadFilesCommand";
@@ -138,7 +138,7 @@ package com.kaltura.contributionWizard.command
 			if (errorMsg)
 				Alert.show(ResourceManager.getInstance().getString(ResourceBundleNames.UPLOAD_IMPORT_VIEW, errorMsg) , ResourceManager.getInstance().getString(ResourceBundleNames.UPLOAD_IMPORT_VIEW, "UPLOAD_ERROR_TITLE"));
 			
-			//REPORT TO KALTURA TO TRACE PROBLEMS WITH UPLOAD
+			//REPORT TO VIDIUN TO TRACE PROBLEMS WITH UPLOAD
 			///////////////////////////////////////////////////
 			var errorDescription : String = "uploadId="+ImportFileVO(info).fileName+", uploadStatus=" +ImportFileVO(info).uploadStatus +
 				", dataOnError="+ImportFileVO(info).dataOnError;
@@ -179,7 +179,7 @@ package com.kaltura.contributionWizard.command
 
 			_model.importData.importCart.currentlyProcessedImportVo = importFileVo;
 			
-			//REPORT TO KALTURA TO TRACE PROBLEMS WITH UPLOAD
+			//REPORT TO VIDIUN TO TRACE PROBLEMS WITH UPLOAD
 			///////////////////////////////////////////////////
 			var errorVo : ErrorVO = new ErrorVO();
 			errorVo.reportingObj = "UploadFilesCommand";
@@ -198,11 +198,11 @@ package com.kaltura.contributionWizard.command
 		 */
 		private function uploadSingleFile(importFileVo:ImportFileVO):void
 		{
-			var fileToken:KalturaUploadToken = new KalturaUploadToken();
+			var fileToken:VidiunUploadToken = new VidiunUploadToken();
 			fileToken.fileName = importFileVo.polledfileReference.fileReference.name;
 			fileToken.fileSize = importFileVo.polledfileReference.bytesTotal;
 			var uploadToken:UploadTokenAdd = new UploadTokenAdd(fileToken);
-			uploadToken.addEventListener(KalturaEvent.COMPLETE, uploadTokenHandler);
+			uploadToken.addEventListener(VidiunEvent.COMPLETE, uploadTokenHandler);
 			_currentFileToUpload = importFileVo;
 			//sends a request to get the file's token
 			_model.context.kc.post(uploadToken);
@@ -213,9 +213,9 @@ package com.kaltura.contributionWizard.command
 		 * @param event 
 		 * 
 		 */		
-		private function uploadTokenHandler(event:KalturaEvent):void {
+		private function uploadTokenHandler(event:VidiunEvent):void {
 			
-			var tokenId:String = KalturaUploadToken(event.data).id;
+			var tokenId:String = VidiunUploadToken(event.data).id;
 			_currentFileToUpload.token = tokenId;
 			var delegate:FileUploadDelegate = new FileUploadDelegate(this);
 			delegate.uploadFile(_currentFileToUpload);

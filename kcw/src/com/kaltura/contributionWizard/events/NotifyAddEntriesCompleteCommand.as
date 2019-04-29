@@ -1,8 +1,8 @@
-package com.kaltura.contributionWizard.events
+package com.vidiun.contributionWizard.events
 {
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.arc90.modular.ModuleSequenceCommand;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 	import flash.ui.Mouse;
 

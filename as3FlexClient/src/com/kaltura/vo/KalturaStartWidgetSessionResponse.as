@@ -1,17 +1,17 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaStartWidgetSessionResponse extends BaseFlexVo
+	public dynamic class VidiunStartWidgetSessionResponse extends BaseFlexVo
 	{
 		public var partnerId : int = int.MIN_VALUE;
-		public var ks : String;
+		public var vs : String;
 		public var userId : String;
 		override protected function setupPropertyList():void
 		{
 			super.setupPropertyList();
 			propertyList.push('partnerId');
-			propertyList.push('ks');
+			propertyList.push('vs');
 			propertyList.push('userId');
 		}
 		public function getParamKeys():Array
@@ -19,7 +19,7 @@ package com.kaltura.vo
 			var arr : Array;
 			arr = new Array();
 			arr.push('partnerId');
-			arr.push('ks');
+			arr.push('vs');
 			arr.push('userId');
 			return arr;
 		}

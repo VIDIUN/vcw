@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaFileSyncStatus
+	public class VidiunFileSyncStatus
 	{
 		public static const ERROR : int = -1;
 		public static const PENDING : int = 1;

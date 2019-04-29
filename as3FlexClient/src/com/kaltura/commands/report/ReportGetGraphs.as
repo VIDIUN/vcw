@@ -1,13 +1,13 @@
-package com.kaltura.commands.report
+package com.vidiun.commands.report
 {
-	import com.kaltura.vo.KalturaReportInputFilter;
-	import com.kaltura.delegates.report.ReportGetGraphsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunReportInputFilter;
+	import com.vidiun.delegates.report.ReportGetGraphsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ReportGetGraphs extends KalturaCall
+	public class ReportGetGraphs extends VidiunCall
 	{
 		public var filterFields : String;
-		public function ReportGetGraphs( reportType : int,reportInputFilter : KalturaReportInputFilter,dimension : String='',objectIds : String='' )
+		public function ReportGetGraphs( reportType : int,reportInputFilter : VidiunReportInputFilter,dimension : String='',objectIds : String='' )
 		{
 			service= 'report';
 			action= 'getGraphs';
@@ -17,7 +17,7 @@ package com.kaltura.commands.report
 			var keyValArr : Array = new Array();
 			keyArr.push( 'reportType' );
 			valueArr.push( reportType );
- 			keyValArr = kalturaObject2Arrays(reportInputFilter,'reportInputFilter');
+ 			keyValArr = vidiunObject2Arrays(reportInputFilter,'reportInputFilter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'dimension' );

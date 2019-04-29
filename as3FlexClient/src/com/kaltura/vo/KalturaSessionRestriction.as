@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseRestriction;
+	import com.vidiun.vo.VidiunBaseRestriction;
 
 	[Bindable]
-	public dynamic class KalturaSessionRestriction extends KalturaBaseRestriction
+	public dynamic class VidiunSessionRestriction extends VidiunBaseRestriction
 	{
 		override protected function setupPropertyList():void
 		{

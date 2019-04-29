@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -23,52 +23,52 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
 <mx:VBox
-	implements="com.kaltura.contributionWizard.view.importViews.IImportStep"
+	implements="com.vidiun.contributionWizard.view.importViews.IImportStep"
 	verticalScrollPolicy="off" horizontalScrollPolicy="off"
 	clipContent="true"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:tagging="com.kaltura.contributionWizard.view.tagging.*"
-	xmlns:text="com.kaltura.text.*"
+	xmlns:tagging="com.vidiun.contributionWizard.view.tagging.*"
+	xmlns:text="com.vidiun.text.*"
 	xmlns:code="http://code.google.com/p/flexlib/"
-	xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*" xmlns:controls="com.kaltura.controls.*" xmlns:ac="com.adobe.ac.*">
+	xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*" xmlns:controls="com.vidiun.controls.*" xmlns:ac="com.adobe.ac.*">
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.events.ImportViewCompleteEvent;
+			import com.vidiun.contributionWizard.view.events.ImportViewCompleteEvent;
 		]]>
 	</mx:Script>
 
 	<!--
 	<mx:Metadata>
-		[Event(name="importViewComplete", type="com.kaltura.contributionWizard.view.events.ImportViewCompleteEvent")]
+		[Event(name="importViewComplete", type="com.vidiun.contributionWizard.view.events.ImportViewCompleteEvent")]
 	</mx:Metadata>
 	-->
 	<mx:Script>
 		<![CDATA[
 			import mx.events.ListEvent;
 			import mx.collections.ItemResponder;
-			import com.kaltura.vo.KalturaCategory;
-			import com.kaltura.contributionWizard.vo.CategoryVO;
-			import com.kaltura.contributionWizard.events.ValidateAllMetaDataEvent;
+			import com.vidiun.vo.VidiunCategory;
+			import com.vidiun.contributionWizard.vo.CategoryVO;
+			import com.vidiun.contributionWizard.events.ValidateAllMetaDataEvent;
 			import mx.core.Application;
-			import com.kaltura.contributionWizard.view.events.TermsOfUseEvent;
+			import com.vidiun.contributionWizard.view.events.TermsOfUseEvent;
 			import mx.managers.PopUpManager;
-			import com.kaltura.contributionWizard.view.importViews.alerts.TermsOfUseScreen;
-			import com.kaltura.contributionWizard.view.importViews.browser.NavigationButtonsMode;
-			import com.kaltura.contributionWizard.view.events.ImportViewCompleteEvent;
-			import com.kaltura.contributionWizard.view.events.KCWViewEvent;
-			import com.kaltura.contributionWizard.enums.KCWWorkflowState;
+			import com.vidiun.contributionWizard.view.importViews.alerts.TermsOfUseScreen;
+			import com.vidiun.contributionWizard.view.importViews.browser.NavigationButtonsMode;
+			import com.vidiun.contributionWizard.view.events.ImportViewCompleteEvent;
+			import com.vidiun.contributionWizard.view.events.VCWViewEvent;
+			import com.vidiun.contributionWizard.enums.VCWWorkflowState;
 			import mx.controls.Alert;
 			import mx.binding.utils.BindingUtils;
-			import com.kaltura.contributionWizard.model.importTypesConfiguration.tagging.TaggingConfig;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.events.BatchMetaDataEvent;
+			import com.vidiun.contributionWizard.model.importTypesConfiguration.tagging.TaggingConfig;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.events.BatchMetaDataEvent;
 			import mx.collections.IList;
 			import mx.events.MetadataEvent;
-			import com.kaltura.vo.importees.BaseImportVO;
+			import com.vidiun.vo.importees.BaseImportVO;
 			import mx.utils.StringUtil;
-			import com.kaltura.contributionWizard.events.TaggingEvent;
+			import com.vidiun.contributionWizard.events.TaggingEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			[Bindable]
 			public var taggingConfig:TaggingConfig;
@@ -186,8 +186,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			/**
 			 * returns the category object that suites to the given name. if no such category- null will be returned.
 			 * */
-			private function getCategoryByName(name:String): KalturaCategory {
-				for each (var cat:KalturaCategory in _model.categoriesFromRoot) {
+			private function getCategoryByName(name:String): VidiunCategory {
+				for each (var cat:VidiunCategory in _model.categoriesFromRoot) {
 					if (cat.name == name)
 						return cat;
 				}
@@ -245,7 +245,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		<mx:HBox id="listContainer" width="100%" height="100%">
 			<mx:VBox>		
 				<mx:List id="thumbsList" styleName="thumbsList" dataProvider="{_model.importData.importCart.importItemsArray}" explicitMaxHeight="{listContainer.height - 2}" width="130"
-					columnWidth="90" rowHeight="90" useRollOver="false" visible="{!(_model.importData.importCart.importItemsArray.length&lt;=1)}" selectedIndex="0" itemRenderer="com.kaltura.contributionWizard.view.tagging.TagImageRenderer" 
+					columnWidth="90" rowHeight="90" useRollOver="false" visible="{!(_model.importData.importCart.importItemsArray.length&lt;=1)}" selectedIndex="0" itemRenderer="com.vidiun.contributionWizard.view.tagging.TagImageRenderer" 
 				    verticalScrollPolicy="on" includeInLayout="{!(_model.importData.importCart.importItemsArray.length&lt;=1)}"  change="entrySelected(event)" alpha="1.0" allowMultipleSelection="false" />
 			</mx:VBox>
 			

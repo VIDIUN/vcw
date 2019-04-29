@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFilter;
+	import com.vidiun.vo.VidiunFilter;
 
 	[Bindable]
-	public dynamic class KalturaBaseSyndicationFeedFilter extends KalturaFilter
+	public dynamic class VidiunBaseSyndicationFeedFilter extends VidiunFilter
 	{
 		override protected function setupPropertyList():void
 		{

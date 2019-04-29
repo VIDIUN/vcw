@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaFilterPager extends BaseFlexVo
+	public dynamic class VidiunFilterPager extends BaseFlexVo
 	{
 		public var pageSize : int = int.MIN_VALUE;
 		public var pageIndex : int = int.MIN_VALUE;

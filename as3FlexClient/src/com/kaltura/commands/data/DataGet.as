@@ -1,9 +1,9 @@
-package com.kaltura.commands.data
+package com.vidiun.commands.data
 {
-	import com.kaltura.delegates.data.DataGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.data.DataGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class DataGet extends KalturaCall
+	public class DataGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function DataGet( entryId : String,version : int=-1 )

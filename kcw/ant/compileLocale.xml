@@ -17,7 +17,7 @@
 
 	
 	<target name="compile" description="compile all locales">
-        <echo>Compiling kcw locales..</echo>
+        <echo>Compiling vcw locales..</echo>
 		<mxmlc output="${LOCALE_DEPLOY_DIR}/${LANGUAGE}_ContributionWizard.swf" locale="${LANGUAGE}">
 					
             <!-- Get default compiler options. -->

@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntryFilter;
+	import com.vidiun.vo.VidiunBaseEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaDocumentEntryFilter extends KalturaBaseEntryFilter
+	public dynamic class VidiunDocumentEntryFilter extends VidiunBaseEntryFilter
 	{
 		public var documentTypeEqual : int = int.MIN_VALUE;
 		public var documentTypeIn : String;

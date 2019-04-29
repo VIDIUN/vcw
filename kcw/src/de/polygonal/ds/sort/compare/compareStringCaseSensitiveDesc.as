@@ -26,8 +26,8 @@ package de.polygonal.ds.sort.compare
 		if (a.length + b.length > 2)
 		{
 			var r:int = 0;
-			var k:int = a.length > b.length ? a.length : b.length;
-			for (var i:int = 0; i < k; i++)
+			var v:int = a.length > b.length ? a.length : b.length;
+			for (var i:int = 0; i < v; i++)
 			{		
 				r = b.charCodeAt(i) - a.charCodeAt(i);
 				if (r != 0)	break;

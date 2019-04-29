@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
 	import flash.utils.clearTimeout;
 	import flash.utils.setTimeout;

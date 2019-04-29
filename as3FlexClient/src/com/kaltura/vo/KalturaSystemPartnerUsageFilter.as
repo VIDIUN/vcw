@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFilter;
+	import com.vidiun.vo.VidiunFilter;
 
 	[Bindable]
-	public dynamic class KalturaSystemPartnerUsageFilter extends KalturaFilter
+	public dynamic class VidiunSystemPartnerUsageFilter extends VidiunFilter
 	{
 		public var fromDate : int = int.MIN_VALUE;
 		public var toDate : int = int.MIN_VALUE;

@@ -1,7 +1,7 @@
-package com.kaltura.contributionWizard.events
+package com.vidiun.contributionWizard.events
 {
 	import com.bjorn.event.ChainEvent;
-	import com.kaltura.contributionWizard.vo.ImportScreenVO;
+	import com.vidiun.contributionWizard.vo.ImportScreenVO;
 
 	import flash.events.Event;
 

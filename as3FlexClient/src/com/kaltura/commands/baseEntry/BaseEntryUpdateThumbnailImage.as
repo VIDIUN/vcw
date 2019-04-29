@@ -1,11 +1,11 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.delegates.baseEntry.BaseEntryUpdateThumbnailImageDelegate;
-	import com.kaltura.net.KalturaFileCall;
+	import com.vidiun.delegates.baseEntry.BaseEntryUpdateThumbnailImageDelegate;
+	import com.vidiun.net.VidiunFileCall;
 	
 	import flash.net.FileReference;
 
-	public class BaseEntryUpdateThumbnailImage extends KalturaFileCall
+	public class BaseEntryUpdateThumbnailImage extends VidiunFileCall
 	{
 		
 		

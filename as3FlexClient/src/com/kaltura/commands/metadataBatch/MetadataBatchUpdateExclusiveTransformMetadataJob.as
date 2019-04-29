@@ -1,14 +1,14 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.vo.KalturaExclusiveLockKey;
-	import com.kaltura.vo.KalturaMetadataBatchJob;
-	import com.kaltura.delegates.metadataBatch.MetadataBatchUpdateExclusiveTransformMetadataJobDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunExclusiveLockKey;
+	import com.vidiun.vo.VidiunMetadataBatchJob;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchUpdateExclusiveTransformMetadataJobDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchUpdateExclusiveTransformMetadataJob extends KalturaCall
+	public class MetadataBatchUpdateExclusiveTransformMetadataJob extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MetadataBatchUpdateExclusiveTransformMetadataJob( id : int,lockKey : KalturaExclusiveLockKey,job : KalturaMetadataBatchJob )
+		public function MetadataBatchUpdateExclusiveTransformMetadataJob( id : int,lockKey : VidiunExclusiveLockKey,job : VidiunMetadataBatchJob )
 		{
 			service= 'metadata_metadatabatch';
 			action= 'updateExclusiveTransformMetadataJob';
@@ -18,10 +18,10 @@ package com.kaltura.commands.metadataBatch
 			var keyValArr : Array = new Array();
 			keyArr.push( 'id' );
 			valueArr.push( id );
- 			keyValArr = kalturaObject2Arrays(lockKey,'lockKey');
+ 			keyValArr = vidiunObject2Arrays(lockKey,'lockKey');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(job,'job');
+ 			keyValArr = vidiunObject2Arrays(job,'job');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

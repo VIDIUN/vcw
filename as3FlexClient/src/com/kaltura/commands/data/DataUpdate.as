@@ -1,13 +1,13 @@
-package com.kaltura.commands.data
+package com.vidiun.commands.data
 {
-	import com.kaltura.vo.KalturaDataEntry;
-	import com.kaltura.delegates.data.DataUpdateDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunDataEntry;
+	import com.vidiun.delegates.data.DataUpdateDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class DataUpdate extends KalturaCall
+	public class DataUpdate extends VidiunCall
 	{
 		public var filterFields : String;
-		public function DataUpdate( entryId : String,documentEntry : KalturaDataEntry )
+		public function DataUpdate( entryId : String,documentEntry : VidiunDataEntry )
 		{
 			service= 'data';
 			action= 'update';
@@ -17,7 +17,7 @@ package com.kaltura.commands.data
 			var keyValArr : Array = new Array();
 			keyArr.push( 'entryId' );
 			valueArr.push( entryId );
- 			keyValArr = kalturaObject2Arrays(documentEntry,'documentEntry');
+ 			keyValArr = vidiunObject2Arrays(documentEntry,'documentEntry');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

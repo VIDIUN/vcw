@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas
-	xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:introView="com.kaltura.contributionWizard.view.introView.*">
+	xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:introView="com.vidiun.contributionWizard.view.introView.*">
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.events.KCWViewEvent;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.events.VCWViewEvent;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 
 			private function dispatchCloseWizard():void
 			{
-				dispatchEvent(new KCWViewEvent(KCWViewEvent.CLOSE_WIZARD));
+				dispatchEvent(new VCWViewEvent(VCWViewEvent.CLOSE_WIZARD));
 			}
 		]]>
 	</mx:Script>

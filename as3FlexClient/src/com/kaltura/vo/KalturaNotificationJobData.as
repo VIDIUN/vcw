@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaNotificationJobData extends KalturaJobData
+	public dynamic class VidiunNotificationJobData extends VidiunJobData
 	{
 		public var userId : String;
 		public var type : int = int.MIN_VALUE;

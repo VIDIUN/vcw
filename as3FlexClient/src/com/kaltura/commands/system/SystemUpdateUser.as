@@ -1,13 +1,13 @@
-package com.kaltura.commands.system
+package com.vidiun.commands.system
 {
-	import com.kaltura.vo.KalturaSystemUser;
-	import com.kaltura.delegates.system.SystemUpdateUserDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunSystemUser;
+	import com.vidiun.delegates.system.SystemUpdateUserDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemUpdateUser extends KalturaCall
+	public class SystemUpdateUser extends VidiunCall
 	{
 		public var filterFields : String;
-		public function SystemUpdateUser( userId : int,systemUser : KalturaSystemUser )
+		public function SystemUpdateUser( userId : int,systemUser : VidiunSystemUser )
 		{
 			service= 'system';
 			action= 'updateUser';
@@ -17,7 +17,7 @@ package com.kaltura.commands.system
 			var keyValArr : Array = new Array();
 			keyArr.push( 'userId' );
 			valueArr.push( userId );
- 			keyValArr = kalturaObject2Arrays(systemUser,'systemUser');
+ 			keyValArr = vidiunObject2Arrays(systemUser,'systemUser');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

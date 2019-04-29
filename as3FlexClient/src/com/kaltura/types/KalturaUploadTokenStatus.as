@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaUploadTokenStatus
+	public class VidiunUploadTokenStatus
 	{
 		public static const PENDING : int = 0;
 		public static const PARTIAL_UPLOAD : int = 1;

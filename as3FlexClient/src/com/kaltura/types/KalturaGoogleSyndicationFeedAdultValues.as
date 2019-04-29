@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaGoogleSyndicationFeedAdultValues
+	public class VidiunGoogleSyndicationFeedAdultValues
 	{
 		public static const YES : String = 'Yes';
 		public static const NO : String = 'No';

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaPartnerStatus
+	public class VidiunPartnerStatus
 	{
 		public static const ACTIVE : int = 1;
 		public static const BLOCKED : int = 2;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -26,8 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	verticalScrollPolicy="off" horizontalScrollPolicy="off" buttonMode="true"
 	toolTip="{_importUrlVo.metaData.description ? _importUrlVo.metaData.description : _importUrlVo.metaData.title}"
 	paddingLeft="5" paddingTop="1"
-	xmlns:searchResultsView="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.*"
-	xmlns:visualMedia="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.visualMedia.*" xmlns:ac="com.adobe.ac.*">
+	xmlns:searchResultsView="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.*"
+	xmlns:visualMedia="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.visualMedia.*" xmlns:ac="com.adobe.ac.*">
 
 	<mx:Metadata>
 		[Event(name="select", 		type="flash.events.Event")]
@@ -38,8 +38,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<mx:Script>
 		<![CDATA[
 			import mx.effects.easing.Quadratic;
-			import com.kaltura.contributionWizard.model.MediaTypes;
-			import com.kaltura.vo.importees.ImportURLVO;
+			import com.vidiun.contributionWizard.model.MediaTypes;
+			import com.vidiun.vo.importees.ImportURLVO;
 
 			public function set mediaType(value:String):void
 			{

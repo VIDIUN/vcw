@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFilter;
+	import com.vidiun.vo.VidiunFilter;
 
 	[Bindable]
-	public dynamic class KalturaMediaInfoFilter extends KalturaFilter
+	public dynamic class VidiunMediaInfoFilter extends VidiunFilter
 	{
 		public var flavorAssetIdEqual : String;
 		override protected function setupPropertyList():void

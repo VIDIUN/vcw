@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.delegates.metadataBatch.MetadataBatchLogConversionDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchLogConversionDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchLogConversion extends KalturaCall
+	public class MetadataBatchLogConversion extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataBatchLogConversion( flavorAssetId : String,data : String )

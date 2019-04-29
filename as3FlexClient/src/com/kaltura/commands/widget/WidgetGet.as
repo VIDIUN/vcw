@@ -1,9 +1,9 @@
-package com.kaltura.commands.widget
+package com.vidiun.commands.widget
 {
-	import com.kaltura.delegates.widget.WidgetGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.widget.WidgetGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class WidgetGet extends KalturaCall
+	public class WidgetGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function WidgetGet( id : String )

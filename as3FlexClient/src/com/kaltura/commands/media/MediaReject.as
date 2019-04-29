@@ -1,9 +1,9 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaRejectDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.media.MediaRejectDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaReject extends KalturaCall
+	public class MediaReject extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MediaReject( entryId : String )

@@ -1,12 +1,12 @@
-package com.kaltura.delegates.systemPartner
+package com.vidiun.delegates.systemPartner
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class SystemPartnerGetAdminSessionDelegate extends WebDelegateBase
 	{
-		public function SystemPartnerGetAdminSessionDelegate(call:KalturaCall, config:KalturaConfig)
+		public function SystemPartnerGetAdminSessionDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

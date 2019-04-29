@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -24,45 +24,45 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <importViews:ImportModule 
 	styleName="uploadView"
-	xmlns:importViews="com.kaltura.contributionWizard.view.importViews.*"
+	xmlns:importViews="com.vidiun.contributionWizard.view.importViews.*"
 	verticalAlign="top" horizontalAlign="center"
-	implements="com.kaltura.contributionWizard.view.importViews.IImportModule"
+	implements="com.vidiun.contributionWizard.view.importViews.IImportModule"
 	creationComplete="onCreationComplete()"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
 	xmlns:net="flash.net.*"
-	xmlns:upload="com.kaltura.contributionWizard.view.importViews.upload.*"
-	xmlns:controller="com.kaltura.contributionWizard.view.controller.*"
-	xmlns:control="com.kaltura.contributionWizard.control.*" xmlns:ac="com.adobe.ac.*" xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*">
+	xmlns:upload="com.vidiun.contributionWizard.view.importViews.upload.*"
+	xmlns:controller="com.vidiun.contributionWizard.view.controller.*"
+	xmlns:control="com.vidiun.contributionWizard.control.*" xmlns:ac="com.adobe.ac.*" xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*">
 
 	<mx:Script>
 		<![CDATA[
 			import mx.messaging.channels.StreamingAMFChannel;
-			import com.kaltura.contributionWizard.vo.limitations.LimitationError;
-			import com.kaltura.contributionWizard.view.importViews.browser.NavigationButtonsMode;
+			import com.vidiun.contributionWizard.vo.limitations.LimitationError;
+			import com.vidiun.contributionWizard.view.importViews.browser.NavigationButtonsMode;
 			import mx.events.CloseEvent;
 			import mx.core.UIComponent;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
-			import com.kaltura.contributionWizard.model.UploadErrors;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.model.UploadErrors;
 			import mx.utils.ObjectUtil;
-			import com.kaltura.contributionWizard.model.UploadModelLocator;
+			import com.vidiun.contributionWizard.model.UploadModelLocator;
 			import com.arc90.modular.CairngormEventDispatcherFactory;
-			import com.kaltura.contributionWizard.model.ImportTypes;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.model.ImportTypes;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 			import mx.controls.Alert;
-			import com.kaltura.contributionWizard.events.CancelUploadEvent;
+			import com.vidiun.contributionWizard.events.CancelUploadEvent;
 			import mx.core.Application;
 			import mx.managers.PopUpManager;
-			import com.kaltura.contributionWizard.model.importData.UploadCartStatusTypes;
+			import com.vidiun.contributionWizard.model.importData.UploadCartStatusTypes;
 			import mx.collections.ArrayCollection;
 			import mx.effects.easing.Quadratic;
-			import com.kaltura.contributionWizard.events.ImportEvent;
+			import com.vidiun.contributionWizard.events.ImportEvent;
 			import mx.controls.listClasses.IListItemRenderer;
-			import com.kaltura.contributionWizard.view.events.ImportViewCompleteEvent;
-			import com.kaltura.vo.importees.ImportFileVO;
+			import com.vidiun.contributionWizard.view.events.ImportViewCompleteEvent;
+			import com.vidiun.vo.importees.ImportFileVO;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
-			import com.kaltura.contributionWizard.events.FileReferenceEvent;
-			import com.kaltura.contributionWizard.view.importViews.IImportModule;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.events.FileReferenceEvent;
+			import com.vidiun.contributionWizard.view.importViews.IImportModule;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			[Bindable]
 			private var _wizardModel:WizardModelLocator = WizardModelLocator.getInstance();

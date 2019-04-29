@@ -1,9 +1,9 @@
-package com.kaltura.commands.adminUser
+package com.vidiun.commands.adminUser
 {
-	import com.kaltura.delegates.adminUser.AdminUserResetPasswordDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.adminUser.AdminUserResetPasswordDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AdminUserResetPassword extends KalturaCall
+	public class AdminUserResetPassword extends VidiunCall
 	{
 		public var filterFields : String;
 		public function AdminUserResetPassword( email : String )

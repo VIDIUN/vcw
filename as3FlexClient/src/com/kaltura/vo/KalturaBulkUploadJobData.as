@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaBulkUploadJobData extends KalturaJobData
+	public dynamic class VidiunBulkUploadJobData extends VidiunJobData
 	{
 		public var userId : int = int.MIN_VALUE;
 		public var uploadedBy : String;

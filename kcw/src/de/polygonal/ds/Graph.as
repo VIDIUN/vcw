@@ -60,8 +60,8 @@ package de.polygonal.ds
 			process(node);
 			node.marked = true;
 			
-			var k:int = node.numArcs, t:GraphNode;
-			for (var i:int = 0; i < k; i++)
+			var v:int = node.numArcs, t:GraphNode;
+			for (var i:int = 0; i < v; i++)
 			{
 				t = node.arcs[i].node;
 				if (!t.marked) depthFirst(t, process);
@@ -82,14 +82,14 @@ package de.polygonal.ds
 			var que:Array = [node];
 			node.marked = true;
 			
-			var c:int = 1, k:int, i:int, arcs:Array;
+			var c:int = 1, v:int, i:int, arcs:Array;
 			var t:GraphNode, u:GraphNode;
 			while (c > 0)
 			{
 				process(t = que[0]);
 				
-				arcs = t.arcs, k = t.numArcs;
-				for (i = 0; i < k; i++)
+				arcs = t.arcs, v = t.numArcs;
+				for (i = 0; i < v; i++)
 				{
 					u = arcs[i].node;
 					if (!u.marked)

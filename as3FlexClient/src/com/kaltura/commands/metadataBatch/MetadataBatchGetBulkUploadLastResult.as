@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.delegates.metadataBatch.MetadataBatchGetBulkUploadLastResultDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchGetBulkUploadLastResultDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchGetBulkUploadLastResult extends KalturaCall
+	public class MetadataBatchGetBulkUploadLastResult extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataBatchGetBulkUploadLastResult( bulkUploadJobId : int )

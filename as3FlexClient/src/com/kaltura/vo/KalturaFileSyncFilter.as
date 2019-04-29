@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFilter;
+	import com.vidiun.vo.VidiunFilter;
 
 	[Bindable]
-	public dynamic class KalturaFileSyncFilter extends KalturaFilter
+	public dynamic class VidiunFileSyncFilter extends VidiunFilter
 	{
 		public var partnerIdEqual : int = int.MIN_VALUE;
 		public var objectTypeEqual : int = int.MIN_VALUE;

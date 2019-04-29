@@ -1,9 +1,9 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.media.MediaGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaGet extends KalturaCall
+	public class MediaGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MediaGet( entryId : String,version : int=-1 )

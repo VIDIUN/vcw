@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaControlPanelCommandType
+	public class VidiunControlPanelCommandType
 	{
 		public static const STOP : int = 1;
 		public static const START : int = 2;

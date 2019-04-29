@@ -1,9 +1,9 @@
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.arc90.modular.ModuleSequenceCommand;
-	import com.kaltura.contributionWizard.events.ChangePermissionLevelEvent;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.events.ChangePermissionLevelEvent;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 	public class ChangePermissionLevelCommand extends ModuleSequenceCommand
 	{

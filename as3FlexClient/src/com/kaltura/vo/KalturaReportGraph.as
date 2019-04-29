@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaReportGraph extends BaseFlexVo
+	public dynamic class VidiunReportGraph extends BaseFlexVo
 	{
 		public var id : String;
 		public var data : String;

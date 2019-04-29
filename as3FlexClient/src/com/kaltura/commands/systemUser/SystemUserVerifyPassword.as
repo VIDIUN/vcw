@@ -1,9 +1,9 @@
-package com.kaltura.commands.systemUser
+package com.vidiun.commands.systemUser
 {
-	import com.kaltura.delegates.systemUser.SystemUserVerifyPasswordDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.systemUser.SystemUserVerifyPasswordDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemUserVerifyPassword extends KalturaCall
+	public class SystemUserVerifyPassword extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemUserVerifyPassword( email : String,password : String )

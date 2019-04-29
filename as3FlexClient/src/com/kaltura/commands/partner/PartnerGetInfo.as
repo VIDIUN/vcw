@@ -1,9 +1,9 @@
-package com.kaltura.commands.partner
+package com.vidiun.commands.partner
 {
-	import com.kaltura.delegates.partner.PartnerGetInfoDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.partner.PartnerGetInfoDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PartnerGetInfo extends KalturaCall
+	public class PartnerGetInfo extends VidiunCall
 	{
 		public var filterFields : String;
 		public function PartnerGetInfo(  )

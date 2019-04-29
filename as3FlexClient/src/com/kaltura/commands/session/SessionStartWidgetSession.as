@@ -1,9 +1,9 @@
-package com.kaltura.commands.session
+package com.vidiun.commands.session
 {
-	import com.kaltura.delegates.session.SessionStartWidgetSessionDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.session.SessionStartWidgetSessionDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SessionStartWidgetSession extends KalturaCall
+	public class SessionStartWidgetSession extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SessionStartWidgetSession( widgetId : String,expiry : int=86400 )

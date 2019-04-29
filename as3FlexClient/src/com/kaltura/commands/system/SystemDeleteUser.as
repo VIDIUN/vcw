@@ -1,9 +1,9 @@
-package com.kaltura.commands.system
+package com.vidiun.commands.system
 {
-	import com.kaltura.delegates.system.SystemDeleteUserDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.system.SystemDeleteUserDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemDeleteUser extends KalturaCall
+	public class SystemDeleteUser extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemDeleteUser( userId : int )

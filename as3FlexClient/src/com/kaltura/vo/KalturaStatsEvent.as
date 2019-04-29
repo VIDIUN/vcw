@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaStatsEvent extends BaseFlexVo
+	public dynamic class VidiunStatsEvent extends BaseFlexVo
 	{
 		public var clientVer : String;
 		public var eventType : int = int.MIN_VALUE;

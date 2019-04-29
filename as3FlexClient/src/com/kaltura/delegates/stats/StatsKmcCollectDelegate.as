@@ -1,12 +1,12 @@
-package com.kaltura.delegates.stats
+package com.vidiun.delegates.stats
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
-	public class StatsKmcCollectDelegate extends WebDelegateBase
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
+	public class StatsVmcCollectDelegate extends WebDelegateBase
 	{
-		public function StatsKmcCollectDelegate(call:KalturaCall, config:KalturaConfig)
+		public function StatsVmcCollectDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

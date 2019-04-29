@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,14 +20,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
 	import com.adobe_cw.adobe.cairngorm.business.ServiceLocator;
-	import com.kaltura.contributionWizard.business.factories.serialization.importUrlVo.concrete.ProviderLoginVoDecoder;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.ProviderLoginVO;
-	import com.kaltura.contributionWizard.vo.providers.AuthenticationMethod;
-	import com.kaltura.net.TemplateURLVariables;
+	import com.vidiun.contributionWizard.business.factories.serialization.importUrlVo.concrete.ProviderLoginVoDecoder;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.ProviderLoginVO;
+	import com.vidiun.contributionWizard.vo.providers.AuthenticationMethod;
+	import com.vidiun.net.TemplateURLVariables;
 
 	import mx.rpc.AsyncToken;
 	import mx.rpc.IResponder;

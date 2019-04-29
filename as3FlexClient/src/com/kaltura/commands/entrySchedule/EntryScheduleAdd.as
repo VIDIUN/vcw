@@ -1,13 +1,13 @@
-package com.kaltura.commands.entrySchedule
+package com.vidiun.commands.entrySchedule
 {
-	import com.kaltura.vo.KalturaEntrySchedule;
-	import com.kaltura.delegates.entrySchedule.EntryScheduleAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunEntrySchedule;
+	import com.vidiun.delegates.entrySchedule.EntryScheduleAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class EntryScheduleAdd extends KalturaCall
+	public class EntryScheduleAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function EntryScheduleAdd( entrySchedule : KalturaEntrySchedule )
+		public function EntryScheduleAdd( entrySchedule : VidiunEntrySchedule )
 		{
 			service= 'entrySchedule';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.entrySchedule
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(entrySchedule,'entrySchedule');
+ 			keyValArr = vidiunObject2Arrays(entrySchedule,'entrySchedule');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

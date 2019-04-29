@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaEntryModerationStatus
+	public class VidiunEntryModerationStatus
 	{
 		public static const PENDING_MODERATION : int = 1;
 		public static const APPROVED : int = 2;

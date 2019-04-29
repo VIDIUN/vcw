@@ -226,11 +226,11 @@ package com.adobe.fileformats.vcard
 				else if (line.search(/^PHOTO;BASE64/i) != -1)
 				{
 					var imageStr:String = new String();
-					for (var k:uint = i+1; k < lines.length; ++k)
+					for (var v:uint = i+1; v < lines.length; ++v)
 					{
-						imageStr += lines[k];
-						//if (lines[k].search(/.+\=$/) != -1) // Very slow in Mac due to RegEx bug
-						if (lines[k].indexOf('=') != -1)
+						imageStr += lines[v];
+						//if (lines[v].search(/.+\=$/) != -1) // Very slow in Mac due to RegEx bug
+						if (lines[v].indexOf('=') != -1)
 						{
 							var decoder:Base64Decoder = new Base64Decoder();
 							decoder.decode(imageStr);

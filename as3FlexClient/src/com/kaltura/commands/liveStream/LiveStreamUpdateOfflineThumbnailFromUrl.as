@@ -1,9 +1,9 @@
-package com.kaltura.commands.liveStream
+package com.vidiun.commands.liveStream
 {
-	import com.kaltura.delegates.liveStream.LiveStreamUpdateOfflineThumbnailFromUrlDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.liveStream.LiveStreamUpdateOfflineThumbnailFromUrlDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class LiveStreamUpdateOfflineThumbnailFromUrl extends KalturaCall
+	public class LiveStreamUpdateOfflineThumbnailFromUrl extends VidiunCall
 	{
 		public var filterFields : String;
 		public function LiveStreamUpdateOfflineThumbnailFromUrl( entryId : String,url : String )

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaNotificationStatus
+	public class VidiunNotificationStatus
 	{
 		public static const PENDING : int = 1;
 		public static const SENT : int = 2;

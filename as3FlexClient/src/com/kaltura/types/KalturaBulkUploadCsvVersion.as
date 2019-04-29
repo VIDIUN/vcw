@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaBulkUploadCsvVersion
+	public class VidiunBulkUploadCsvVersion
 	{
 		public static const V1 : String = '1';
 		public static const V2 : String = '2';

@@ -1,15 +1,15 @@
-package com.kaltura
+package com.vidiun
 {
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
 	
 	import flash.events.EventDispatcher;
 
-	public class KalturaClient extends EventDispatcher
+	public class VidiunClient extends EventDispatcher
 	{	
-		protected var _currentConfig:KalturaConfig;
+		protected var _currentConfig:VidiunConfig;
 		
-		public function KalturaClient( config : KalturaConfig) 
+		public function VidiunClient( config : VidiunConfig) 
 		{
 			_currentConfig = config;
 		}
@@ -18,20 +18,20 @@ package com.kaltura
 		public function get partnerId():String  { return _currentConfig ? this._currentConfig.partnerId : null; }
 		public function get domain():String { return _currentConfig ? this._currentConfig.domain : null; }
 		
-		public function set ks( currentConfig : String ):void  {  _currentConfig.ks = currentConfig; }
-		[Bindable]public function get ks():String  { return _currentConfig ? this._currentConfig.ks : null; }
+		public function set vs( currentConfig : String ):void  {  _currentConfig.vs = currentConfig; }
+		[Bindable]public function get vs():String  { return _currentConfig ? this._currentConfig.vs : null; }
 		
 		public function set clientTag(value:String):void { _currentConfig.clientTag = value; }
 		public function get clientTag():String { return _currentConfig.clientTag; }
 		
 		
-		public function post(call:KalturaCall):KalturaCall {
+		public function post(call:VidiunCall):VidiunCall {
 			if (_currentConfig) {
 				call.config = _currentConfig;
 				call.initialize();
 				call.execute();
 			} else {
-				throw new Error("Cannot post a call; no kaltura config has been set.");
+				throw new Error("Cannot post a call; no vidiun config has been set.");
 			}
 			return call;
 		}

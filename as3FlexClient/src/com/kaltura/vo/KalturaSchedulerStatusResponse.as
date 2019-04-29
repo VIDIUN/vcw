@@ -1,7 +1,7 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
-	public dynamic class KalturaSchedulerStatusResponse extends BaseFlexVo
+	import com.vidiun.vo.BaseFlexVo;
+	public dynamic class VidiunSchedulerStatusResponse extends BaseFlexVo
 	{
 		public var queuesStatus : Array = new Array();
 		public var controlPanelCommands : Array = new Array();

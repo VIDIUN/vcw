@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFilter;
+	import com.vidiun.vo.VidiunFilter;
 
 	[Bindable]
-	public dynamic class KalturaFlavorParamsFilter extends KalturaFilter
+	public dynamic class VidiunFlavorParamsFilter extends VidiunFilter
 	{
 		public var isSystemDefaultEqual : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

@@ -1,9 +1,9 @@
-package com.kaltura.commands.session
+package com.vidiun.commands.session
 {
-	import com.kaltura.delegates.session.SessionStartDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.session.SessionStartDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SessionStart extends KalturaCall
+	public class SessionStart extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SessionStart( secret : String,userId : String='',type : int=0,partnerId : int=-1,expiry : int=86400,privileges : String='' )

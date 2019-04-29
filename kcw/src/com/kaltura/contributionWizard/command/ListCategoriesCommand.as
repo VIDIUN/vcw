@@ -1,17 +1,17 @@
-package com.kaltura.contributionWizard.command {
+package com.vidiun.contributionWizard.command {
 	import com.adobe_cw.adobe.cairngorm.commands.ICommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
-	import com.kaltura.commands.MultiRequest;
-	import com.kaltura.commands.category.CategoryGet;
-	import com.kaltura.commands.category.CategoryList;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.CategoryVO;
-	import com.kaltura.dataStructures.HashMap;
-	import com.kaltura.errors.KalturaError;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.vo.KalturaCategory;
-	import com.kaltura.vo.KalturaCategoryFilter;
-	import com.kaltura.vo.KalturaCategoryListResponse;
+	import com.vidiun.commands.MultiRequest;
+	import com.vidiun.commands.category.CategoryGet;
+	import com.vidiun.commands.category.CategoryList;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.CategoryVO;
+	import com.vidiun.dataStructures.HashMap;
+	import com.vidiun.errors.VidiunError;
+	import com.vidiun.events.VidiunEvent;
+	import com.vidiun.vo.VidiunCategory;
+	import com.vidiun.vo.VidiunCategoryFilter;
+	import com.vidiun.vo.VidiunCategoryListResponse;
 	
 	import mx.collections.ArrayCollection;
 	import mx.collections.Sort;
@@ -42,7 +42,7 @@ package com.kaltura.contributionWizard.command {
 				}
 				
 				// get the rest of the categories
-				var filter:KalturaCategoryFilter = new KalturaCategoryFilter();
+				var filter:VidiunCategoryFilter = new VidiunCategoryFilter();
 				filter.fullNameStartsWith = "aa"; // need to add a value here so MR will process this
 				
 				var listCategories:CategoryList = new CategoryList(filter);
@@ -55,8 +55,8 @@ package com.kaltura.contributionWizard.command {
 					mr.addRequestParam("1:filter:fullNameStartsWith", "");
 				}
 				
-				mr.addEventListener(KalturaEvent.COMPLETE, result);
-				mr.addEventListener(KalturaEvent.FAILED, fault);
+				mr.addEventListener(VidiunEvent.COMPLETE, result);
+				mr.addEventListener(VidiunEvent.FAILED, fault);
 				_model.context.kc.post(mr);
 				_model.categoriesUploaded = true;
 			}
@@ -80,36 +80,36 @@ package com.kaltura.contributionWizard.command {
 		 *
 		 */
 		public function result(info:Object):void {
-			var event:KalturaEvent = info as KalturaEvent;
+			var event:VidiunEvent = info as VidiunEvent;
 			_model.loadingFlag = false;
 
-			var rootCat:KalturaCategory;
-			var kclr:KalturaCategoryListResponse;
+			var rootCat:VidiunCategory;
+			var vclr:VidiunCategoryListResponse;
 			
 			if (_model.categoriesRootId) {
 				// we will have 2 calls in MR
-				if (event.data[0] is KalturaError) {
-					showError((event.data[0] as KalturaError).errorMsg);
+				if (event.data[0] is VidiunError) {
+					showError((event.data[0] as VidiunError).errorMsg);
 					return;
 				}
-				else if (event.data[1] is KalturaError) {
-					showError((event.data[1] as KalturaError).errorMsg);
+				else if (event.data[1] is VidiunError) {
+					showError((event.data[1] as VidiunError).errorMsg);
 					return;
 				}
-				rootCat = event.data[0] as KalturaCategory;
-				kclr = event.data[1] as KalturaCategoryListResponse;
+				rootCat = event.data[0] as VidiunCategory;
+				vclr = event.data[1] as VidiunCategoryListResponse;
 			}
 			else {
 				// only one call
-				if (event.data[0] is KalturaError) {
-					showError((event.data[0] as KalturaError).errorMsg);
+				if (event.data[0] is VidiunError) {
+					showError((event.data[0] as VidiunError).errorMsg);
 					return;
 				}
 				
-				kclr = event.data[0] as KalturaCategoryListResponse;
+				vclr = event.data[0] as VidiunCategoryListResponse;
 			}
 			
-			var categories:ArrayCollection = new ArrayCollection(kclr.objects);
+			var categories:ArrayCollection = new ArrayCollection(vclr.objects);
 			_model.categoriesFromRoot.addAll(categories);
 
 			// builds the category list that will be displayed on the "Tagging View" screen

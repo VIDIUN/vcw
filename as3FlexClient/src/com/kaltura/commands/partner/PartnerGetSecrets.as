@@ -1,9 +1,9 @@
-package com.kaltura.commands.partner
+package com.vidiun.commands.partner
 {
-	import com.kaltura.delegates.partner.PartnerGetSecretsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.partner.PartnerGetSecretsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PartnerGetSecrets extends KalturaCall
+	public class PartnerGetSecrets extends VidiunCall
 	{
 		public var filterFields : String;
 		public function PartnerGetSecrets( partnerId : int,adminEmail : String,cmsPassword : String )

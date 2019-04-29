@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaEntryType
+	public class VidiunEntryType
 	{
 		public static const AUTOMATIC : int = -1;
 		public static const MEDIA_CLIP : int = 1;

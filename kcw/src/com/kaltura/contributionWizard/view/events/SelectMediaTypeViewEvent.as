@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.view.events
+package com.vidiun.contributionWizard.view.events
 {
 	import flash.events.Event;
 

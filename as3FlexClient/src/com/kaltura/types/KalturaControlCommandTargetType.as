@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaControlCommandTargetType
+	public class VidiunControlCommandTargetType
 	{
 		public static const SCHEDULER : int = 0;
 		public static const JOB : int = 1;

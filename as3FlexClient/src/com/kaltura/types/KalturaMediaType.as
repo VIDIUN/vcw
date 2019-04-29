@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaMediaType
+	public class VidiunMediaType
 	{
 		public static const VIDEO : int = 1;
 		public static const IMAGE : int = 2;

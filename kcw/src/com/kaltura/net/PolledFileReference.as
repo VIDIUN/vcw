@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,16 +20,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.net
+package com.vidiun.net
 {
-	import com.kaltura.contributionWizard.business.GetUploadTokenDelegate;
-	import com.kaltura.contributionWizard.events.CancelUploadEvent;
-	import com.kaltura.contributionWizard.events.ReportErrorEvent;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.ErrorVO;
-	import com.kaltura.types.KalturaUploadTokenStatus;
-	import com.kaltura.vo.KalturaUploadToken;
-	import com.kaltura.vo.importees.ImportFileVO;
+	import com.vidiun.contributionWizard.business.GetUploadTokenDelegate;
+	import com.vidiun.contributionWizard.events.CancelUploadEvent;
+	import com.vidiun.contributionWizard.events.ReportErrorEvent;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.ErrorVO;
+	import com.vidiun.types.VidiunUploadTokenStatus;
+	import com.vidiun.vo.VidiunUploadToken;
+	import com.vidiun.vo.importees.ImportFileVO;
 	
 	import flash.events.DataEvent;
 	import flash.events.Event;
@@ -104,7 +104,7 @@ package com.kaltura.net
 			//if we are loading right now and 
 			if(!hasComplete && hasBeenOpened)
 			{
-				//REPORT TO KALTURA TO TRACE PROBLEMS WITH UPLOAD
+				//REPORT TO VIDIUN TO TRACE PROBLEMS WITH UPLOAD
 				///////////////////////////////////////////////////
 				var errorVo : ErrorVO = new ErrorVO();
 				errorVo.reportingObj = "PolledFileReference";
@@ -113,7 +113,7 @@ package com.kaltura.net
 				reportErrorEvent.dispatch();
 				///////////////////////////////////////////////////
 				
-				//if there's a suspicion that the kcw stucks on upload.
+				//if there's a suspicion that the vcw stucks on upload.
 				if(bytesLoaded == bytesTotal || bytesLoaded == _oldBytesLoaded || 1)
 				{
 					var getUploadToken : GetUploadTokenDelegate = new GetUploadTokenDelegate(this);
@@ -125,15 +125,15 @@ package com.kaltura.net
 		}
 		
 		/**
-		 * This function will be called when there's a suspicion that the kcw stucks on upload.
+		 * This function will be called when there's a suspicion that the vcw stucks on upload.
 		 * In this case an uploadTokenGet request is sent to the server, to know the status of the
 		 * current upload.
 		 * @param data the data returned from the server
 		 * */
 		public function result(data:Object):void
 		{
-			var res: KalturaUploadToken = data as KalturaUploadToken;
-			if(res && (res.status==KalturaUploadTokenStatus.FULL_UPLOAD))
+			var res: VidiunUploadToken = data as VidiunUploadToken;
+			if(res && (res.status==VidiunUploadTokenStatus.FULL_UPLOAD))
 			{
 				var uploadTokenId : String = res.id;
 				

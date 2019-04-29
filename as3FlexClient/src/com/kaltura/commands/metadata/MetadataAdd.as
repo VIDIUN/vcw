@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadata
+package com.vidiun.commands.metadata
 {
-	import com.kaltura.delegates.metadata.MetadataAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadata.MetadataAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataAdd extends KalturaCall
+	public class MetadataAdd extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataAdd( metadataProfileId : int,objectType : int,objectId : String,xmlData : String )

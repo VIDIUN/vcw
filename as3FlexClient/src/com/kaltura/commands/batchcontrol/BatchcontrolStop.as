@@ -1,9 +1,9 @@
-package com.kaltura.commands.batchcontrol
+package com.vidiun.commands.batchcontrol
 {
-	import com.kaltura.delegates.batchcontrol.BatchcontrolStopDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.batchcontrol.BatchcontrolStopDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BatchcontrolStop extends KalturaCall
+	public class BatchcontrolStop extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BatchcontrolStop( schedulerId : int,schedulerName : String,targetType : int,adminId : int,adminName : String,cause : String,workerId : int=undefined,workerName : String='' )

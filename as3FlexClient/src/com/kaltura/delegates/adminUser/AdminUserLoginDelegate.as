@@ -1,12 +1,12 @@
-package com.kaltura.delegates.adminUser
+package com.vidiun.delegates.adminUser
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class AdminUserLoginDelegate extends WebDelegateBase
 	{
-		public function AdminUserLoginDelegate(call:KalturaCall, config:KalturaConfig)
+		public function AdminUserLoginDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

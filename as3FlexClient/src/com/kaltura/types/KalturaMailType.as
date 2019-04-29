@@ -1,24 +1,24 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaMailType
+	public class VidiunMailType
 	{
-		public static const MAIL_TYPE_KALTURA_NEWSLETTER : int = 10;
+		public static const MAIL_TYPE_VIDIUN_NEWSLETTER : int = 10;
 		public static const MAIL_TYPE_ADDED_TO_FAVORITES : int = 11;
 		public static const MAIL_TYPE_ADDED_TO_CLIP_FAVORITES : int = 12;
 		public static const MAIL_TYPE_NEW_COMMENT_IN_PROFILE : int = 13;
-		public static const MAIL_TYPE_CLIP_ADDED_YOUR_KALTURA : int = 20;
+		public static const MAIL_TYPE_CLIP_ADDED_YOUR_VIDIUN : int = 20;
 		public static const MAIL_TYPE_VIDEO_ADDED : int = 21;
 		public static const MAIL_TYPE_ROUGHCUT_CREATED : int = 22;
-		public static const MAIL_TYPE_ADDED_KALTURA_TO_YOUR_FAVORITES : int = 23;
-		public static const MAIL_TYPE_NEW_COMMENT_IN_KALTURA : int = 24;
+		public static const MAIL_TYPE_ADDED_VIDIUN_TO_YOUR_FAVORITES : int = 23;
+		public static const MAIL_TYPE_NEW_COMMENT_IN_VIDIUN : int = 24;
 		public static const MAIL_TYPE_CLIP_ADDED : int = 30;
 		public static const MAIL_TYPE_VIDEO_CREATED : int = 31;
-		public static const MAIL_TYPE_ADDED_KALTURA_TO_HIS_FAVORITES : int = 32;
-		public static const MAIL_TYPE_NEW_COMMENT_IN_KALTURA_YOU_CONTRIBUTED : int = 33;
+		public static const MAIL_TYPE_ADDED_VIDIUN_TO_HIS_FAVORITES : int = 32;
+		public static const MAIL_TYPE_NEW_COMMENT_IN_VIDIUN_YOU_CONTRIBUTED : int = 33;
 		public static const MAIL_TYPE_CLIP_CONTRIBUTED : int = 40;
 		public static const MAIL_TYPE_ROUGHCUT_CREATED_SUBSCRIBED : int = 41;
-		public static const MAIL_TYPE_ADDED_KALTURA_TO_HIS_FAVORITES_SUBSCRIBED : int = 42;
-		public static const MAIL_TYPE_NEW_COMMENT_IN_KALTURA_YOU_SUBSCRIBED : int = 43;
+		public static const MAIL_TYPE_ADDED_VIDIUN_TO_HIS_FAVORITES_SUBSCRIBED : int = 42;
+		public static const MAIL_TYPE_NEW_COMMENT_IN_VIDIUN_YOU_SUBSCRIBED : int = 43;
 		public static const MAIL_TYPE_REGISTER_CONFIRM : int = 50;
 		public static const MAIL_TYPE_PASSWORD_RESET : int = 51;
 		public static const MAIL_TYPE_LOGIN_MAIL_RESET : int = 52;

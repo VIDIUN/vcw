@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaConvertCollectionFlavorData extends BaseFlexVo
+	public dynamic class VidiunConvertCollectionFlavorData extends BaseFlexVo
 	{
 		public var flavorAssetId : String;
 		public var flavorParamsOutputId : int = int.MIN_VALUE;

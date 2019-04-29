@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaMailJobData extends KalturaJobData
+	public dynamic class VidiunMailJobData extends VidiunJobData
 	{
 		public var mailType : int = int.MIN_VALUE;
 		public var mailPriority : int = int.MIN_VALUE;

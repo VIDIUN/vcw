@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <mx:HBox
 	verticalAlign="middle"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:controls="com.kaltura.contributionWizard.view.importViews.search.controls.*"
+	xmlns:controls="com.vidiun.contributionWizard.view.importViews.search.controls.*"
 	currentState="{getCurrentState(_model.mediaProviders.activeMediaProvider.authMethodList.activeMethod.searchable)}"
 	>
 	<mx:Metadata>
@@ -39,14 +39,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<mx:Script>
 		<![CDATA[
 
-			//[Event(name="authenticate", 		type="com.kaltura.contributionWizard.view.events.AuthenticatedSearchViewEvent")]
+			//[Event(name="authenticate", 		type="com.vidiun.contributionWizard.view.events.AuthenticatedSearchViewEvent")]
 
-			import com.kaltura.contributionWizard.view.events.AuthenticatedSearchViewEvent;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.contributionWizard.vo.PageSearchDirection;
-			import com.kaltura.contributionWizard.events.SearchMediaEvent;
-			import com.kaltura.contributionWizard.vo.SearchMediaRequestVO;
+			import com.vidiun.contributionWizard.view.events.AuthenticatedSearchViewEvent;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.vo.PageSearchDirection;
+			import com.vidiun.contributionWizard.events.SearchMediaEvent;
+			import com.vidiun.contributionWizard.vo.SearchMediaRequestVO;
 
 			public static const NOT_SEARCHABLE_STATE:String = "notSearchableState";
 			public static const SEARCHABLE:String 			= "searchable";

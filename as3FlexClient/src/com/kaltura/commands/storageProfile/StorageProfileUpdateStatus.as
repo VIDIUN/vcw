@@ -1,9 +1,9 @@
-package com.kaltura.commands.storageProfile
+package com.vidiun.commands.storageProfile
 {
-	import com.kaltura.delegates.storageProfile.StorageProfileUpdateStatusDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.storageProfile.StorageProfileUpdateStatusDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class StorageProfileUpdateStatus extends KalturaCall
+	public class StorageProfileUpdateStatus extends VidiunCall
 	{
 		public var filterFields : String;
 		public function StorageProfileUpdateStatus( storageId : int,status : int )

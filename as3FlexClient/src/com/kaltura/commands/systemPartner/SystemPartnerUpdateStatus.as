@@ -1,9 +1,9 @@
-package com.kaltura.commands.systemPartner
+package com.vidiun.commands.systemPartner
 {
-	import com.kaltura.delegates.systemPartner.SystemPartnerUpdateStatusDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.systemPartner.SystemPartnerUpdateStatusDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemPartnerUpdateStatus extends KalturaCall
+	public class SystemPartnerUpdateStatus extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemPartnerUpdateStatus( partnerId : int,status : int )

@@ -3,22 +3,22 @@
 	verticalScrollPolicy="off" horizontalScrollPolicy="off" paddingLeft="5" >
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.utils.KCountriesUtil;
-			import com.kaltura.utils.KConfigUtil;
+			import com.vidiun.utils.VCountriesUtil;
+			import com.vidiun.utils.VConfigUtil;
 			import mx.controls.Image;
 			
 			private function onCreationComplete(event:Event):void
 			{
 				if(data != null)
 				{
-					flagImg.source = KCountriesUtil.instance.getCountryFlag(data.code);
+					flagImg.source = VCountriesUtil.instance.getCountryFlag(data.code);
 				}
 			}
 			
 			override public function validateNow():void
 			{
 				super.validateNow();
-				flagImg.source = KCountriesUtil.instance.getCountryFlag(data.code);
+				flagImg.source = VCountriesUtil.instance.getCountryFlag(data.code);
 			}
 			
 			

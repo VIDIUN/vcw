@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,20 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.commands.ICommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
-	import com.kaltura.contributionWizard.events.FileReferenceEvent;
-	import com.kaltura.contributionWizard.events.ImportEvent;
-	import com.kaltura.contributionWizard.model.UploadErrorsTypes;
-	import com.kaltura.contributionWizard.model.UploadModelLocator;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.model.importData.ImportCart;
-	import com.kaltura.contributionWizard.model.importData.UploadCartStatusTypes;
-	import com.kaltura.contributionWizard.util.MediaSourceDataInjector;
-	import com.kaltura.net.PolledFileReference;
-	import com.kaltura.vo.importees.ImportFileVO;
+	import com.vidiun.contributionWizard.events.FileReferenceEvent;
+	import com.vidiun.contributionWizard.events.ImportEvent;
+	import com.vidiun.contributionWizard.model.UploadErrorsTypes;
+	import com.vidiun.contributionWizard.model.UploadModelLocator;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.importData.ImportCart;
+	import com.vidiun.contributionWizard.model.importData.UploadCartStatusTypes;
+	import com.vidiun.contributionWizard.util.MediaSourceDataInjector;
+	import com.vidiun.net.PolledFileReference;
+	import com.vidiun.vo.importees.ImportFileVO;
 	
 	import flash.net.FileFilter;
 	import flash.net.FileReference;

@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <importViews:ImportModule styleName="searchView" width="100%" height="100%"
-						  xmlns="com.kaltura.contributionWizard.view.importViews.search.*"
+						  xmlns="com.vidiun.contributionWizard.view.importViews.search.*"
 						  xmlns:mx="http://www.adobe.com/2006/mxml"
-						  xmlns:importViews="com.kaltura.contributionWizard.view.importViews.*"
-						  xmlns:searchResultsView="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.*"
-						  xmlns:controller="com.kaltura.contributionWizard.view.controller.*"
-						  xmlns:controls="com.kaltura.contributionWizard.view.importViews.search.controls.*"
-						  xmlns:utils="adobe.utils.*" xmlns:control="com.kaltura.contributionWizard.control.*"
-						  xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*"
+						  xmlns:importViews="com.vidiun.contributionWizard.view.importViews.*"
+						  xmlns:searchResultsView="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.*"
+						  xmlns:controller="com.vidiun.contributionWizard.view.controller.*"
+						  xmlns:controls="com.vidiun.contributionWizard.view.importViews.search.controls.*"
+						  xmlns:utils="adobe.utils.*" xmlns:control="com.vidiun.contributionWizard.control.*"
+						  xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*"
 						  xmlns:ac="com.adobe.ac.*">
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.importViews.search.PrivateAuthenticationScreen;
-			import com.kaltura.contributionWizard.vo.limitations.LimitationError;
-			import com.kaltura.contributionWizard.view.importViews.browser.NavigationButtonsMode;
-			import com.kaltura.contributionWizard.view.events.ImportViewCompleteEvent;
-			import com.kaltura.contributionWizard.view.events.KCWViewEvent;
+			import com.vidiun.contributionWizard.view.importViews.search.PrivateAuthenticationScreen;
+			import com.vidiun.contributionWizard.vo.limitations.LimitationError;
+			import com.vidiun.contributionWizard.view.importViews.browser.NavigationButtonsMode;
+			import com.vidiun.contributionWizard.view.events.ImportViewCompleteEvent;
+			import com.vidiun.contributionWizard.view.events.VCWViewEvent;
 			import com.bjorn.event.EventChainFactory;
 			import com.bjorn.event.ChainEvent;
 			import flash.utils.setTimeout;
 			import mx.managers.IFocusManagerComponent;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
 			import com.hurlant.crypto.symmetric.ECBMode;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.contributionWizard.events.MediaInfoEvent;
-			import com.kaltura.contributionWizard.vo.PageSearchDirection;
-			import com.kaltura.contributionWizard.events.SearchMediaEvent;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.events.MediaInfoEvent;
+			import com.vidiun.contributionWizard.vo.PageSearchDirection;
+			import com.vidiun.contributionWizard.events.SearchMediaEvent;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 			import mx.managers.PopUpManager;
 			import com.arc90.modular.CairngormEventDispatcherFactory;
 			import mx.core.Application;
 			import mx.controls.Alert;
-			import com.kaltura.contributionWizard.events.AuthMethodEvent;
-			import com.kaltura.contributionWizard.view.events.AuthenticatedSearchViewEvent;
+			import com.vidiun.contributionWizard.events.AuthMethodEvent;
+			import com.vidiun.contributionWizard.view.events.AuthenticatedSearchViewEvent;
 
 			//Start of MediaInfoViewController handlers
 			//TODO: The adult content handling should not be handled in two places

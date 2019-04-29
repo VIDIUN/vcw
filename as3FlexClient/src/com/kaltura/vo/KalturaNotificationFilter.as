@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseJobFilter;
+	import com.vidiun.vo.VidiunBaseJobFilter;
 
 	[Bindable]
-	public dynamic class KalturaNotificationFilter extends KalturaBaseJobFilter
+	public dynamic class VidiunNotificationFilter extends VidiunBaseJobFilter
 	{
 		override protected function setupPropertyList():void
 		{

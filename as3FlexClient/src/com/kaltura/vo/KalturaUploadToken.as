@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaUploadToken extends BaseFlexVo
+	public dynamic class VidiunUploadToken extends BaseFlexVo
 	{
 		public var id : String;
 		public var partnerId : int = int.MIN_VALUE;

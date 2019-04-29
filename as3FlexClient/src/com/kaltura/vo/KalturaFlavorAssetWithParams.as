@@ -1,15 +1,15 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFlavorParams;
+	import com.vidiun.vo.VidiunFlavorParams;
 
-	import com.kaltura.vo.KalturaFlavorAsset;
+	import com.vidiun.vo.VidiunFlavorAsset;
 
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaFlavorAssetWithParams extends BaseFlexVo
+	public dynamic class VidiunFlavorAssetWithParams extends BaseFlexVo
 	{
-		public var flavorAsset : KalturaFlavorAsset;
-		public var flavorParams : KalturaFlavorParams;
+		public var flavorAsset : VidiunFlavorAsset;
+		public var flavorParams : VidiunFlavorParams;
 		public var entryId : String;
 		override protected function setupPropertyList():void
 		{

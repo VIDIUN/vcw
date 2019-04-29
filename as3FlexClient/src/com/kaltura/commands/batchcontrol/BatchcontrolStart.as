@@ -1,9 +1,9 @@
-package com.kaltura.commands.batchcontrol
+package com.vidiun.commands.batchcontrol
 {
-	import com.kaltura.delegates.batchcontrol.BatchcontrolStartDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.batchcontrol.BatchcontrolStartDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BatchcontrolStart extends KalturaCall
+	public class BatchcontrolStart extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BatchcontrolStart( schedulerId : int,schedulerName : String,targetType : int,adminId : int,adminName : String,workerId : int,workerName : String,cause : String='' )

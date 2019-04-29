@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.model
+package com.vidiun.contributionWizard.model
 {
 	[Bindable]
 	public class ExternalUrls
@@ -30,7 +30,7 @@ package com.kaltura.contributionWizard.model
 		/**
 		 * url of terms of use document
 		 */
-		public var termsOfUseUrl:String = "http://corp.kaltura.com/tandc";
+		public var termsOfUseUrl:String = "http://corp.vidiun.com/tandc";
 		
 		public var startupPreloaderUrl:String;
 

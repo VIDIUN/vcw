@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseRestriction;
+	import com.vidiun.vo.VidiunBaseRestriction;
 
 	[Bindable]
-	public dynamic class KalturaDirectoryRestriction extends KalturaBaseRestriction
+	public dynamic class VidiunDirectoryRestriction extends VidiunBaseRestriction
 	{
 		public var directoryRestrictionType : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

@@ -1,9 +1,9 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.media.MediaDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaDelete extends KalturaCall
+	public class MediaDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MediaDelete( entryId : String )

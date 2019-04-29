@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadata
+package com.vidiun.commands.metadata
 {
-	import com.kaltura.delegates.metadata.MetadataAddFromBulkDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadata.MetadataAddFromBulkDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataAddFromBulk extends KalturaCall
+	public class MetadataAddFromBulk extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataAddFromBulk( metadataProfileId : int,objectType : int,objectId : String,url : String )

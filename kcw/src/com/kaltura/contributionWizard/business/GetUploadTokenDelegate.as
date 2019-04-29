@@ -1,10 +1,10 @@
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
-	import com.kaltura.commands.uploadToken.UploadTokenGet;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.vo.KalturaUploadToken;
-	import com.kaltura.vo.importees.ImportFileVO;
+	import com.vidiun.commands.uploadToken.UploadTokenGet;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.events.VidiunEvent;
+	import com.vidiun.vo.VidiunUploadToken;
+	import com.vidiun.vo.importees.ImportFileVO;
 	
 	import mx.rpc.IResponder;
 	
@@ -36,8 +36,8 @@ package com.kaltura.contributionWizard.business
 		{
 			if (_model.importData.importCart.currentlyProcessedImportVo is ImportFileVO) {
 				var getUpload:UploadTokenGet = new UploadTokenGet(ImportFileVO(_model.importData.importCart.currentlyProcessedImportVo).token);
-				getUpload.addEventListener(KalturaEvent.COMPLETE, result);
-				getUpload.addEventListener(KalturaEvent.FAILED, fault);
+				getUpload.addEventListener(VidiunEvent.COMPLETE, result);
+				getUpload.addEventListener(VidiunEvent.FAILED, fault);
 				_model.context.kc.post(getUpload);
 			}
 		}
@@ -62,7 +62,7 @@ package com.kaltura.contributionWizard.business
 		public function result(data:Object):void
 		{
 			if (data.data)
-				responder.result( data.data as KalturaUploadToken);		
+				responder.result( data.data as VidiunUploadToken);		
 		}
 	}
 }

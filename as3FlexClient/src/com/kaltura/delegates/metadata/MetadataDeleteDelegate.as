@@ -1,12 +1,12 @@
-package com.kaltura.delegates.metadata
+package com.vidiun.delegates.metadata
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class MetadataDeleteDelegate extends WebDelegateBase
 	{
-		public function MetadataDeleteDelegate(call:KalturaCall, config:KalturaConfig)
+		public function MetadataDeleteDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

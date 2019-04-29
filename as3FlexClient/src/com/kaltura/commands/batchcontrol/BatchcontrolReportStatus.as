@@ -1,9 +1,9 @@
-package com.kaltura.commands.batchcontrol
+package com.vidiun.commands.batchcontrol
 {
-	import com.kaltura.delegates.batchcontrol.BatchcontrolReportStatusDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.batchcontrol.BatchcontrolReportStatusDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BatchcontrolReportStatus extends KalturaCall
+	public class BatchcontrolReportStatus extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BatchcontrolReportStatus( schedulerConfigId : int,schedulerName : String,schedulerStatuses : Array )

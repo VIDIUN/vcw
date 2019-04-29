@@ -1,9 +1,9 @@
-package com.kaltura.commands.accessControl
+package com.vidiun.commands.accessControl
 {
-	import com.kaltura.delegates.accessControl.AccessControlDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.accessControl.AccessControlDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AccessControlDelete extends KalturaCall
+	public class AccessControlDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function AccessControlDelete( id : int )

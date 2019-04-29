@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaSearchItem;
+	import com.vidiun.vo.VidiunSearchItem;
 
 	[Bindable]
-	public dynamic class KalturaSearchOperator extends KalturaSearchItem
+	public dynamic class VidiunSearchOperator extends VidiunSearchItem
 	{
 		public var type : int = int.MIN_VALUE;
 		public var items : Array = new Array();

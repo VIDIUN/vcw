@@ -17,11 +17,11 @@ package com.hurlant.crypto.symmetric
 	public class XTeaKey implements ISymmetricKey
 	{
 		public const NUM_ROUNDS:uint = 64;	
-		private var k:Array;
+		private var v:Array;
 
 		public function XTeaKey(a:ByteArray) {
 			a.position=0;
-			k = [a.readUnsignedInt(),a.readUnsignedInt(),a.readUnsignedInt(),a.readUnsignedInt()];
+			v = [a.readUnsignedInt(),a.readUnsignedInt(),a.readUnsignedInt(),a.readUnsignedInt()];
 		}
 		/**
 		 * K is an hex string with 32 digits.
@@ -48,9 +48,9 @@ package com.hurlant.crypto.symmetric
 			var sum:uint =0;
 			var delta:uint = 0x9E3779B9;
 			for (i=0; i<NUM_ROUNDS; i++) {
-				v0 += (((v1 << 4) ^ (v1 >> 5)) + v1) ^ (sum + k[sum & 3]);
+				v0 += (((v1 << 4) ^ (v1 >> 5)) + v1) ^ (sum + v[sum & 3]);
 				sum += delta;
-		        v1 += (((v0 << 4) ^ (v0 >> 5)) + v0) ^ (sum + k[(sum>>11) & 3]);
+		        v1 += (((v0 << 4) ^ (v0 >> 5)) + v0) ^ (sum + v[(sum>>11) & 3]);
 			}
 			block.position-=8;
 			block.writeUnsignedInt(v0);
@@ -65,9 +65,9 @@ package com.hurlant.crypto.symmetric
 			var delta:uint = 0x9E3779B9;
 			var sum:uint = delta*NUM_ROUNDS;
 			for (i=0; i<NUM_ROUNDS; i++) {
-				v1 -= (((v0 << 4) ^ (v0 >> 5)) + v0) ^ (sum + k[(sum>>11) & 3]);
+				v1 -= (((v0 << 4) ^ (v0 >> 5)) + v0) ^ (sum + v[(sum>>11) & 3]);
 				sum -= delta;
-				v0 -= (((v1 << 4) ^ (v1 >> 5)) + v1) ^ (sum + k[sum & 3]);
+				v0 -= (((v1 << 4) ^ (v1 >> 5)) + v1) ^ (sum + v[sum & 3]);
 			}
 			block.position-=8;
 			block.writeUnsignedInt(v0);
@@ -75,13 +75,13 @@ package com.hurlant.crypto.symmetric
 		}
 
 		public function dispose():void {
-			//private var k:Array;
+			//private var v:Array;
 			var r:Random = new Random;
-			for (var i:uint=0;i<k.length;i++) {
-				k[i] = r.nextByte();
-				delete k[i];
+			for (var i:uint=0;i<v.length;i++) {
+				v[i] = r.nextByte();
+				delete v[i];
 			}
-			k = null;
+			v = null;
 			Memory.gc();
 		}
 

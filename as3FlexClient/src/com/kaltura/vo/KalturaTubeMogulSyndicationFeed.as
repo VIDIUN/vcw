@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseSyndicationFeed;
+	import com.vidiun.vo.VidiunBaseSyndicationFeed;
 
 	[Bindable]
-	public dynamic class KalturaTubeMogulSyndicationFeed extends KalturaBaseSyndicationFeed
+	public dynamic class VidiunTubeMogulSyndicationFeed extends VidiunBaseSyndicationFeed
 	{
 		public var category : String;
 		override protected function setupPropertyList():void

@@ -275,7 +275,7 @@ package com.serialization.json
         };
 		
         _object = function ():* {
-            var k:* = {} ;
+            var v:* = {} ;
             var o:* = {} ;
             if (ch == '{') {
                 
@@ -291,14 +291,14 @@ package com.serialization.json
                 
                 while (ch) 
                 {
-                    k = _string();
+                    v = _string();
                     _white();
                     if (ch != ':') 
                     {
                         break;
                     }
                     _next();
-                    o[k] = _value();
+                    o[v] = _value();
                     _white();
                     if (ch == '}') {
                         _next();

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaAudioCodec
+	public class VidiunAudioCodec
 	{
 		public static const NONE : String = '';
 		public static const MP3 : String = 'mp3';

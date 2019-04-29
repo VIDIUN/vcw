@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.view.importViews.soundRecorder.view
+package com.vidiun.contributionWizard.view.importViews.soundRecorder.view
 {
 	import flash.display.Graphics;
 	import flash.display.Sprite;

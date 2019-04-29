@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -22,15 +22,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @ignore
 */
 -->
-<core:KApplication backgroundColor="0x000000" preloader="com.kaltura.preloaders.KPreloader" layout="absolute"
+<core:VApplication backgroundColor="0x000000" preloader="com.vidiun.preloaders.VPreloader" layout="absolute"
 				   width="100%" height="100%" horizontalAlign="center" verticalAlign="middle" frameRate="40"
-				   implements="com.kaltura.contributionWizard.IContributionWizard"
+				   implements="com.vidiun.contributionWizard.IContributionWizard"
 				   creationComplete="onCreationComplete()" 
-				   xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="com.kaltura.core.*"
-				   xmlns:control="com.kaltura.contributionWizard.control.*"
-				   xmlns:business="com.kaltura.contributionWizard.business.*"
-				   xmlns:introView="com.kaltura.contributionWizard.view.*"
-				   xmlns:pending="com.kaltura.contributionWizard.view.pending.*">
+				   xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="com.vidiun.core.*"
+				   xmlns:control="com.vidiun.contributionWizard.control.*"
+				   xmlns:business="com.vidiun.contributionWizard.business.*"
+				   xmlns:introView="com.vidiun.contributionWizard.view.*"
+				   xmlns:pending="com.vidiun.contributionWizard.view.pending.*">
 
 	<mx:Metadata>
 		[ResourceBundle("Errors")] 
@@ -54,26 +54,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		<![CDATA[
 			import com.bjorn.event.ChainEvent;
 			import com.bjorn.event.EventChainFactory;
-			import com.kaltura.KalturaClient;
-			import com.kaltura.config.KalturaConfig;
-			import com.kaltura.contributionWizard.IContributionWizard;
-			import com.kaltura.contributionWizard.events.GotoScreenEvent;
-			import com.kaltura.contributionWizard.events.LoadUIEvent;
-			import com.kaltura.contributionWizard.events.NotifyShellEvent;
-			import com.kaltura.contributionWizard.events.ReportErrorEvent;
-			import com.kaltura.contributionWizard.events.SaveInjectedDataEvent;
-			import com.kaltura.contributionWizard.events.SetDefaultScreenEvent;
-			import com.kaltura.contributionWizard.events.ValidateLimitationsEvent;
-			import com.kaltura.contributionWizard.events.WizardConfigEvent;
-			import com.kaltura.contributionWizard.model.Context;
-			import com.kaltura.contributionWizard.model.ExternalFunctionIds;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.contributionWizard.model.limitations.Utils;
-			import com.kaltura.contributionWizard.vo.ErrorVO;
-			import com.kaltura.contributionWizard.vo.ImportScreenVO;
-			import com.kaltura.contributionWizard.vo.limitations.LimitationsVO;
-			import com.kaltura.utils.KUtils;
-			import com.kaltura.utils.ObjectHelpers;
+			import com.vidiun.VidiunClient;
+			import com.vidiun.config.VidiunConfig;
+			import com.vidiun.contributionWizard.IContributionWizard;
+			import com.vidiun.contributionWizard.events.GotoScreenEvent;
+			import com.vidiun.contributionWizard.events.LoadUIEvent;
+			import com.vidiun.contributionWizard.events.NotifyShellEvent;
+			import com.vidiun.contributionWizard.events.ReportErrorEvent;
+			import com.vidiun.contributionWizard.events.SaveInjectedDataEvent;
+			import com.vidiun.contributionWizard.events.SetDefaultScreenEvent;
+			import com.vidiun.contributionWizard.events.ValidateLimitationsEvent;
+			import com.vidiun.contributionWizard.events.WizardConfigEvent;
+			import com.vidiun.contributionWizard.model.Context;
+			import com.vidiun.contributionWizard.model.ExternalFunctionIds;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.limitations.Utils;
+			import com.vidiun.contributionWizard.vo.ErrorVO;
+			import com.vidiun.contributionWizard.vo.ImportScreenVO;
+			import com.vidiun.contributionWizard.vo.limitations.LimitationsVO;
+			import com.vidiun.utils.VUtils;
+			import com.vidiun.utils.ObjectHelpers;
 
 			import flash.utils.setTimeout;
 
@@ -94,7 +94,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			import mx.utils.URLUtil;
 
 			public static var myVersion:String = "2.2.6";
-			public static var CLIENT_TAG:String = "kcw:" + myVersion;
+			public static var CLIENT_TAG:String = "vcw:" + myVersion;
 			public static const DEFAULT_PROTOCOL:String = "http";
 
 			private var _model:WizardModelLocator = WizardModelLocator.getInstance();
@@ -108,22 +108,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 			/**
 			 * A set of parameters that defines the essential environmental information
-			 * for the contribution wizard to work with kaltura services
+			 * for the contribution wizard to work with vidiun services
 			 *
 			 * defaultMediaType - 	An optional parameter, that indicates the default media type screen to show at startup.
 			 * 						The media type is given as a string (e.g. "image", "video", "audio").
 			 *
 			 * defaultMediaProviderName - An optional parameter, that indicates the default selected media provider.
-			 * 							The provider is given as the provider name, e.g "kaltura".
+			 * 							The provider is given as the provider name, e.g "vidiun".
 			 * isAnonymous
-			 * sessionId - KS
+			 * sessionId - VS
 			 * partnerId - partner id
-			 * host - host URL (www.kaltura.com)
+			 * host - host URL (www.vidiun.com)
 			 * terms_of_use
 			 * quick_edit - If false, entries are automatically added to the roughcut end, otherwise, entries will not be automatically added to the roughcut
 			 *
-			 * userId - Deprecated in PS3 (KCW 2.0 and above)
-			 * kshow_id - Deprecated in PS3 (KCW 2.0 and above)
+			 * userId - Deprecated in PS3 (VCW 2.0 and above)
+			 * vshow_id - Deprecated in PS3 (VCW 2.0 and above)
 			 **/
 			public function setParameters(parameters:Object):void {
 				if (_params.protocol)
@@ -195,10 +195,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 				var customContextMenu:ContextMenu = new ContextMenu();
 				customContextMenu.hideBuiltInItems();
-				var menuItem:ContextMenuItem = new ContextMenuItem("kcw version: " + myVersion);
+				var menuItem:ContextMenuItem = new ContextMenuItem("vcw version: " + myVersion);
 
 				//hide the Flash menu
-				var credits:ContextMenuItem = new ContextMenuItem("About Kaltura's Open Source Media Uploader");
+				var credits:ContextMenuItem = new ContextMenuItem("About Vidiun's Open Source Media Uploader");
 				credits.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onCreditClick);
 
 				customContextMenu.customItems.push(credits);
@@ -227,11 +227,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 			private function setConfiguration(params:Object):void {
-				var configuration:KalturaConfig = new KalturaConfig();
+				var configuration:VidiunConfig = new VidiunConfig();
 				configuration.partnerId = params.partnerid;
 				configuration.clientTag = CLIENT_TAG;
 				var protocol:String = (params.protocol) ? params.protocol : (DEFAULT_PROTOCOL + "://");
-				configuration.domain = protocol + KUtils.hostFromCode(params.host); //"http://kaldev.kaltura.com";
+				configuration.domain = protocol + VUtils.hostFromCode(params.host); //"http://viddev.vidiun.com";
 				if (params.srvurl)
 					configuration.srvUrl = params.srvurl;
 				else
@@ -239,11 +239,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 				_model.categoriesRootId = params.categoriesrootid;
 				_model.additionalField = params.additionalfield;
-				_model.context.kc = new KalturaClient(configuration);
-				if (params.ks)
-					_model.context.kc.ks = params.ks;
+				_model.context.kc = new VidiunClient(configuration);
+				if (params.vs)
+					_model.context.kc.vs = params.vs;
 				else
-					_model.context.kc.ks = params.sessionid
+					_model.context.kc.vs = params.sessionid
 			}
 
 
@@ -265,7 +265,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 			private function onCreditClick(evt:ContextMenuEvent):void {
-				var urlRequest:URLRequest = new URLRequest("http://corp.kaltura.com/technology/content_ingestion");
+				var urlRequest:URLRequest = new URLRequest("http://corp.vidiun.com/technology/content_ingestion");
 				try {
 					navigateToURL(urlRequest, "_blank");
 				}
@@ -355,4 +355,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 						width="100%" height="100%"/>
 
 	<pending:PendingManager/>
-</core:KApplication>
+</core:VApplication>

@@ -793,8 +793,8 @@ The copyrights embodied in the content of this file are licensed under the BSD (
 					var curRequired : Boolean = false;
 					if(curData["required"] is Array) {
 						var reqLeng : int = curData["required"].length;
-						for (var k : int = 0;k < reqLeng; k++) {
-							var temp : Boolean = Boolean(curData["required"][k] as Boolean);
+						for (var v : int = 0;v < reqLeng; v++) {
+							var temp : Boolean = Boolean(curData["required"][v] as Boolean);
 							curRequired ||= temp;
 						}
 					} else if(curData["required"] is String) {

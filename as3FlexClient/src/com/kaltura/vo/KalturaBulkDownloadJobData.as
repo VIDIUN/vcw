@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaBulkDownloadJobData extends KalturaJobData
+	public dynamic class VidiunBulkDownloadJobData extends VidiunJobData
 	{
 		public var entryIds : String;
 		public var flavorParamsId : int = int.MIN_VALUE;

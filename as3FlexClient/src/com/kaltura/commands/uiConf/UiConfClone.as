@@ -1,9 +1,9 @@
-package com.kaltura.commands.uiConf
+package com.vidiun.commands.uiConf
 {
-	import com.kaltura.delegates.uiConf.UiConfCloneDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.uiConf.UiConfCloneDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UiConfClone extends KalturaCall
+	public class UiConfClone extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UiConfClone( id : int )

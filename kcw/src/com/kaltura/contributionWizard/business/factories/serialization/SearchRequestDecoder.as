@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,10 +20,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.business.factories.serialization
+package com.vidiun.contributionWizard.business.factories.serialization
 {
 	import com.adobe.cairngorm.vo.IValueObject;
-	import com.kaltura.contributionWizard.vo.SearchMediaRequestVO;
+	import com.vidiun.contributionWizard.vo.SearchMediaRequestVO;
 
 	import flash.net.URLVariables;
 
@@ -62,7 +62,7 @@ package com.kaltura.contributionWizard.business.factories.serialization
 			urlVars["search:mediaType"] 	= searchMediaRequestVO.mediaProviderVo.mediaInfo.mediaCode;
 			if (searchMediaRequestVO.mediaProviderVo.providerCode)
 			{
-				//when the server is not kaltura server, the media source is redundant
+				//when the server is not vidiun server, the media source is redundant
 				urlVars["search:searchSource"] = searchMediaRequestVO.mediaProviderVo.providerCode;
 			}
 			var authData:String = searchMediaRequestVO.mediaProviderVo.authMethodList.activeMethod.key || searchMediaRequestVO.mediaProviderVo.authMethodList.activeMethod.externalAuthUrl;

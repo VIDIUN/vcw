@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFlavorParamsFilter;
+	import com.vidiun.vo.VidiunFlavorParamsFilter;
 
 	[Bindable]
-	public dynamic class KalturaFlavorParamsOutputFilter extends KalturaFlavorParamsFilter
+	public dynamic class VidiunFlavorParamsOutputFilter extends VidiunFlavorParamsFilter
 	{
 		public var flavorParamsIdEqual : int = int.MIN_VALUE;
 		public var flavorParamsVersionEqual : String;

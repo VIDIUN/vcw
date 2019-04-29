@@ -1,27 +1,27 @@
-package com.kaltura.commands.metadata
+package com.vidiun.commands.metadata
 {
-	import com.kaltura.vo.KalturaMetadataFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.metadata.MetadataListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMetadataFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.metadata.MetadataListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataList extends KalturaCall
+	public class MetadataList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MetadataList( filter : KalturaMetadataFilter=null,pager : KalturaFilterPager=null )
+		public function MetadataList( filter : VidiunMetadataFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaMetadataFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunMetadataFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'metadata_metadata';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

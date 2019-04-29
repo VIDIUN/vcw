@@ -1,12 +1,12 @@
-package com.kaltura.delegates.flavorAsset
+package com.vidiun.delegates.flavorAsset
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class FlavorAssetReconvertDelegate extends WebDelegateBase
 	{
-		public function FlavorAssetReconvertDelegate(call:KalturaCall, config:KalturaConfig)
+		public function FlavorAssetReconvertDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

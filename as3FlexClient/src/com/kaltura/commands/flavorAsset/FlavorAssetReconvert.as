@@ -1,9 +1,9 @@
-package com.kaltura.commands.flavorAsset
+package com.vidiun.commands.flavorAsset
 {
-	import com.kaltura.delegates.flavorAsset.FlavorAssetReconvertDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.flavorAsset.FlavorAssetReconvertDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorAssetReconvert extends KalturaCall
+	public class FlavorAssetReconvert extends VidiunCall
 	{
 		public var filterFields : String;
 		public function FlavorAssetReconvert( id : String )

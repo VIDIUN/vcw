@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaMediaEntryOrderBy
+	public class VidiunMediaEntryOrderBy
 	{
 		public static const MEDIA_TYPE_ASC : String = '+mediaType';
 		public static const MEDIA_TYPE_DESC : String = '-mediaType';

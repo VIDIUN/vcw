@@ -1,26 +1,26 @@
-package com.kaltura.commands.search
+package com.vidiun.commands.search
 {
-	import com.kaltura.vo.KalturaSearch;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.search.SearchSearchDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunSearch;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.search.SearchSearchDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SearchSearch extends KalturaCall
+	public class SearchSearch extends VidiunCall
 	{
 		public var filterFields : String;
-		public function SearchSearch( search : KalturaSearch,pager : KalturaFilterPager=null )
+		public function SearchSearch( search : VidiunSearch,pager : VidiunFilterPager=null )
 		{
-			if(pager== null)pager= new KalturaFilterPager();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'search';
 			action= 'search';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(search,'search');
+ 			keyValArr = vidiunObject2Arrays(search,'search');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

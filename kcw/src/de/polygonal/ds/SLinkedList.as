@@ -75,7 +75,7 @@ package de.polygonal.ds
 		 */
 		public function append(...args):SListNode
 		{
-			var k:int = args.length;
+			var v:int = args.length;
 			
 			var node:SListNode = new SListNode(args[0]);
 			if (head)
@@ -86,16 +86,16 @@ package de.polygonal.ds
 			else
 				head = tail = node;
 			
-			if (k > 1)
+			if (v > 1)
 			{
 				var t:SListNode = node;
-				for (var i:int = 1; i < k; i++)
+				for (var i:int = 1; i < v; i++)
 				{
 					node = new SListNode(args[i]);
 					tail.next = node;
 					tail = node;
 				}
-				_count += k;
+				_count += v;
 				return t;
 			}
 			
@@ -112,8 +112,8 @@ package de.polygonal.ds
 		 */
 		public function prepend(...args):SListNode
 		{
-			var k:int = args.length;
-			var node:SListNode = new SListNode(args[int(k - 1)]);
+			var v:int = args.length;
+			var node:SListNode = new SListNode(args[int(v - 1)]);
 			if (head)
 			{
 				node.next = head;
@@ -122,16 +122,16 @@ package de.polygonal.ds
 			else
 				head = tail = node;
 			
-			if (k > 1)
+			if (v > 1)
 			{
 				var t:SListNode = node;
-				for (var i:int = k - 2; i >= 0; i--)
+				for (var i:int = v - 2; i >= 0; i--)
 				{
 					node = new SListNode(args[i]);
 					node.next = head;
 					head = node;
 				}
-				_count += k;
+				_count += v;
 				return t;
 			}
 			
@@ -283,8 +283,8 @@ package de.polygonal.ds
 				tail = a.tail;
 			}
 			
-			var k:int = args.length;
-			for (var i:int = 1; i < k; i++)
+			var v:int = args.length;
+			for (var i:int = 1; i < v; i++)
 			{
 				a = args[i];
 				tail.next = a.head;
@@ -315,8 +315,8 @@ package de.polygonal.ds
 				c.append(n.data);
 				n = n.next;
 			}
-			var k:int = args.length;
-			for (var i:int = 0; i < k; i++)
+			var v:int = args.length;
+			for (var i:int = 0; i < v; i++)
 			{
 				a = args[i];
 				n = a.head;
@@ -488,7 +488,7 @@ package de.polygonal.ds
 					t = t.next;
 					
 				var c:SLinkedList = new SLinkedList();
-				var i:int, k:int;
+				var i:int, v:int;
 				
 				if (deleteCount == 0xffffffff)
 				{
@@ -516,12 +516,12 @@ package de.polygonal.ds
 					}
 				}
 				
-				k = args.length;
-				if (k > 0)
+				v = args.length;
+				if (v > 0)
 				{
 					if (_count == 0)
 					{
-						for (i = 0; i < k; i++)
+						for (i = 0; i < v; i++)
 							append(args[i]);
 					}
 					else
@@ -530,7 +530,7 @@ package de.polygonal.ds
 						if (t == null)
 						{
 							n = prepend(args[0]);
-							for (i = 1; i < k; i++)
+							for (i = 1; i < v; i++)
 							{
 								n.insertAfter(new SListNode(args[i]));
 								if (n == tail) tail = n.next;
@@ -541,7 +541,7 @@ package de.polygonal.ds
 						else
 						{
 							n = t;
-							for (i = 0; i < k; i++)
+							for (i = 0; i < v; i++)
 							{
 								n.insertAfter(new SListNode(args[i]));
 								if (n == tail) tail = n.next;

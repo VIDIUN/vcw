@@ -1,9 +1,9 @@
-package com.kaltura.commands.systemUser
+package com.vidiun.commands.systemUser
 {
-	import com.kaltura.delegates.systemUser.SystemUserGenerateNewPasswordDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.systemUser.SystemUserGenerateNewPasswordDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemUserGenerateNewPassword extends KalturaCall
+	public class SystemUserGenerateNewPassword extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemUserGenerateNewPassword(  )

@@ -1,13 +1,13 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.vo.KalturaMediaInfo;
-	import com.kaltura.delegates.metadataBatch.MetadataBatchAddMediaInfoDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMediaInfo;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchAddMediaInfoDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchAddMediaInfo extends KalturaCall
+	public class MetadataBatchAddMediaInfo extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MetadataBatchAddMediaInfo( mediaInfo : KalturaMediaInfo )
+		public function MetadataBatchAddMediaInfo( mediaInfo : VidiunMediaInfo )
 		{
 			service= 'metadata_metadatabatch';
 			action= 'addMediaInfo';
@@ -15,7 +15,7 @@ package com.kaltura.commands.metadataBatch
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(mediaInfo,'mediaInfo');
+ 			keyValArr = vidiunObject2Arrays(mediaInfo,'mediaInfo');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

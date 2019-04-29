@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaSystemPartnerConfiguration extends BaseFlexVo
+	public dynamic class VidiunSystemPartnerConfiguration extends BaseFlexVo
 	{
 		public var host : String;
 		public var cdnHost : String;
@@ -11,9 +11,9 @@ package com.kaltura.vo
 		public var liveStreamEnabled : Boolean;
 		public var moderateContent : Boolean;
 		public var rtmpUrl : String;
-		public var storageDeleteFromKaltura : Boolean;
+		public var storageDeleteFromVidiun : Boolean;
 		public var storageServePriority : int = int.MIN_VALUE;
-		public var kmcVersion : int = int.MIN_VALUE;
+		public var vmcVersion : int = int.MIN_VALUE;
 		public var enableAnalyticsTab : Boolean;
 		public var enableSilverLight : Boolean;
 		override protected function setupPropertyList():void
@@ -26,9 +26,9 @@ package com.kaltura.vo
 			propertyList.push('liveStreamEnabled');
 			propertyList.push('moderateContent');
 			propertyList.push('rtmpUrl');
-			propertyList.push('storageDeleteFromKaltura');
+			propertyList.push('storageDeleteFromVidiun');
 			propertyList.push('storageServePriority');
-			propertyList.push('kmcVersion');
+			propertyList.push('vmcVersion');
 			propertyList.push('enableAnalyticsTab');
 			propertyList.push('enableSilverLight');
 		}
@@ -43,9 +43,9 @@ package com.kaltura.vo
 			arr.push('liveStreamEnabled');
 			arr.push('moderateContent');
 			arr.push('rtmpUrl');
-			arr.push('storageDeleteFromKaltura');
+			arr.push('storageDeleteFromVidiun');
 			arr.push('storageServePriority');
-			arr.push('kmcVersion');
+			arr.push('vmcVersion');
 			arr.push('enableAnalyticsTab');
 			arr.push('enableSilverLight');
 			return arr;
@@ -62,9 +62,9 @@ package com.kaltura.vo
 			arr.push('liveStreamEnabled');
 			arr.push('moderateContent');
 			arr.push('rtmpUrl');
-			arr.push('storageDeleteFromKaltura');
+			arr.push('storageDeleteFromVidiun');
 			arr.push('storageServePriority');
-			arr.push('kmcVersion');
+			arr.push('vmcVersion');
 			arr.push('enableAnalyticsTab');
 			arr.push('enableSilverLight');
 			return arr;

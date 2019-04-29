@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,17 +20,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
 	import com.adobe_cw.adobe.cairngorm.business.ServiceLocator;
-	import com.kaltura.contributionWizard.business.factories.serialization.EntriesURLVarsFactory;
-	import com.kaltura.contributionWizard.model.Context;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.CreditsVO;
-	import com.kaltura.contributionWizard.vo.PartnerNotificationVO;
-	import com.kaltura.net.TemplateURLVariables;
-	import com.kaltura.utils.PathUtil;
-	import com.kaltura.vo.importees.ImportFileVO;
+	import com.vidiun.contributionWizard.business.factories.serialization.EntriesURLVarsFactory;
+	import com.vidiun.contributionWizard.model.Context;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.CreditsVO;
+	import com.vidiun.contributionWizard.vo.PartnerNotificationVO;
+	import com.vidiun.net.TemplateURLVariables;
+	import com.vidiun.utils.PathUtil;
+	import com.vidiun.vo.importees.ImportFileVO;
 	
 	import flash.net.URLRequest;
 	import flash.net.URLVariables;
@@ -162,7 +162,7 @@ package com.kaltura.contributionWizard.business
 			trace(stackTrace);
 			var urlVars:URLVariables = new URLVariables();
 
-			urlVars.reporting_obj	= "kcw";
+			urlVars.reporting_obj	= "vcw";
 			urlVars.error_code		= "1";
 			urlVars.error_description = "AddEntriesDelegate.fault() stack trace:\n\n" + stackTrace;
 			var url:String = PathUtil.getAbsoluteUrl(_model.context.protocol + _model.context.hostName, "/index.php/partnerservices2/reporterror");
@@ -175,9 +175,9 @@ package com.kaltura.contributionWizard.business
 		{
 	   		var urlVars:URLVariables = EntriesURLVarsFactory.createURLVars(context, importItemsToAdd);
 	   		
-	   		for (var key:String in _model.context.injectedKVars)
+	   		for (var key:String in _model.context.injectedVVars)
 	   		{
-	   			urlVars[key] = _model.context.injectedKVars[key];
+	   			urlVars[key] = _model.context.injectedVVars[key];
 	   		}
 	   		
 	   		if (creditsVo)

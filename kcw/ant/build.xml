@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<project name="KMC Compiler" basedir="./.." default="build">
+<project name="VMC Compiler" basedir="./.." default="build">
 	
 	<!-- path to Flex SDK -->
     <property name="FLEX_HOME" value="C:/Program Files (x86)/Adobe/Adobe Flash Builder 4.5/sdks/3.5.0"/>
 	
 	<!-- directory for the compiled swf -->
     <property name="DEPLOY_DIR" value="${basedir}/bin-release"/>
-    <property name="STYLE_DEPLOY_DIR" value="${basedir}/../kcwStyleProject/bin-release"/>
+    <property name="STYLE_DEPLOY_DIR" value="${basedir}/../vcwStyleProject/bin-release"/>
 	
-	<property name="KCW_VERSION" value="v2.2.3"/>
+	<property name="VCW_VERSION" value="v2.2.3"/>
 	
-    <property name="PACK_DEPLOY_DIR" value="${basedir}/../${KCW_VERSION}"/>
+    <property name="PACK_DEPLOY_DIR" value="${basedir}/../${VCW_VERSION}"/>
 	
 	<!-- include flex tasks -->
 	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
@@ -19,14 +19,14 @@
 	<!--  -->
 	<target name="build" description="general build" depends="clean, init, compile_locales, compile, pack">
 		<length property="length" mode="each">
-		    <fileset dir="${basedir}/../${KCW_VERSION}" >
+		    <fileset dir="${basedir}/../${VCW_VERSION}" >
 				<!--exclude name="**/locale/**"/-->
 				<include name="**/*.swf"/>
 			</fileset>
 		</length>
 		<echo>${length}</echo>
 
-		<echo>WOOHOO! KCW is ready!</echo>
+		<echo>WOOHOO! VCW is ready!</echo>
 	</target>
 	
 	<target name="compile_locales" description="compile locale files" >
@@ -35,11 +35,11 @@
 		</ant> 
 	</target>
 	
-	<target name="compile" description="compile release build of kcw and kcwStyleProject">
-		<fb.exportReleaseBuild project="kcw" destDir="${DEPLOY_DIR}" /> 
-		<echo>kcw release build created</echo>
-		<fb.exportReleaseBuild project="kcwStyleProject" destDir="${STYLE_DEPLOY_DIR}" /> 
-		<echo>kcwStyleProject release build created</echo>
+	<target name="compile" description="compile release build of vcw and vcwStyleProject">
+		<fb.exportReleaseBuild project="vcw" destDir="${DEPLOY_DIR}" /> 
+		<echo>vcw release build created</echo>
+		<fb.exportReleaseBuild project="vcwStyleProject" destDir="${STYLE_DEPLOY_DIR}" /> 
+		<echo>vcwStyleProject release build created</echo>
 	</target>
 			
 	<target name="pack" description="copy all version files to version folder">

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -25,22 +25,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <mx:ViewStack
 	creationComplete="init()"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:tile="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.tile.*"
-	xmlns:visualMedia="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.visualMedia.*"
-	xmlns:audio="com.kaltura.contributionWizard.view.importViews.search.searchResultsView.audio.*" xmlns:ac="com.adobe.ac.*">
+	xmlns:tile="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.tile.*"
+	xmlns:visualMedia="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.visualMedia.*"
+	xmlns:audio="com.vidiun.contributionWizard.view.importViews.search.searchResultsView.audio.*" xmlns:ac="com.adobe.ac.*">
 	<mx:Script>
 		<![CDATA[
 			import mx.controls.SWFLoader;
 			import mx.rpc.events.ResultEvent;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 			import com.arc90.modular.CairngormEventDispatcherFactory;
 			import mx.controls.listClasses.ListBase;
 			import mx.collections.IList;
 			import mx.core.Container;
-			import com.kaltura.contributionWizard.model.MediaTypes;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.vo.importees.ImportURLVO;
-			import com.kaltura.contributionWizard.events.ImportEvent;
+			import com.vidiun.contributionWizard.model.MediaTypes;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.vo.importees.ImportURLVO;
+			import com.vidiun.contributionWizard.events.ImportEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
 
 			[Bindable]

@@ -33,8 +33,8 @@ package com.hurlant.crypto.tests
  			for (var i:uint=0;i<32;i++) {
  				key[i]=i;
  			}
-			var k:AESKey = new AESKey(key);
-			assert("128bit block size", k.getBlockSize()==16);
+			var v:AESKey = new AESKey(key);
+			assert("128bit block size", v.getBlockSize()==16);
 		}
 		
 		/**

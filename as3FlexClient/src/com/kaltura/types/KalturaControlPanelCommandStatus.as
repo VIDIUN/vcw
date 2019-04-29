@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaControlPanelCommandStatus
+	public class VidiunControlPanelCommandStatus
 	{
 		public static const PENDING : int = 1;
 		public static const HANDLED : int = 2;

@@ -1,12 +1,12 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBatchJob;
+	import com.vidiun.vo.VidiunBatchJob;
 
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaFreeJobResponse extends BaseFlexVo
+	public dynamic class VidiunFreeJobResponse extends BaseFlexVo
 	{
-		public var job : KalturaBatchJob;
+		public var job : VidiunBatchJob;
 		public var jobType : int = int.MIN_VALUE;
 		public var queueSize : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

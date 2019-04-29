@@ -127,11 +127,11 @@ package com.adobe.images
 			var codevalue:int = 0;
 			var pos_in_table:int = 0;
 			var HT:Array = new Array();
-			for (var k:int=1; k<=16; k++) {
-				for (var j:int=1; j<=nrcodes[k]; j++) {
+			for (var v:int=1; v<=16; v++) {
+				for (var j:int=1; j<=nrcodes[v]; j++) {
 					HT[std_table[pos_in_table]] = new BitString();
 					HT[std_table[pos_in_table]].val = codevalue;
-					HT[std_table[pos_in_table]].len = k;
+					HT[std_table[pos_in_table]].len = v;
 					pos_in_table++;
 					codevalue++;
 				}

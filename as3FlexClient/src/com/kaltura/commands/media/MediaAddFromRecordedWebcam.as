@@ -1,13 +1,13 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.vo.KalturaMediaEntry;
-	import com.kaltura.delegates.media.MediaAddFromRecordedWebcamDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMediaEntry;
+	import com.vidiun.delegates.media.MediaAddFromRecordedWebcamDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaAddFromRecordedWebcam extends KalturaCall
+	public class MediaAddFromRecordedWebcam extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MediaAddFromRecordedWebcam( mediaEntry : KalturaMediaEntry,webcamTokenId : String )
+		public function MediaAddFromRecordedWebcam( mediaEntry : VidiunMediaEntry,webcamTokenId : String )
 		{
 			service= 'media';
 			action= 'addFromRecordedWebcam';
@@ -15,7 +15,7 @@ package com.kaltura.commands.media
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(mediaEntry,'mediaEntry');
+ 			keyValArr = vidiunObject2Arrays(mediaEntry,'mediaEntry');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'webcamTokenId' );

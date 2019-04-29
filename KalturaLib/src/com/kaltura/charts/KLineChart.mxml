@@ -40,12 +40,12 @@
 					var arrCol : ArrayCollection = value as ArrayCollection;
 					for(var i:int=0; i<arrCol.length; i++)
 					{
-						for(var k:int=0; k<newArrCol.length; k++)
+						for(var v:int=0; v<newArrCol.length; v++)
 						{
-							var firstDate : Date = new Date( newArrCol[k].x );
+							var firstDate : Date = new Date( newArrCol[v].x );
 							var secondDate : Date = new Date( arrCol[i].x );
 							if( firstDate.date == secondDate.date && firstDate.fullYear == secondDate.fullYear && firstDate.month == secondDate.month)
-								newArrCol[k] = arrCol[i];
+								newArrCol[v] = arrCol[i];
 						}
 
 						if(String(arrCol[i].y).indexOf('.') != -1)

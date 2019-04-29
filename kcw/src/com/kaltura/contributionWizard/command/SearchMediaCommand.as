@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,28 +20,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.commands.ICommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
 	import com.arc90.modular.ModuleSequenceCommand;
-	import com.kaltura.contributionWizard.business.SearchMediaDelegate;
-	import com.kaltura.contributionWizard.business.ServiceCanceller;
-	import com.kaltura.contributionWizard.events.SearchMediaEvent;
-	import com.kaltura.contributionWizard.events.ViewControllerEvent;
-	import com.kaltura.contributionWizard.model.PendingActions;
-	import com.kaltura.contributionWizard.model.SearchResults;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.model.importData.ImportCart;
-	import com.kaltura.contributionWizard.util.MediaSourceDataInjector;
-	import com.kaltura.contributionWizard.vo.PageSearchDirection;
-	import com.kaltura.contributionWizard.vo.SearchMediaRequestVO;
-	import com.kaltura.vo.importees.BaseImportVO;
-	import com.kaltura.vo.importees.ImportURLVO;
-	import com.kaltura.contributionWizard.vo.providers.AuthenticationMethod;
-	import com.kaltura.utils.pager.Pager;
-	import com.kaltura.vo.MediaMetaDataVO;
+	import com.vidiun.contributionWizard.business.SearchMediaDelegate;
+	import com.vidiun.contributionWizard.business.ServiceCanceller;
+	import com.vidiun.contributionWizard.events.SearchMediaEvent;
+	import com.vidiun.contributionWizard.events.ViewControllerEvent;
+	import com.vidiun.contributionWizard.model.PendingActions;
+	import com.vidiun.contributionWizard.model.SearchResults;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.importData.ImportCart;
+	import com.vidiun.contributionWizard.util.MediaSourceDataInjector;
+	import com.vidiun.contributionWizard.vo.PageSearchDirection;
+	import com.vidiun.contributionWizard.vo.SearchMediaRequestVO;
+	import com.vidiun.vo.importees.BaseImportVO;
+	import com.vidiun.vo.importees.ImportURLVO;
+	import com.vidiun.contributionWizard.vo.providers.AuthenticationMethod;
+	import com.vidiun.utils.pager.Pager;
+	import com.vidiun.vo.MediaMetaDataVO;
 
 	import mx.collections.ArrayCollection;
 	import mx.rpc.IResponder;

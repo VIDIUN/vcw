@@ -1,9 +1,9 @@
-package com.kaltura.commands.uploadToken
+package com.vidiun.commands.uploadToken
 {
-	import com.kaltura.delegates.uploadToken.UploadTokenDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.uploadToken.UploadTokenDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UploadTokenDelete extends KalturaCall
+	public class UploadTokenDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UploadTokenDelete( uploadTokenId : String )

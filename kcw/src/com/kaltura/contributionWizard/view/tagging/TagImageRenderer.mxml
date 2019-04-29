@@ -1,10 +1,10 @@
 <mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml" height="100%" width="100%" horizontalAlign="center" verticalAlign="middle" buttonMode="{selectable}">
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.types.KalturaSearchProviderType;
-			import com.kaltura.types.KalturaMediaType;
-			import com.kaltura.types.KalturaSourceType;
-			import com.kaltura.vo.importees.BaseImportVO;
+			import com.vidiun.types.VidiunSearchProviderType;
+			import com.vidiun.types.VidiunMediaType;
+			import com.vidiun.types.VidiunSourceType;
+			import com.vidiun.vo.importees.BaseImportVO;
 					
 			[Embed(source="../assets/webcamthumb.png")]  [Bindable]  private var _imgWebcam:Class;
 			[Embed(source="../assets/audioThumbnail.png")]  [Bindable]  private var _imgAudio:Class;
@@ -17,11 +17,11 @@
 				var importItemVo:BaseImportVO = BaseImportVO(value);
 				if (importItemVo) {
 					//if data provider is webcam then the displayed thumbnail will be _imgCls		
-					if(Number(importItemVo.mediaProviderCode) == KalturaSourceType.WEBCAM)
+					if(Number(importItemVo.mediaProviderCode) == VidiunSourceType.WEBCAM)
 						thumbImg.source = _imgWebcam;
-					else if ((Number(importItemVo.mediaTypeCode) == KalturaMediaType.AUDIO) &&
-							 (Number(importItemVo.mediaProviderCode)==KalturaSourceType.FILE || 
-							  Number(importItemVo.mediaProviderCode)==KalturaSearchProviderType.KALTURA_PARTNER))
+					else if ((Number(importItemVo.mediaTypeCode) == VidiunMediaType.AUDIO) &&
+							 (Number(importItemVo.mediaProviderCode)==VidiunSourceType.FILE || 
+							  Number(importItemVo.mediaProviderCode)==VidiunSearchProviderType.VIDIUN_PARTNER))
 							thumbImg.source = _imgAudio;
 					else
 						thumbImg.source = importItemVo.thumbURL;

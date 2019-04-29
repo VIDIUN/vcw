@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaReportType
+	public class VidiunReportType
 	{
 		public static const TOP_CONTENT : int = 1;
 		public static const CONTENT_DROPOFF : int = 2;

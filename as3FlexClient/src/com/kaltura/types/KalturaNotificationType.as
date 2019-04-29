@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaNotificationType
+	public class VidiunNotificationType
 	{
 		public static const ENTRY_ADD : int = 1;
 		public static const ENTR_UPDATE_PERMISSIONS : int = 2;

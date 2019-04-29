@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaSearch;
+	import com.vidiun.vo.VidiunSearch;
 
 	[Bindable]
-	public dynamic class KalturaSearchResult extends KalturaSearch
+	public dynamic class VidiunSearchResult extends VidiunSearch
 	{
 		public var id : String;
 		public var title : String;

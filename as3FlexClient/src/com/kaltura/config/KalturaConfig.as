@@ -1,17 +1,17 @@
-package com.kaltura.config 
+package com.vidiun.config 
 {	
 	import flash.events.EventDispatcher;
 
-	public class KalturaConfig extends EventDispatcher implements IKalturaConfig
+	public class VidiunConfig extends EventDispatcher implements IVidiunConfig
 	{
 		protected var _partnerId:String; 
-		protected var _ks:String;
+		protected var _vs:String;
 		protected var _clientTag:String;
-		protected var _domain : String = "http://www.kaltura.com";
+		protected var _domain : String = "http://www.vidiun.com";
 		protected var _srvUrl:String = "/api_v3/index.php"; //will be defined by the genertor
 		protected var _ignoreNull : int = 1;
 		
-		public function KalturaConfig() {
+		public function VidiunConfig() {
 			super();
 		}
 
@@ -24,8 +24,8 @@ package com.kaltura.config
 		public function get partnerId():String { return _partnerId;	}
 		public function set partnerId(value:String):void {  _partnerId = value; }
 
-		public function get ks():String { return _ks; }
-		public function set ks(value:String):void { _ks = value; }
+		public function get vs():String { return _vs; }
+		public function set vs(value:String):void { _vs = value; }
 		
 		public function get clientTag():String { return _clientTag; }
 		public function set clientTag(value:String):void { _clientTag = value; }

@@ -1,9 +1,9 @@
-package com.kaltura.commands.flavorParams
+package com.vidiun.commands.flavorParams
 {
-	import com.kaltura.delegates.flavorParams.FlavorParamsDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.flavorParams.FlavorParamsDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorParamsDelete extends KalturaCall
+	public class FlavorParamsDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function FlavorParamsDelete( id : int )

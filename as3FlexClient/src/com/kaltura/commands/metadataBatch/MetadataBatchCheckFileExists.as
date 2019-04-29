@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.delegates.metadataBatch.MetadataBatchCheckFileExistsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchCheckFileExistsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchCheckFileExists extends KalturaCall
+	public class MetadataBatchCheckFileExists extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataBatchCheckFileExists( localPath : String,size : int )

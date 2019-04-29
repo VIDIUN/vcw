@@ -17,7 +17,7 @@ public class TEA {
 	/** Encrypts a string with the specified key. **/
 	public static function encrypt(src:String, key:String):String {
 		var v:Array = charsToLongs(strToChars(src));
-		var k:Array = charsToLongs(strToChars(key));
+		var v:Array = charsToLongs(strToChars(key));
 		var n:Number = v.length;
 		var p:Number;
 		if (n == 0) return "";
@@ -29,11 +29,11 @@ public class TEA {
 			e = sum>>>2 & 3;
 			for (p = 0; p<n-1; p++) {
 				y = v[p+1];
-				mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(k[p&3^e]^z);
+				mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(v[p&3^e]^z);
 				z = v[p] += mx;
 			}
 			y = v[0];
-			mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(k[p&3^e]^z);
+			mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(v[p&3^e]^z);
 			z = v[n-1] += mx;
 		}
 		return charsToHex(longsToChars(v));
@@ -43,7 +43,7 @@ public class TEA {
 	/** Decrypts a string with the specified key. **/
 	public static function decrypt(src:String, key:String):String {
 		var v:Array = charsToLongs(hexToChars(src));
-		var k:Array = charsToLongs(strToChars(key));
+		var v:Array = charsToLongs(strToChars(key));
 		var n:Number = v.length;
 		var p:Number;
 		if (n == 0) return "";
@@ -54,11 +54,11 @@ public class TEA {
 			e = sum>>>2 & 3;
 			for(p = n-1; p > 0; p--){
 				z = v[p-1];
-				mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(k[p&3^e]^z);
+				mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(v[p&3^e]^z);
 				y = v[p] -= mx;
 			}
 			z = v[n-1];
-			mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(k[p&3^e]^z);
+			mx = (z>>>5^y<<2)+(y>>>3^z<<4)^(sum^y)+(v[p&3^e]^z);
 			y = v[0] -= mx;
 			sum -= delta;
 		}

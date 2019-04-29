@@ -1,9 +1,9 @@
-package com.kaltura.commands.adminUser
+package com.vidiun.commands.adminUser
 {
-	import com.kaltura.delegates.adminUser.AdminUserUpdatePasswordDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.adminUser.AdminUserUpdatePasswordDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AdminUserUpdatePassword extends KalturaCall
+	public class AdminUserUpdatePassword extends VidiunCall
 	{
 		public var filterFields : String;
 		public function AdminUserUpdatePassword( email : String,password : String,newEmail : String='',newPassword : String='' )

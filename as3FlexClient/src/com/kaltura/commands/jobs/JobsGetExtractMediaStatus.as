@@ -1,9 +1,9 @@
-package com.kaltura.commands.jobs
+package com.vidiun.commands.jobs
 {
-	import com.kaltura.delegates.jobs.JobsGetExtractMediaStatusDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.jobs.JobsGetExtractMediaStatusDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class JobsGetExtractMediaStatus extends KalturaCall
+	public class JobsGetExtractMediaStatus extends VidiunCall
 	{
 		public var filterFields : String;
 		public function JobsGetExtractMediaStatus( job_id : int )

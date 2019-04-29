@@ -68,7 +68,7 @@ function onWizardReady()
 function next()
 {
 	console.log("next");
-	var flashObj = document.getElementById("kcw");
+	var flashObj = document.getElementById("vcw");
 	flashObj.goNextStep();
 
 }
@@ -76,7 +76,7 @@ function next()
 function prev()
 {
 	console.log("prev");
-	var flashObj = document.getElementById("kcw");
+	var flashObj = document.getElementById("vcw");
 	flashObj.goPrevStep();
 
 }
@@ -101,7 +101,7 @@ function setButtonMode(buttonObj, isEnabled, label)
 	buttonObj.value = label;
 }
 
-function kcwPendingChangeHandler(pending)
+function vcwPendingChangeHandler(pending)
 {
     document.getElementById("nextButton").disabled = pending ?
     	true :
@@ -114,7 +114,7 @@ function kcwPendingChangeHandler(pending)
 function changePData()
 {
 	var pData = document.getElementById("partnerData").value;
-	var flashObj = document.getElementById("kcw");
+	var flashObj = document.getElementById("vcw");
 	flashObj.setPartnerData(pData);
 }
 // Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
@@ -153,7 +153,7 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 			"width", "680",
 			"height", "400",
 			"align", "middle",
-			"id", "kcw",
+			"id", "vcw",
 			"quality", "high",
 			"Flashvars",
 						//'defaultMediaType=video' +
@@ -168,17 +168,17 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 						'&fileSystemMode=true'+
 						'&additionalField=METADATA_TITLE'+
 						//Deprecated -> '&subPartnerId=100' + 
-						//'&kshow_id=faa852m6f0' +
-						//'&kshow_id=-2' + //sandbox kshow id
+						//'&vshow_id=faa852m6f0' +
+						//'&vshow_id=-2' + //sandbox vshow id
 						//'&protocol=http' + 
-						'&host=www.kaltura.com' +
+						'&host=www.vidiun.com' +
 						//'&host=localhost:85' +
 						//'&terms_of_use=index.php/terms' +
 						'&afterAddentry=addentry'+
 						'&close=wizardCloseCallback' + 
 						'&wizardReadyHandler=onWizardReady' +
 						'&quick_edit=1' +
-						//'&uploadUrl=http://www.kaltura.com/index.php/partnerservices2/upload' +
+						//'&uploadUrl=http://www.vidiun.com/index.php/partnerservices2/upload' +
 						//'&uploadUrl=http://localhost/upload' +
 						//'&showCloseButton=true'+
 						//'&groupId=SomeGroupName' +
@@ -187,11 +187,11 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 						'&credits_screen_name=1001' +
 						'&credits_site_url=1001' +
 						'&permission=5' +
-						'&groupId=kaltura' +
+						'&groupId=vidiun' +
 						'&screenName=Almog' +
 						'&siteUrl=' +
-						'&load_thumbnail_with_ks=false' +
-						//'&cdnHost=kaltura.com' +
+						'&load_thumbnail_with_vs=false' +
+						//'&cdnHost=vidiun.com' +
 						//'&limitations.upload.singleFileSize.min=-1' +
 						//'&limitations.upload.singleFileSize.max=-1' +
 						//'&limitations.upload.totalFileSize.min=14000000' +

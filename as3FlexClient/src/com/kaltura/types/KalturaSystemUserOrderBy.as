@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSystemUserOrderBy
+	public class VidiunSystemUserOrderBy
 	{
 		public static const ID_ASC : String = '+id';
 		public static const ID_DESC : String = '-id';

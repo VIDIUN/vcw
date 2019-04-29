@@ -1,12 +1,12 @@
-package com.kaltura.delegates.mixing
+package com.vidiun.delegates.mixing
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class MixingRequestFlatteningDelegate extends WebDelegateBase
 	{
-		public function MixingRequestFlatteningDelegate(call:KalturaCall, config:KalturaConfig)
+		public function MixingRequestFlatteningDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

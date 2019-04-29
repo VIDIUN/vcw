@@ -31,8 +31,8 @@ package de.polygonal.ds
 		 */
 		public static function hashString(s:String):int
 		{
-			var hash:int = 0, i:int, k:int = s.length;
-			for (i = 0; i < k; i++)
+			var hash:int = 0, i:int, v:int = s.length;
+			for (i = 0; i < v; i++)
 				hash += (i + 1) * s.charCodeAt(i);
 			return hash;
 		}
@@ -93,8 +93,8 @@ package de.polygonal.ds
 		public function find(key:*):*
 		{
 			var list:Array = _table[int(_hash(key) & _divisor)];
-			var k:int = list.length, entry:HashEntry;
-			for (var i:int = 0; i < k; i++)
+			var v:int = list.length, entry:HashEntry;
+			for (var i:int = 0; i < v; i++)
 			{
 				entry = list[i];
 				if (entry.key === key)
@@ -113,8 +113,8 @@ package de.polygonal.ds
 		public function remove(key:*):*
 		{
 			var list:Array = _table[int(_hash(key) & _divisor)];
-			var k:int = list.length;
-			for (var i:int = 0; i < k; i++)
+			var v:int = list.length;
+			for (var i:int = 0; i < v; i++)
 			{
 				var entry:HashEntry = list[i];
 				if (entry.key === key)
@@ -133,8 +133,8 @@ package de.polygonal.ds
 		 */
 		public function contains(obj:*):Boolean
 		{
-			var list:Array, k:int = size;
-			for (var i:int = 0; i < k; i++)
+			var list:Array, v:int = size;
+			for (var i:int = 0; i < v; i++)
 			{
 				list = _table[i];
 				var l:int = list.length; 
@@ -185,8 +185,8 @@ package de.polygonal.ds
 		 */
 		public function toArray():Array
 		{
-			var a:Array = [], list:Array, k:int = size;
-			for (var i:int = 0; i < k; i++)
+			var a:Array = [], list:Array, v:int = size;
+			for (var i:int = 0; i < v; i++)
 			{
 				list = _table[i];
 				var l:int = list.length; 

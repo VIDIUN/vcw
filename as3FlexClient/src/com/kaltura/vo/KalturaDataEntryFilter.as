@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntryFilter;
+	import com.vidiun.vo.VidiunBaseEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaDataEntryFilter extends KalturaBaseEntryFilter
+	public dynamic class VidiunDataEntryFilter extends VidiunBaseEntryFilter
 	{
 		override protected function setupPropertyList():void
 		{

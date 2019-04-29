@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaPullJobData extends KalturaJobData
+	public dynamic class VidiunPullJobData extends VidiunJobData
 	{
 		public var srcFileUrl : String;
 		public var destFileLocalPath : String;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -26,21 +26,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		creationComplete="creationCompleteHandler()"
 		xmlns:mx="http://www.adobe.com/2006/mxml"
 		xmlns:ac="com.adobe.ac.*"
-		xmlns:pending="com.kaltura.contributionWizard.view.pending.*"
+		xmlns:pending="com.vidiun.contributionWizard.view.pending.*"
 			>
 	<mx:Script>
 		<![CDATA[
 			import mx.events.PropertyChangeEvent;
 			import mx.binding.utils.ChangeWatcher;
 			import mx.managers.SystemManager;
-			import com.kaltura.contributionWizard.events.PendingActionEvent;
+			import com.vidiun.contributionWizard.events.PendingActionEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
-			import com.kaltura.contributionWizard.view.events.CancelPendingActionViewEvent;
+			import com.vidiun.contributionWizard.view.events.CancelPendingActionViewEvent;
 			import mx.core.IFlexDisplayObject;
 			import mx.core.Application;
 			import mx.controls.Alert;
 			import mx.managers.PopUpManager;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 			[Bindable]
 			private var _model:WizardModelLocator = WizardModelLocator.getInstance();
 

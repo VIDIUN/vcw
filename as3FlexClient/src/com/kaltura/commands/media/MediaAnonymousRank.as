@@ -1,9 +1,9 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaAnonymousRankDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.media.MediaAnonymousRankDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaAnonymousRank extends KalturaCall
+	public class MediaAnonymousRank extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MediaAnonymousRank( entryId : String,rank : int )

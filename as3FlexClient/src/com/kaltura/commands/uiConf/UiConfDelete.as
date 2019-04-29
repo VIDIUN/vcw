@@ -1,9 +1,9 @@
-package com.kaltura.commands.uiConf
+package com.vidiun.commands.uiConf
 {
-	import com.kaltura.delegates.uiConf.UiConfDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.uiConf.UiConfDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UiConfDelete extends KalturaCall
+	public class UiConfDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UiConfDelete( id : int )

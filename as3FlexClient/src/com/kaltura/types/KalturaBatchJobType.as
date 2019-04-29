@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaBatchJobType
+	public class VidiunBatchJobType
 	{
 		public static const CONVERT : int = 0;
 		public static const IMPORT : int = 1;

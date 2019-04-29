@@ -1,9 +1,9 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaRequestConversionDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.media.MediaRequestConversionDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaRequestConversion extends KalturaCall
+	public class MediaRequestConversion extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MediaRequestConversion( entryId : String,fileFormat : String )

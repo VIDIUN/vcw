@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntry;
+	import com.vidiun.vo.VidiunBaseEntry;
 
 	[Bindable]
-	public dynamic class KalturaDocumentEntry extends KalturaBaseEntry
+	public dynamic class VidiunDocumentEntry extends VidiunBaseEntry
 	{
 		public var documentType : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

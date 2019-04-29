@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaSessionRestriction;
+	import com.vidiun.vo.VidiunSessionRestriction;
 
 	[Bindable]
-	public dynamic class KalturaPreviewRestriction extends KalturaSessionRestriction
+	public dynamic class VidiunPreviewRestriction extends VidiunSessionRestriction
 	{
 		public var previewLength : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

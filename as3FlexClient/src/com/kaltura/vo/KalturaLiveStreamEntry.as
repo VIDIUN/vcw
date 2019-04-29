@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaMediaEntry;
+	import com.vidiun.vo.VidiunMediaEntry;
 
 	[Bindable]
-	public dynamic class KalturaLiveStreamEntry extends KalturaMediaEntry
+	public dynamic class VidiunLiveStreamEntry extends VidiunMediaEntry
 	{
 		public var offlineMessage : String;
 		public var streamRemoteId : String;

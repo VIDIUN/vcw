@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,66 +20,66 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.control
+package com.vidiun.contributionWizard.control
 {
   import com.adobe_cw.adobe.cairngorm.control.FrontController;
-  import com.kaltura.contributionWizard.command.AddBatchTagsCommand;
-  import com.kaltura.contributionWizard.command.AddCreditsCommand;
-  import com.kaltura.contributionWizard.command.AddEntriesCommand;
-  import com.kaltura.contributionWizard.command.AddToImportCartCommand;
-  import com.kaltura.contributionWizard.command.CallExternalInterfaceCommand;
-  import com.kaltura.contributionWizard.command.CancelPendingRequestCommand;
-  import com.kaltura.contributionWizard.command.ChangeMediaProviderCommand;
-  import com.kaltura.contributionWizard.command.ChangePermissionLevelCommand;
-  import com.kaltura.contributionWizard.command.ChangeWorkflowCommand;
-  import com.kaltura.contributionWizard.command.CheckPartnerNotificationCommand;
-  import com.kaltura.contributionWizard.command.ClearImportStateCommand;
-  import com.kaltura.contributionWizard.command.CloseWizardCommand;
-  import com.kaltura.contributionWizard.command.GetWizardConfigCommand;
-  import com.kaltura.contributionWizard.command.GotoNextImportStepCommand;
-  import com.kaltura.contributionWizard.command.GotoScreenCommand;
-  import com.kaltura.contributionWizard.command.ListCategoriesCommand;
-  import com.kaltura.contributionWizard.command.LoadLocaleCommand;
-  import com.kaltura.contributionWizard.command.LoadStylesCommand;
-  import com.kaltura.contributionWizard.command.NotifyShellCommand;
-  import com.kaltura.contributionWizard.command.RemoveFromImportCartCommand;
-  import com.kaltura.contributionWizard.command.ReportErrorCommand;
-  import com.kaltura.contributionWizard.command.SaveInjectedDataCommand;
-  import com.kaltura.contributionWizard.command.SelectMediaTypeCommand;
-  import com.kaltura.contributionWizard.command.SendPartnerNotificationsCommand;
-  import com.kaltura.contributionWizard.command.SetDefaultScreenCommand;
-  import com.kaltura.contributionWizard.command.SetMetaDataCommand;
-  import com.kaltura.contributionWizard.command.ValidateAllMetaDataCommand;
-  import com.kaltura.contributionWizard.command.ValidateLimitationsCommand;
-  import com.kaltura.contributionWizard.command.ValidateMetaDataFieldCommand;
-  import com.kaltura.contributionWizard.events.AddEntriesEvent;
-  import com.kaltura.contributionWizard.events.BatchMetaDataEvent;
-  import com.kaltura.contributionWizard.events.CategoryEvent;
-  import com.kaltura.contributionWizard.events.ChangePermissionLevelEvent;
-  import com.kaltura.contributionWizard.events.ClearImportStateEvent;
-  import com.kaltura.contributionWizard.events.CloseWizardEvent;
-  import com.kaltura.contributionWizard.events.CreditsEvent;
-  import com.kaltura.contributionWizard.events.EntriesAddedEvent;
-  import com.kaltura.contributionWizard.events.ExternalInterfaceEvent;
-  import com.kaltura.contributionWizard.events.GotoNextImportStepEvent;
-  import com.kaltura.contributionWizard.events.GotoScreenEvent;
-  import com.kaltura.contributionWizard.events.ImportEvent;
-  import com.kaltura.contributionWizard.events.LoadUIEvent;
-  import com.kaltura.contributionWizard.events.MediaProviderEvent;
-  import com.kaltura.contributionWizard.events.MediaTypeSelectionEvent;
-  import com.kaltura.contributionWizard.events.NotifyAddEntriesCompleteCommand;
-  import com.kaltura.contributionWizard.events.NotifyShellEvent;
-  import com.kaltura.contributionWizard.events.PartnerNotificationsEvent;
-  import com.kaltura.contributionWizard.events.PendingActionEvent;
-  import com.kaltura.contributionWizard.events.ReportErrorEvent;
-  import com.kaltura.contributionWizard.events.SaveInjectedDataEvent;
-  import com.kaltura.contributionWizard.events.SetDefaultScreenEvent;
-  import com.kaltura.contributionWizard.events.TaggingEvent;
-  import com.kaltura.contributionWizard.events.ValidateAllMetaDataEvent;
-  import com.kaltura.contributionWizard.events.ValidateLimitationsEvent;
-  import com.kaltura.contributionWizard.events.ValidateMetaDataEvent;
-  import com.kaltura.contributionWizard.events.WizardConfigEvent;
-  import com.kaltura.contributionWizard.events.WorkflowEvent;
+  import com.vidiun.contributionWizard.command.AddBatchTagsCommand;
+  import com.vidiun.contributionWizard.command.AddCreditsCommand;
+  import com.vidiun.contributionWizard.command.AddEntriesCommand;
+  import com.vidiun.contributionWizard.command.AddToImportCartCommand;
+  import com.vidiun.contributionWizard.command.CallExternalInterfaceCommand;
+  import com.vidiun.contributionWizard.command.CancelPendingRequestCommand;
+  import com.vidiun.contributionWizard.command.ChangeMediaProviderCommand;
+  import com.vidiun.contributionWizard.command.ChangePermissionLevelCommand;
+  import com.vidiun.contributionWizard.command.ChangeWorkflowCommand;
+  import com.vidiun.contributionWizard.command.CheckPartnerNotificationCommand;
+  import com.vidiun.contributionWizard.command.ClearImportStateCommand;
+  import com.vidiun.contributionWizard.command.CloseWizardCommand;
+  import com.vidiun.contributionWizard.command.GetWizardConfigCommand;
+  import com.vidiun.contributionWizard.command.GotoNextImportStepCommand;
+  import com.vidiun.contributionWizard.command.GotoScreenCommand;
+  import com.vidiun.contributionWizard.command.ListCategoriesCommand;
+  import com.vidiun.contributionWizard.command.LoadLocaleCommand;
+  import com.vidiun.contributionWizard.command.LoadStylesCommand;
+  import com.vidiun.contributionWizard.command.NotifyShellCommand;
+  import com.vidiun.contributionWizard.command.RemoveFromImportCartCommand;
+  import com.vidiun.contributionWizard.command.ReportErrorCommand;
+  import com.vidiun.contributionWizard.command.SaveInjectedDataCommand;
+  import com.vidiun.contributionWizard.command.SelectMediaTypeCommand;
+  import com.vidiun.contributionWizard.command.SendPartnerNotificationsCommand;
+  import com.vidiun.contributionWizard.command.SetDefaultScreenCommand;
+  import com.vidiun.contributionWizard.command.SetMetaDataCommand;
+  import com.vidiun.contributionWizard.command.ValidateAllMetaDataCommand;
+  import com.vidiun.contributionWizard.command.ValidateLimitationsCommand;
+  import com.vidiun.contributionWizard.command.ValidateMetaDataFieldCommand;
+  import com.vidiun.contributionWizard.events.AddEntriesEvent;
+  import com.vidiun.contributionWizard.events.BatchMetaDataEvent;
+  import com.vidiun.contributionWizard.events.CategoryEvent;
+  import com.vidiun.contributionWizard.events.ChangePermissionLevelEvent;
+  import com.vidiun.contributionWizard.events.ClearImportStateEvent;
+  import com.vidiun.contributionWizard.events.CloseWizardEvent;
+  import com.vidiun.contributionWizard.events.CreditsEvent;
+  import com.vidiun.contributionWizard.events.EntriesAddedEvent;
+  import com.vidiun.contributionWizard.events.ExternalInterfaceEvent;
+  import com.vidiun.contributionWizard.events.GotoNextImportStepEvent;
+  import com.vidiun.contributionWizard.events.GotoScreenEvent;
+  import com.vidiun.contributionWizard.events.ImportEvent;
+  import com.vidiun.contributionWizard.events.LoadUIEvent;
+  import com.vidiun.contributionWizard.events.MediaProviderEvent;
+  import com.vidiun.contributionWizard.events.MediaTypeSelectionEvent;
+  import com.vidiun.contributionWizard.events.NotifyAddEntriesCompleteCommand;
+  import com.vidiun.contributionWizard.events.NotifyShellEvent;
+  import com.vidiun.contributionWizard.events.PartnerNotificationsEvent;
+  import com.vidiun.contributionWizard.events.PendingActionEvent;
+  import com.vidiun.contributionWizard.events.ReportErrorEvent;
+  import com.vidiun.contributionWizard.events.SaveInjectedDataEvent;
+  import com.vidiun.contributionWizard.events.SetDefaultScreenEvent;
+  import com.vidiun.contributionWizard.events.TaggingEvent;
+  import com.vidiun.contributionWizard.events.ValidateAllMetaDataEvent;
+  import com.vidiun.contributionWizard.events.ValidateLimitationsEvent;
+  import com.vidiun.contributionWizard.events.ValidateMetaDataEvent;
+  import com.vidiun.contributionWizard.events.WizardConfigEvent;
+  import com.vidiun.contributionWizard.events.WorkflowEvent;
 
   public class WizardController extends FrontController
   {

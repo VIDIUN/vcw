@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSystemUserRole
+	public class VidiunSystemUserRole
 	{
 		public static const ROLE_GUEST : String = 'guest';
 		public static const ROLE_PROFESIONAL_SERVICES : String = 'ps';

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaStorageProfileStatus
+	public class VidiunStorageProfileStatus
 	{
 		public static const DISABLED : int = 1;
 		public static const AUTOMATIC : int = 2;

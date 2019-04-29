@@ -1,27 +1,27 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.vo.KalturaBaseEntryFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.baseEntry.BaseEntryListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunBaseEntryFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.baseEntry.BaseEntryListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryList extends KalturaCall
+	public class BaseEntryList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function BaseEntryList( filter : KalturaBaseEntryFilter=null,pager : KalturaFilterPager=null )
+		public function BaseEntryList( filter : VidiunBaseEntryFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaBaseEntryFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunBaseEntryFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'baseentry';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

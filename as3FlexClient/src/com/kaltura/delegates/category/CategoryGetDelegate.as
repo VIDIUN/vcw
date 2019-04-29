@@ -1,22 +1,22 @@
-package com.kaltura.delegates.category
+package com.vidiun.delegates.category
 {
-	import com.kaltura.core.KClassFactory;
+	import com.vidiun.core.VClassFactory;
 
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class CategoryGetDelegate extends WebDelegateBase
 	{
-		public function CategoryGetDelegate(call:KalturaCall, config:KalturaConfig)
+		public function CategoryGetDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}
 
 		override public function parse( result : XML ) : *
 		{
-			var cls : Class = getDefinitionByName('com.kaltura.vo.'+ result.result.objectType) as Class;
-			var obj : * = (new KClassFactory( cls )).newInstanceFromXML( result.result );
+			var cls : Class = getDefinitionByName('com.vidiun.vo.'+ result.result.objectType) as Class;
+			var obj : * = (new VClassFactory( cls )).newInstanceFromXML( result.result );
 			return obj;
 		}
 

@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaStorageJobData;
+	import com.vidiun.vo.VidiunStorageJobData;
 
 	[Bindable]
-	public dynamic class KalturaStorageExportJobData extends KalturaStorageJobData
+	public dynamic class VidiunStorageExportJobData extends VidiunStorageJobData
 	{
 		public var destFileSyncStoredPath : String;
 		public var force : Boolean;

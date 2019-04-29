@@ -1,9 +1,9 @@
-package com.kaltura.commands.adminUser
+package com.vidiun.commands.adminUser
 {
-	import com.kaltura.delegates.adminUser.AdminUserLoginDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.adminUser.AdminUserLoginDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AdminUserLogin extends KalturaCall
+	public class AdminUserLogin extends VidiunCall
 	{
 		public var filterFields : String;
 		public function AdminUserLogin( email : String,password : String )

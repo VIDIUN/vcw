@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaSearchResultResponse extends BaseFlexVo
+	public dynamic class VidiunSearchResultResponse extends BaseFlexVo
 	{
 		public var objects : Array = new Array();
 		public var needMediaInfo : Boolean;

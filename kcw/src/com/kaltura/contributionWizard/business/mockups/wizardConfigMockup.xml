@@ -32,7 +32,7 @@
 	    <name>Webcam</name>
 	    <logo/>
 	    <customData>
-	      <serverUrl>rtmp://kaldev.kaltura.com/oflaDemo</serverUrl>
+	      <serverUrl>rtmp://viddev.vidiun.com/oflaDemo</serverUrl>
 	    </customData>
 	    <media>
 	      <type>video</type>
@@ -46,8 +46,8 @@
 	      <authMethod>3</authMethod>
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
-	    <name>Kaltura</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_kaltura.gif</logo>
+	    <name>Vidiun</name>
+	    <logo>http://www.vidiun.com/images/wizard/logo_vidiun.gif</logo>
 	    <media>
 	      <type>video</type>
 	    </media>
@@ -67,7 +67,7 @@
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
 	    <name>Flickr</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_flickr.png</logo>
+	    <logo>http://www.vidiun.com/images/wizard/logo_flickr.png</logo>
 	    <media>
 	      <type>image</type>
 	    </media>
@@ -107,7 +107,7 @@
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
 	    <name>NYPL</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_nypl.png</logo>
+	    <logo>http://www.vidiun.com/images/wizard/logo_nypl.png</logo>
 	    <media>
 	      <type>image</type>
 	    </media>
@@ -121,7 +121,7 @@
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
 	    <name>YouTube</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_youtube.png</logo>
+	    <logo>http://www.vidiun.com/images/wizard/logo_youtube.png</logo>
 	    <media>
 	      <type>video</type>
 	    </media>
@@ -135,7 +135,7 @@
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
 	    <name>MySpace</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_myspace.png</logo>
+	    <logo>http://www.vidiun.com/images/wizard/logo_myspace.png</logo>
 	    <media>
 	      <type>video</type>
 	    </media>
@@ -148,7 +148,7 @@
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
 	    <name>MediaCommons</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_phototbucket.png</logo>
+	    <logo>http://www.vidiun.com/images/wizard/logo_phototbucket.png</logo>
 	    <media>
 	      <type>image</type>
 	    </media>
@@ -161,7 +161,7 @@
 	    </authMethodList>
 	    <moduleUrl>SearchView.swf</moduleUrl>
 	    <name>URL</name>
-	    <logo>http://www.kaltura.com/images/wizard/logo_url.gif</logo>
+	    <logo>http://www.vidiun.com/images/wizard/logo_url.gif</logo>
 	    <media>
 	      <type>video</type>
 	    </media>
@@ -211,8 +211,8 @@
 	    <target>
 			ContributionWizard.swf
 	    </target>
-	    <cssUrl>/content/uiconf/kaltura/styles_ContributionWizard_default.swf</cssUrl>
-	    <localeUrl>/content/uiconf/kaltura/en_US_ContributionWizard.swf</localeUrl>
+	    <cssUrl>/content/uiconf/vidiun/styles_ContributionWizard_default.swf</cssUrl>
+	    <localeUrl>/content/uiconf/vidiun/en_US_ContributionWizard.swf</localeUrl>
 	  </UIConfig>
 
 	</UIConfigList>

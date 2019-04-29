@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaFlavorReadyBehaviorType
+	public class VidiunFlavorReadyBehaviorType
 	{
 		public static const INHERIT_FLAVOR_PARAMS : int = 0;
 		public static const REQUIRED : int = 1;

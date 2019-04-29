@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaContainerFormat
+	public class VidiunContainerFormat
 	{
 		public static const FLV : String = 'flv';
 		public static const MP4 : String = 'mp4';

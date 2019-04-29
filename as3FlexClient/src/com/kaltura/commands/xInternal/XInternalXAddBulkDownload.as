@@ -1,9 +1,9 @@
-package com.kaltura.commands.xInternal
+package com.vidiun.commands.xInternal
 {
-	import com.kaltura.delegates.xInternal.XInternalXAddBulkDownloadDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.xInternal.XInternalXAddBulkDownloadDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class XInternalXAddBulkDownload extends KalturaCall
+	public class XInternalXAddBulkDownload extends VidiunCall
 	{
 		public var filterFields : String;
 		public function XInternalXAddBulkDownload( entryIds : String,flavorParamsId : String='' )

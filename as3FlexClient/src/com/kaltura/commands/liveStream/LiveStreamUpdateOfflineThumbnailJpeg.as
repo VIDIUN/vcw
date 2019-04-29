@@ -1,10 +1,10 @@
-package com.kaltura.commands.liveStream
+package com.vidiun.commands.liveStream
 {
-	import com.kaltura.vo.File;
-	import com.kaltura.delegates.liveStream.LiveStreamUpdateOfflineThumbnailJpegDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.File;
+	import com.vidiun.delegates.liveStream.LiveStreamUpdateOfflineThumbnailJpegDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class LiveStreamUpdateOfflineThumbnailJpeg extends KalturaCall
+	public class LiveStreamUpdateOfflineThumbnailJpeg extends VidiunCall
 	{
 		public var filterFields : String;
 		public function LiveStreamUpdateOfflineThumbnailJpeg( entryId : String,fileData : file )
@@ -17,7 +17,7 @@ package com.kaltura.commands.liveStream
 			var keyValArr : Array = new Array();
 			keyArr.push( 'entryId' );
 			valueArr.push( entryId );
- 			keyValArr = kalturaObject2Arrays(fileData,'fileData');
+ 			keyValArr = vidiunObject2Arrays(fileData,'fileData');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

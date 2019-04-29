@@ -1,9 +1,9 @@
-package com.kaltura.commands.mixing
+package com.vidiun.commands.mixing
 {
-	import com.kaltura.delegates.mixing.MixingRequestFlatteningDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.mixing.MixingRequestFlatteningDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MixingRequestFlattening extends KalturaCall
+	public class MixingRequestFlattening extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MixingRequestFlattening( entryId : String,fileFormat : String,version : int=-1 )

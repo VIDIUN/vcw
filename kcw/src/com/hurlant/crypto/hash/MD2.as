@@ -94,8 +94,8 @@ package com.hurlant.crypto.hash
 				/* Do 18 rounds */
 				for (j=0;j<18;j++) {
 					/* Round j. */
-					for (var k:uint=0;k<48;k++) {
-						X[k] = t = X[k]^S[t];
+					for (var v:uint=0;v<48;v++) {
+						X[v] = t = X[v]^S[t];
 					}
 					t = (t+j)&0xff;
 				}

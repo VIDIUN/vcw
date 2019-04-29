@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntryFilter;
+	import com.vidiun.vo.VidiunBaseEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaPlayableEntryFilter extends KalturaBaseEntryFilter
+	public dynamic class VidiunPlayableEntryFilter extends VidiunBaseEntryFilter
 	{
 		public var durationLessThan : int = int.MIN_VALUE;
 		public var durationGreaterThan : int = int.MIN_VALUE;

@@ -1,13 +1,13 @@
-package com.kaltura.commands.widget
+package com.vidiun.commands.widget
 {
-	import com.kaltura.vo.KalturaWidget;
-	import com.kaltura.delegates.widget.WidgetCloneDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunWidget;
+	import com.vidiun.delegates.widget.WidgetCloneDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class WidgetClone extends KalturaCall
+	public class WidgetClone extends VidiunCall
 	{
 		public var filterFields : String;
-		public function WidgetClone( widget : KalturaWidget )
+		public function WidgetClone( widget : VidiunWidget )
 		{
 			service= 'widget';
 			action= 'clone';
@@ -15,7 +15,7 @@ package com.kaltura.commands.widget
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(widget,'widget');
+ 			keyValArr = vidiunObject2Arrays(widget,'widget');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

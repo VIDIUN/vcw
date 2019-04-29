@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,21 +20,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.commands.SequenceCommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.bjorn.event.ChainEvent;
-	import com.kaltura.contributionWizard.business.AddEntriesDelegate;
-	import com.kaltura.contributionWizard.business.AddEntriesResult;
-	import com.kaltura.contributionWizard.business.ServiceCanceller;
-	import com.kaltura.contributionWizard.events.CloseWizardEvent;
-	import com.kaltura.contributionWizard.events.EntriesAddedEvent;
-	import com.kaltura.contributionWizard.events.PartnerNotificationsEvent;
-	import com.kaltura.contributionWizard.model.PendingActions;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-	import com.kaltura.vo.importees.ImportURLVO;
+	import com.vidiun.contributionWizard.business.AddEntriesDelegate;
+	import com.vidiun.contributionWizard.business.AddEntriesResult;
+	import com.vidiun.contributionWizard.business.ServiceCanceller;
+	import com.vidiun.contributionWizard.events.CloseWizardEvent;
+	import com.vidiun.contributionWizard.events.EntriesAddedEvent;
+	import com.vidiun.contributionWizard.events.PartnerNotificationsEvent;
+	import com.vidiun.contributionWizard.model.PendingActions;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+	import com.vidiun.vo.importees.ImportURLVO;
 	
 	import mx.collections.ArrayCollection;
 	import mx.controls.Alert;
@@ -86,7 +86,7 @@ package com.kaltura.contributionWizard.command
 			//_model.pendingActions.isPending = false;  // if we remove the popup it look like we can do more things with the wizard, and apparently this is a lie. (missing end screen?)
 			var addEntriesResult:AddEntriesResult = data as AddEntriesResult;
 
-			setNewKshowId(addEntriesResult.entriesInfoList[0].kshowId);
+			setNewVshowId(addEntriesResult.entriesInfoList[0].vshowId);
 
 			if (addEntriesResult.notificationsIds)
 			{
@@ -121,9 +121,9 @@ package com.kaltura.contributionWizard.command
 
 		}
 
-		private function setNewKshowId(newKshowId:String):void
+		private function setNewVshowId(newVshowId:String):void
 		{
-			_model.context.kshowId = newKshowId;
+			_model.context.vshowId = newVshowId;
 		}
 
 		private function notifyAddEntriesComplete(entriesInfoList:Array):void

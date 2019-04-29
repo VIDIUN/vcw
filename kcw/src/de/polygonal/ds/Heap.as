@@ -175,8 +175,8 @@ package de.polygonal.ds
 		public function dump():String
 		{
 			var s:String = "Heap\n{\n";
-			var k:int = _count + 1;
-			for (var i:int = 1; i < k; i++)
+			var v:int = _count + 1;
+			for (var i:int = 1; i < v; i++)
 			{
 				s += "\t" + _heap[i] + "\n";
 			}

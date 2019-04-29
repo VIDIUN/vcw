@@ -1,19 +1,19 @@
-package com.kaltura.delegates {
+package com.vidiun.delegates {
 	
-	import com.kaltura.config.IKalturaConfig;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.config.IVidiunConfig;
+	import com.vidiun.net.VidiunCall;
 	
 	import flash.events.IEventDispatcher;
 	
-	public interface IKalturaCallDelegate extends IEventDispatcher {
+	public interface IVidiunCallDelegate extends IEventDispatcher {
 		
 		function close():void;
 		
-		function get call():KalturaCall;
-		function set call(newVal:KalturaCall):void;
+		function get call():VidiunCall;
+		function set call(newVal:VidiunCall):void;
 		
-		function get config():IKalturaConfig;
-		function set config(newVal:IKalturaConfig):void;
+		function get config():IVidiunConfig;
+		function set config(newVal:IVidiunConfig):void;
 	}
 	
 }

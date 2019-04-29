@@ -1,12 +1,12 @@
-package com.kaltura.delegates.EmailIngestionProfile
+package com.vidiun.delegates.EmailIngestionProfile
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class EmailIngestionProfileDeleteDelegate extends WebDelegateBase
 	{
-		public function EmailIngestionProfileDeleteDelegate(call:KalturaCall, config:KalturaConfig)
+		public function EmailIngestionProfileDeleteDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

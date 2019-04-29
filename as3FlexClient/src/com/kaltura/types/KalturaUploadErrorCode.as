@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaUploadErrorCode
+	public class VidiunUploadErrorCode
 	{
 		public static const NO_ERROR : int = 0;
 		public static const GENERAL_ERROR : int = 1;

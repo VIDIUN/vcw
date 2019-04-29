@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaLiveStreamBitrate extends BaseFlexVo
+	public dynamic class VidiunLiveStreamBitrate extends BaseFlexVo
 	{
 		public var bitrate : int = int.MIN_VALUE;
 		public var width : int = int.MIN_VALUE;

@@ -1,13 +1,13 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.vo.KalturaEntryExtraDataParams;
-	import com.kaltura.delegates.baseEntry.BaseEntryGetExtraDataDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunEntryExtraDataParams;
+	import com.vidiun.delegates.baseEntry.BaseEntryGetExtraDataDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryGetExtraData extends KalturaCall
+	public class BaseEntryGetExtraData extends VidiunCall
 	{
 		public var filterFields : String;
-		public function BaseEntryGetExtraData( entryId : String,extraDataParams : KalturaEntryExtraDataParams )
+		public function BaseEntryGetExtraData( entryId : String,extraDataParams : VidiunEntryExtraDataParams )
 		{
 			service= 'baseEntry';
 			action= 'getExtraData';
@@ -17,7 +17,7 @@ package com.kaltura.commands.baseEntry
 			var keyValArr : Array = new Array();
 			keyArr.push( 'entryId' );
 			valueArr.push( entryId );
- 			keyValArr = kalturaObject2Arrays(extraDataParams,'extraDataParams');
+ 			keyValArr = vidiunObject2Arrays(extraDataParams,'extraDataParams');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

@@ -1,4 +1,4 @@
-package com.kaltura.analytics
+package com.vidiun.analytics
 {
 	import com.google.analytics.AnalyticsTracker;
 	import com.google.analytics.GATracker;
@@ -11,7 +11,7 @@ package com.kaltura.analytics
 		private var _urchinNumber:String = "";//here the Urchin Number, take it from the partner UrchinNumber
 		private var _partnerId:String;
 		private var _userId:String;
-		private var _kmcVersion:String;
+		private var _vmcVersion:String;
 		
 		private static var _instance:GoogleAnalyticsTracker;
 		
@@ -30,9 +30,9 @@ package com.kaltura.analytics
 			return _instance;
 		}
         
-        public function init(partnerId:String, userId:String, parentDisplayObject:DisplayObject,kmcVersion:String,urchinNumber:String, langCode:String, debug:Boolean):void
+        public function init(partnerId:String, userId:String, parentDisplayObject:DisplayObject,vmcVersion:String,urchinNumber:String, langCode:String, debug:Boolean):void
         {
-        	_kmcVersion=kmcVersion;
+        	_vmcVersion=vmcVersion;
         	_urchinNumber = urchinNumber;
         	_partnerId = partnerId;
         	_userId = userId;
@@ -41,7 +41,7 @@ package com.kaltura.analytics
         
         public function sendToGA(eventTracked:String):void
         {
-        	tracker.trackPageview(_kmcVersion+"/"+ eventTracked+"/"+"partner_id=" + _partnerId + "/user_id=" + _userId );
+        	tracker.trackPageview(_vmcVersion+"/"+ eventTracked+"/"+"partner_id=" + _partnerId + "/user_id=" + _userId );
         }
 	}
 }

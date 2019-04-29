@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -27,9 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	width="100%" height="100%"
 	horizontalAlign="center" verticalAlign="middle"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:view="com.kaltura.contributionWizard.view.importViews.webcam.view.*"
-	xmlns:controler="com.kaltura.contributionWizard.view.importViews.webcam.controler.*"
-	xmlns:importees="com.kaltura.vo.importees.*" xmlns:spinner="com.grakl.spinner.*" xmlns:code="http://code.google.com/p/flexlib/">
+	xmlns:view="com.vidiun.contributionWizard.view.importViews.webcam.view.*"
+	xmlns:controler="com.vidiun.contributionWizard.view.importViews.webcam.controler.*"
+	xmlns:importees="com.vidiun.vo.importees.*" xmlns:spinner="com.grakl.spinner.*" xmlns:code="http://code.google.com/p/flexlib/">
 
     <importees:ImportFileVO id="importItemVo"
     	fileName="{_webcamModel.streamName}"
@@ -43,15 +43,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
 			import com.arc90.modular.CairngormEventDispatcherFactory;
 			import com.grakl.spinner.Spinner;
-			import com.kaltura.contributionWizard.events.ImportEvent;
-			import com.kaltura.contributionWizard.events.webcam.WebcamEvent;
-			import com.kaltura.contributionWizard.model.WebcamModelLocator;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.contributionWizard.view.importViews.webcam.controler.VideoRecorder;
-			import com.kaltura.contributionWizard.view.importViews.webcam.events.RecorderControlEvent;
-			import com.kaltura.contributionWizard.view.importViews.webcam.events.RecorderEvent;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.vo.importees.ImportFileVO;
+			import com.vidiun.contributionWizard.events.ImportEvent;
+			import com.vidiun.contributionWizard.events.webcam.WebcamEvent;
+			import com.vidiun.contributionWizard.model.WebcamModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.view.importViews.webcam.controler.VideoRecorder;
+			import com.vidiun.contributionWizard.view.importViews.webcam.events.RecorderControlEvent;
+			import com.vidiun.contributionWizard.view.importViews.webcam.events.RecorderEvent;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.vo.importees.ImportFileVO;
 			
 			import mx.binding.utils.BindingUtils;
 			import mx.binding.utils.ChangeWatcher;
@@ -106,7 +106,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			    params.from_time = int(fromTime * 1000);
 			    params.to_time = int(toTime * 1000);
 		        //GlobalData.setLoader(true,this);
-		    	app.srvHelper.kalturaService("addentry",params,addentrySrv); */
+		    	app.srvHelper.vidiunService("addentry",params,addentrySrv); */
 			}
 
 			public function entryAdded(event:ResultEvent):void
@@ -245,7 +245,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				// trace("1");
 				var clipLength:Number = evtSaveRecord.maxTime - evtSaveRecord.minTime;
 
-				/* if (clipLength < KRecorderView.MIN_RECORD_TIME)
+				/* if (clipLength < VRecorderView.MIN_RECORD_TIME)
 				{
 					Alert.show("Sorry, less than three seconds recording time is not allowed.");
 					return;

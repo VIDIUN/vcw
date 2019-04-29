@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaConvartableJobData;
+	import com.vidiun.vo.VidiunConvartableJobData;
 
 	[Bindable]
-	public dynamic class KalturaPostConvertJobData extends KalturaConvartableJobData
+	public dynamic class VidiunPostConvertJobData extends VidiunConvartableJobData
 	{
 		public var flavorAssetId : String;
 		public var createThumb : Boolean;

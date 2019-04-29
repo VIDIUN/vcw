@@ -1,18 +1,18 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFlavorParamsOutput;
+	import com.vidiun.vo.VidiunFlavorParamsOutput;
 
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaConvartableJobData extends KalturaJobData
+	public dynamic class VidiunConvartableJobData extends VidiunJobData
 	{
 		public var srcFileSyncLocalPath : String;
 		public var actualSrcFileSyncLocalPath : String;
 		public var srcFileSyncRemoteUrl : String;
 		public var engineVersion : int = int.MIN_VALUE;
 		public var flavorParamsOutputId : int = int.MIN_VALUE;
-		public var flavorParamsOutput : KalturaFlavorParamsOutput;
+		public var flavorParamsOutput : VidiunFlavorParamsOutput;
 		public var mediaInfoId : int = int.MIN_VALUE;
 		public var currentOperationSet : int = int.MIN_VALUE;
 		public var currentOperationIndex : int = int.MIN_VALUE;

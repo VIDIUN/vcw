@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,12 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.model
+package com.vidiun.contributionWizard.model
 {
 	import com.adobe_cw.adobe.cairngorm.model.IModelLocator;
-	import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-	import com.kaltura.contributionWizard.vo.providers.WebcamParametersVO;
-	import com.kaltura.utils.LSOHandler;
+	import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+	import com.vidiun.contributionWizard.vo.providers.WebcamParametersVO;
+	import com.vidiun.utils.LSOHandler;
 	
 	import flash.media.Camera;
 	import flash.media.Microphone;

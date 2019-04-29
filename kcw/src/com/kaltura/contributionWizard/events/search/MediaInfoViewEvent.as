@@ -1,6 +1,6 @@
-package com.kaltura.contributionWizard.events.search
+package com.vidiun.contributionWizard.events.search
 {
-	import com.kaltura.contributionWizard.events.ViewControllerEvent;
+	import com.vidiun.contributionWizard.events.ViewControllerEvent;
 
 	import flash.events.Event;
 

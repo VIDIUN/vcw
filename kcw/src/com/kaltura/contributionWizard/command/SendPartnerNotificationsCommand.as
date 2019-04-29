@@ -1,12 +1,12 @@
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.arc90.modular.ModuleSequenceCommand;
-	import com.kaltura.contributionWizard.business.AddEntriesResult;
-	import com.kaltura.contributionWizard.events.EntriesAddedEvent;
-	import com.kaltura.contributionWizard.events.PartnerNotificationsEvent;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.PartnerNotificationVO;
+	import com.vidiun.contributionWizard.business.AddEntriesResult;
+	import com.vidiun.contributionWizard.events.EntriesAddedEvent;
+	import com.vidiun.contributionWizard.events.PartnerNotificationsEvent;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.PartnerNotificationVO;
 	
 	import flash.events.ErrorEvent;
 	import flash.events.Event;

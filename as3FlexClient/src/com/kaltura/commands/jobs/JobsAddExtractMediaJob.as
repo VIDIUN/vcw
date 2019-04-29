@@ -1,14 +1,14 @@
-package com.kaltura.commands.jobs
+package com.vidiun.commands.jobs
 {
-	import com.kaltura.vo.KalturaBatchJob;
-	import com.kaltura.vo.KalturaExtractMediaJobData;
-	import com.kaltura.delegates.jobs.JobsAddExtractMediaJobDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunBatchJob;
+	import com.vidiun.vo.VidiunExtractMediaJobData;
+	import com.vidiun.delegates.jobs.JobsAddExtractMediaJobDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class JobsAddExtractMediaJob extends KalturaCall
+	public class JobsAddExtractMediaJob extends VidiunCall
 	{
 		public var filterFields : String;
-		public function JobsAddExtractMediaJob( job : KalturaBatchJob,extractMediaType : int,data : KalturaExtractMediaJobData )
+		public function JobsAddExtractMediaJob( job : VidiunBatchJob,extractMediaType : int,data : VidiunExtractMediaJobData )
 		{
 			service= 'jobs';
 			action= 'addExtractMediaJob';
@@ -16,12 +16,12 @@ package com.kaltura.commands.jobs
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(job,'job');
+ 			keyValArr = vidiunObject2Arrays(job,'job');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'extractMediaType' );
 			valueArr.push( extractMediaType );
- 			keyValArr = kalturaObject2Arrays(data,'data');
+ 			keyValArr = vidiunObject2Arrays(data,'data');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

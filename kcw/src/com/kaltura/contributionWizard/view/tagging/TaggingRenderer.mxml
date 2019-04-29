@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
 <mx:HBox verticalAlign="middle" verticalScrollPolicy="off" horizontalScrollPolicy="off"
-		 xmlns:mx="http://www.adobe.com/2006/mxml" show="onShow(event)" xmlns:vo="com.kaltura.vo.*"
+		 xmlns:mx="http://www.adobe.com/2006/mxml" show="onShow(event)" xmlns:vo="com.vidiun.vo.*"
 		 creationComplete="setCategory()">
 	<mx:Metadata>
 	</mx:Metadata>
@@ -32,18 +32,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		<![CDATA[
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
 			import com.google.analytics.core.ga_internal;
-			import com.kaltura.contributionWizard.events.TaggingEvent;
-			import com.kaltura.contributionWizard.events.ValidateAllMetaDataEvent;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.contributionWizard.model.importTypesConfiguration.tagging.TaggingConfig;
-			import com.kaltura.contributionWizard.view.events.TaggingViewEvent;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.types.KalturaSourceType;
-			import com.kaltura.vo.KalturaCategory;
-			import com.kaltura.vo.MediaMetaDataVO;
-			import com.kaltura.vo.importees.BaseImportVO;
-			import com.kaltura.vo.importees.ImportFileVO;
-			import com.kaltura.vo.importees.ImportURLVO;
+			import com.vidiun.contributionWizard.events.TaggingEvent;
+			import com.vidiun.contributionWizard.events.ValidateAllMetaDataEvent;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.importTypesConfiguration.tagging.TaggingConfig;
+			import com.vidiun.contributionWizard.view.events.TaggingViewEvent;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.types.VidiunSourceType;
+			import com.vidiun.vo.VidiunCategory;
+			import com.vidiun.vo.MediaMetaDataVO;
+			import com.vidiun.vo.importees.BaseImportVO;
+			import com.vidiun.vo.importees.ImportFileVO;
+			import com.vidiun.vo.importees.ImportURLVO;
 			
 			import flash.utils.setTimeout;
 			
@@ -145,7 +145,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 			private function categoryChangeHandler():void {
-				_categoryName = (categoryCB.selectedItem as KalturaCategory).fullName;
+				_categoryName = (categoryCB.selectedItem as VidiunCategory).fullName;
 				dispatchSetMediaMetaData(inputMetaData, _metaDataVo);
 			}
 
@@ -186,13 +186,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				 * */
 				
 				var ac:ArrayCollection = categoryCB.dataProvider as ArrayCollection;
-				var kCat:KalturaCategory;
+				var vCat:VidiunCategory;
 				for (var i:int = 0; i<ac.length; i++) {
-					kCat = ac.getItemAt(i) as KalturaCategory;
-					if (kCat && kCat.fullName == _initialCategory) {
+					vCat = ac.getItemAt(i) as VidiunCategory;
+					if (vCat && vCat.fullName == _initialCategory) {
 						_comboIndex = 200; // got no idea what this is
-						categoryCB.selectedItem = kCat; //set the seletedItem of the combo box
-						_categoryName = kCat.fullName; // set the category name
+						categoryCB.selectedItem = vCat; //set the seletedItem of the combo box
+						_categoryName = vCat.fullName; // set the category name
 						_categoryIndex = i;
 						dispatchSetMediaMetaData(inputMetaData, _metaDataVo);
 						return;

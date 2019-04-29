@@ -63,33 +63,33 @@ package com.hurlant.math
 		
 		public function toString(radix:Number=16):String {
 			if (s<0) return "-"+negate().toString(radix);
-			var k:int;
+			var v:int;
 			switch (radix) {
-				case 2:   k=1; break;
-				case 4:   k=2; break;
-				case 8:   k=3; break;
-				case 16:  k=4; break;
-				case 32:  k=5; break;
+				case 2:   v=1; break;
+				case 4:   v=2; break;
+				case 8:   v=3; break;
+				case 16:  v=4; break;
+				case 32:  v=5; break;
 				default:
 //					return toRadix(radix);
 			}
-			var km:int = (1<<k)-1;
+			var km:int = (1<<v)-1;
 			var d:int = 0;
 			var m:Boolean = false;
 			var r:String = "";
 			var i:int = t;
-			var p:int = DB-(i*DB)%k;
+			var p:int = DB-(i*DB)%v;
 			if (i-->0) {
 				if (p<DB && (d=a[i]>>p)>0) {
 					m = true;
 					r = d.toString(36);
 				}
 				while (i >= 0) {
-					if (p<k) {
-						d = (a[i]&((1<<p)-1))<<(k-p);
-						d|= a[--i]>>(p+=DB-k);
+					if (p<v) {
+						d = (a[i]&((1<<p)-1))<<(v-p);
+						d|= a[--i]>>(p+=DB-v);
 					} else {
-						d = (a[i]>>(p-=k))&km;
+						d = (a[i]>>(p-=v))&km;
 						if (p<=0) {
 							p += DB;
 							--i;
@@ -106,11 +106,11 @@ package com.hurlant.math
 			return m?r:"0";
 		}
 		public function toArray(array:ByteArray):uint {
-			const k:int = 8;
+			const v:int = 8;
 			const km:int = (1<<8)-1;
 			var d:int = 0;
 			var i:int = t;
-			var p:int = DB-(i*DB)%k;
+			var p:int = DB-(i*DB)%v;
 			var m:Boolean = false;
 			var c:int = 0;
 			if (i-->0) {
@@ -120,11 +120,11 @@ package com.hurlant.math
 					c++;
 				}
 				while (i >= 0) {
-					if (p<k) {
-						d = (a[i]&((1<<p)-1))<<(k-p);
-						d|= a[--i]>>(p+=DB-k);
+					if (p<v) {
+						d = (a[i]&((1<<p)-1))<<(v-p);
+						d|= a[--i]>>(p+=DB-v);
 					} else {
-						d = (a[i]>>(p-=k))&km;
+						d = (a[i]>>(p-=v))&km;
 						if (p<=0) {
 							p += DB;
 							--i;
@@ -267,20 +267,20 @@ package com.hurlant.math
 			var p:int = value.position;
 			var i:int = p+length;
 			var sh:int = 0;
-			const k:int = 8;
+			const v:int = 8;
 			t = 0;
 			s = 0;
 			while (--i >= p) {
 				var x:int = i<value.length?value[i]:0;
 				if (sh == 0) {
 					a[t++] = x;
-				} else if (sh+k > DB) {
+				} else if (sh+v > DB) {
 					a[t-1] |= (x&((1<<(DB-sh))-1))<<sh;
 					a[t++] = x>>(DB-sh);
 				} else {
 					a[t-1] |= x<<sh;
 				}
-				sh += k;
+				sh += v;
 				if (sh >= DB) sh -= DB;
 			}
 			clamp();
@@ -539,7 +539,7 @@ package com.hurlant.math
 		 *         xy == 1 (mod n)
 		 *         xy =  1+km
 		 * 	 xy(2-xy) = (1+km)(1-km)
-		 * x[y(2-xy)] =  1-k^2.m^2
+		 * x[y(2-xy)] =  1-v^2.m^2
 		 * x[y(2-xy)] == 1 (mod m^2)
 		 * if y is 1/x mod m, then y(2-xy) is 1/x mod m^2
 		 * should reduce x and y(2-xy) by m^2 at each step to keep size bounded
@@ -757,10 +757,10 @@ package com.hurlant.math
 			r[0] = s;
 			var p:int = DB-(i*DB)%8;
 			var d:int;
-			var k:int=0;
+			var v:int=0;
 			if (i-->0) {
 				if (p<DB && (d=a[i]>>p)!=(s&DM)>>p) {
-					r[k++] = d|(s<<(DB-p));
+					r[v++] = d|(s<<(DB-p));
 				}
 				while (i>=0) {
 					if(p<8) {
@@ -774,8 +774,8 @@ package com.hurlant.math
 						}
 					}
 					if ((d&0x80)!=0) d|=-256;
-					if (k==0 && (s&0x80)!=(d&0x80)) ++k;
-					if (k>0 || d!=s) r[k++] = d;
+					if (v==0 && (s&0x80)!=(d&0x80)) ++v;
+					if (v>0 || d!=s) r[v++] = d;
 				} 
 			}
 			return r;
@@ -1194,22 +1194,22 @@ package com.hurlant.math
 		 */
 		public function modPow(e:BigInteger, m:BigInteger):BigInteger {
 			var i:int = e.bitLength();
-			var k:int;
+			var v:int;
 			var r:BigInteger = nbv(1);
 			var z:IReduction;
 			
 			if (i<=0) {
 				return r;
 			} else if (i<18) {
-				k=1;
+				v=1;
 			} else if (i<48) {
-				k=3;
+				v=3;
 			} else if (i<144) {
-				k=4;
+				v=4;
 			} else if (i<768) {
-				k=5;
+				v=5;
 			} else {
-				k=6;
+				v=6;
 			}
 			if (i<8) {
 				z = new ClassicReduction(m);
@@ -1221,10 +1221,10 @@ package com.hurlant.math
 			// precomputation
 			var g:Array = [];
 			var n:int = 3;
-			var k1:int = k-1;
-			var km:int = (1<<k)-1;
+			var k1:int = v-1;
+			var km:int = (1<<v)-1;
 			g[1] = z.convert(this);
-			if (k > 1) {
+			if (v > 1) {
 				var g2:BigInteger = new BigInteger;
 				z.sqrTo(g[1], g2);
 				while (n<=km) {
@@ -1249,7 +1249,7 @@ package com.hurlant.math
 						w |= e.a[j-1]>>(DB+i-k1);
 					}
 				}
-				n = k;
+				n = v;
 				while ((w&1)==0) {
 					w >>= 1;
 					--n;
@@ -1473,11 +1473,11 @@ package com.hurlant.math
 		 */
 		protected function millerRabin(t:int):Boolean {
 			var n1:BigInteger = subtract(BigInteger.ONE);
-			var k:int = n1.getLowestSetBit();
-			if (k<=0) {
+			var v:int = n1.getLowestSetBit();
+			if (v<=0) {
 				return false;
 			}
-			var r:BigInteger = n1.shiftRight(k);
+			var r:BigInteger = n1.shiftRight(v);
 			t = (t+1)>>1;
 			if (t>lowprimes.length) {
 				t = lowprimes.length;
@@ -1488,7 +1488,7 @@ package com.hurlant.math
 				var y:BigInteger = a.modPow(r, this);
 				if (y.compareTo(BigInteger.ONE)!=0 && y.compareTo(n1)!=0) {
 					var j:int = 1;
-					while (j++<k && y.compareTo(n1)!=0) {
+					while (j++<v && y.compareTo(n1)!=0) {
 						y = y.modPowInt(2, this);
 						if (y.compareTo(BigInteger.ONE)==0) {
 							return false;

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaLicenseType
+	public class VidiunLicenseType
 	{
 		public static const UNKNOWN : int = -1;
 		public static const NONE : int = 0;

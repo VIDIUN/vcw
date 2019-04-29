@@ -6,7 +6,7 @@
 	This popup window is used to add a new domain name to the Sites Restriction list
 
 -->
-<HelpTitleWindow xmlns="com.kaltura.containers.*" xmlns:mx="http://www.adobe.com/2006/mxml" showCloseButton="true" 
+<HelpTitleWindow xmlns="com.vidiun.containers.*" xmlns:mx="http://www.adobe.com/2006/mxml" showCloseButton="true" 
 	title="{rm.getString('windows', 'addNewDomainTitle')}" layout="vertical" close="closeWindow(event)">
 	<mx:Script>
 		<![CDATA[

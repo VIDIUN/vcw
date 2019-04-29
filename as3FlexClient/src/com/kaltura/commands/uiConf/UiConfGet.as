@@ -1,9 +1,9 @@
-package com.kaltura.commands.uiConf
+package com.vidiun.commands.uiConf
 {
-	import com.kaltura.delegates.uiConf.UiConfGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.uiConf.UiConfGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UiConfGet extends KalturaCall
+	public class UiConfGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UiConfGet( id : int )

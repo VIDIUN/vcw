@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntry;
+	import com.vidiun.vo.VidiunBaseEntry;
 
 	[Bindable]
-	public dynamic class KalturaPlaylist extends KalturaBaseEntry
+	public dynamic class VidiunPlaylist extends VidiunBaseEntry
 	{
 		public var playlistContent : String;
 		public var filters : Array = new Array();

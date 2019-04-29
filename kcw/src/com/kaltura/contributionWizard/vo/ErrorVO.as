@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.vo
+package com.vidiun.contributionWizard.vo
 {
 	import com.adobe.cairngorm.vo.IValueObject;
 	

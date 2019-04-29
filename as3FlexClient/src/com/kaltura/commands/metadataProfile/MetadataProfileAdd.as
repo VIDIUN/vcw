@@ -1,13 +1,13 @@
-package com.kaltura.commands.metadataProfile
+package com.vidiun.commands.metadataProfile
 {
-	import com.kaltura.vo.KalturaMetadataProfile;
-	import com.kaltura.delegates.metadataProfile.MetadataProfileAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMetadataProfile;
+	import com.vidiun.delegates.metadataProfile.MetadataProfileAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataProfileAdd extends KalturaCall
+	public class MetadataProfileAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MetadataProfileAdd( metadataProfile : KalturaMetadataProfile,xsdData : String,viewsData : String='' )
+		public function MetadataProfileAdd( metadataProfile : VidiunMetadataProfile,xsdData : String,viewsData : String='' )
 		{
 			service= 'metadata_metadataprofile';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.metadataProfile
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(metadataProfile,'metadataProfile');
+ 			keyValArr = vidiunObject2Arrays(metadataProfile,'metadataProfile');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'xsdData' );

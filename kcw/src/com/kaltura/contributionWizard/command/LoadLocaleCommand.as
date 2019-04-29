@@ -1,11 +1,11 @@
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.commands.SequenceCommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
 	import com.bjorn.event.ChainEvent;
-	import com.kaltura.contributionWizard.events.LoadUIEvent;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.UIConfigVO;
+	import com.vidiun.contributionWizard.events.LoadUIEvent;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.UIConfigVO;
 
 	import flash.events.IEventDispatcher;
 	import flash.system.ApplicationDomain;
@@ -35,10 +35,10 @@ package com.kaltura.contributionWizard.command
 				
 				var localeUrl : String = uiConfigVo.localeUrl;
 				
-				//if we want to test the kcw in file system mode
+				//if we want to test the vcw in file system mode
 				if(_model.context.fileSystemMode) 
 				{
-					localeUrl = "assets/en_US_ContributionWizard_kaltura.swf";
+					localeUrl = "assets/en_US_ContributionWizard_vidiun.swf";
 					if(_model.context.localLocale)
 						localeUrl = _model.context.localLocale;
 				}
@@ -64,7 +64,7 @@ package com.kaltura.contributionWizard.command
 			(
 				function(element:String, index:int, list:Array):void
 				{
-					if (element.indexOf("kaltura") == -1)
+					if (element.indexOf("vidiun") == -1)
 					{
 						orderedLocales.unshift(element);
 					}
@@ -75,7 +75,7 @@ package com.kaltura.contributionWizard.command
 				}
 			);
 			_resourceManager.localeChain = orderedLocales;
-			//_resourceManager.localeChain = ResourceManager.getInstance().getLocales().reverse();//["en_US_kaltura", "en_US"] => ["en_US", "en_US_kaltura"];
+			//_resourceManager.localeChain = ResourceManager.getInstance().getLocales().reverse();//["en_US_vidiun", "en_US"] => ["en_US", "en_US_vidiun"];
 			_model.loadState.loaded();
 		}
 

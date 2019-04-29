@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,19 +20,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.util
+package com.vidiun.contributionWizard.util
 {
-	import com.kaltura.contributionWizard.model.Context;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.Context;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 	public class ContextDecorator
 	{
 		private static var _context:Context = WizardModelLocator.getInstance().context;
-		private static const PROPERTY_SESSION:String 		= "ks";
+		private static const PROPERTY_SESSION:String 		= "vs";
 		private static const PROPERTY_PARTNER_ID:String 	= "partnerId";
 		//private static const PROPERTY_SUB_PARTNER_ID:String	= "subp_id";
 		//private static const PROPERTY_PUSER_ID:String 		= "uid";
-		//private static const PROPERTY_KSHOW_ID:String 		= "kshow_id";
+		//private static const PROPERTY_VSHOW_ID:String 		= "vshow_id";
 
 		public static function addVariables(decoratedVars:Object):void
 		{
@@ -41,7 +41,7 @@ package com.kaltura.contributionWizard.util
 				decoratedVars[PROPERTY_PARTNER_ID]		= _context.partnerId;
 			//decoratedVars[PROPERTY_SUB_PARTNER_ID] 	= _context.subPartnerId;
 			//decoratedVars[PROPERTY_PUSER_ID] 		= _context.userId;
-			//decoratedVars[PROPERTY_KSHOW_ID] 		= _context.kshowId;
+			//decoratedVars[PROPERTY_VSHOW_ID] 		= _context.vshowId;
 		}
 
 	}

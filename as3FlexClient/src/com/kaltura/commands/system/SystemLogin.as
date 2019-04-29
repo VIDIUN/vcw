@@ -1,9 +1,9 @@
-package com.kaltura.commands.system
+package com.vidiun.commands.system
 {
-	import com.kaltura.delegates.system.SystemLoginDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.system.SystemLoginDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemLogin extends KalturaCall
+	public class SystemLogin extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemLogin( email : String,password : String )

@@ -1,9 +1,9 @@
-package com.kaltura.commands.data
+package com.vidiun.commands.data
 {
-	import com.kaltura.delegates.data.DataDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.data.DataDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class DataDelete extends KalturaCall
+	public class DataDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function DataDelete( entryId : String )

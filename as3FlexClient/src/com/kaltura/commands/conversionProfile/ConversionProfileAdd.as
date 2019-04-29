@@ -1,13 +1,13 @@
-package com.kaltura.commands.conversionProfile
+package com.vidiun.commands.conversionProfile
 {
-	import com.kaltura.vo.KalturaConversionProfile;
-	import com.kaltura.delegates.conversionProfile.ConversionProfileAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunConversionProfile;
+	import com.vidiun.delegates.conversionProfile.ConversionProfileAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ConversionProfileAdd extends KalturaCall
+	public class ConversionProfileAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function ConversionProfileAdd( conversionProfile : KalturaConversionProfile )
+		public function ConversionProfileAdd( conversionProfile : VidiunConversionProfile )
 		{
 			service= 'conversionprofile';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.conversionProfile
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(conversionProfile,'conversionProfile');
+ 			keyValArr = vidiunObject2Arrays(conversionProfile,'conversionProfile');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

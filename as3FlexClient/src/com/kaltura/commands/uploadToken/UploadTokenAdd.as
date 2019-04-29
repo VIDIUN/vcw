@@ -1,22 +1,22 @@
-package com.kaltura.commands.uploadToken
+package com.vidiun.commands.uploadToken
 {
-	import com.kaltura.vo.KalturaUploadToken;
-	import com.kaltura.delegates.uploadToken.UploadTokenAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunUploadToken;
+	import com.vidiun.delegates.uploadToken.UploadTokenAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UploadTokenAdd extends KalturaCall
+	public class UploadTokenAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function UploadTokenAdd( uploadToken : KalturaUploadToken=null )
+		public function UploadTokenAdd( uploadToken : VidiunUploadToken=null )
 		{
-			if(uploadToken== null)uploadToken= new KalturaUploadToken();
+			if(uploadToken== null)uploadToken= new VidiunUploadToken();
 			service= 'uploadtoken';
 			action= 'add';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(uploadToken,'uploadToken');
+ 			keyValArr = vidiunObject2Arrays(uploadToken,'uploadToken');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

@@ -1,7 +1,7 @@
-package com.kaltura.contributionWizard.events
+package com.vidiun.contributionWizard.events
 {
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
-	import com.kaltura.contributionWizard.vo.ErrorVO;
+	import com.vidiun.contributionWizard.vo.ErrorVO;
 
 	public class ReportErrorEvent extends CairngormEvent
 	{

@@ -1,6 +1,6 @@
-package com.kaltura.contributionWizard.view.events
+package com.vidiun.contributionWizard.view.events
 {
-	import com.kaltura.vo.MediaMetaDataVO;
+	import com.vidiun.vo.MediaMetaDataVO;
 	
 	import flash.events.Event;
 

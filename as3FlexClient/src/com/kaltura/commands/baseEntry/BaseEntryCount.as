@@ -1,22 +1,22 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.vo.KalturaBaseEntryFilter;
-	import com.kaltura.delegates.baseEntry.BaseEntryCountDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunBaseEntryFilter;
+	import com.vidiun.delegates.baseEntry.BaseEntryCountDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryCount extends KalturaCall
+	public class BaseEntryCount extends VidiunCall
 	{
 		public var filterFields : String;
-		public function BaseEntryCount( filter : KalturaBaseEntryFilter=null )
+		public function BaseEntryCount( filter : VidiunBaseEntryFilter=null )
 		{
-			if(filter== null)filter= new KalturaBaseEntryFilter();
+			if(filter== null)filter= new VidiunBaseEntryFilter();
 			service= 'baseentry';
 			action= 'count';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

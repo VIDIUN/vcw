@@ -1,5 +1,5 @@
 package {
-	import com.kaltura.wrapper.IFlexWrapper;
+	import com.vidiun.wrapper.IFlexWrapper;
 
 	import flash.display.Loader;
 	import flash.display.MovieClip;

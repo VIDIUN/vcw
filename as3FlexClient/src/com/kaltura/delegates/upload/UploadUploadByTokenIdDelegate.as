@@ -1,12 +1,12 @@
-package com.kaltura.delegates.upload
+package com.vidiun.delegates.upload
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class UploadUploadByTokenIdDelegate extends WebDelegateBase
 	{
-		public function UploadUploadByTokenIdDelegate(call:KalturaCall, config:KalturaConfig)
+		public function UploadUploadByTokenIdDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

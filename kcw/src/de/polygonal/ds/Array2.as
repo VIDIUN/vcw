@@ -76,8 +76,8 @@ package de.polygonal.ds
 		 */
 		public function fill(item:*):void
 		{
-			var k:int = _w * _h;
-			for (var i:int = 0; i < k; i++)
+			var v:int = _w * _h;
+			for (var i:int = 0; i < v; i++)
 				_a[i] = item;
 		}
 		
@@ -177,11 +177,11 @@ package de.polygonal.ds
 		{
 			if (_w == 1) return;
 			
-			var j:int = _w - 1, k:int;
+			var j:int = _w - 1, v:int;
 			for (var i:int = 0; i < _h; i++)
 			{
-				k = i * _w + j;
-				_a.splice(k, 0, _a.splice(k - j, 1));
+				v = i * _w + j;
+				_a.splice(v, 0, _a.splice(v - j, 1));
 			}
 		}
 		
@@ -194,11 +194,11 @@ package de.polygonal.ds
 		{
 			if (_w == 1) return;
 			
-			var j:int = _w - 1, k:int;
+			var j:int = _w - 1, v:int;
 			for (var i:int = 0; i < _h; i++)
 			{
-				k = i * _w + j;
-				_a.splice(k - j, 0, _a.splice(k, 1));
+				v = i * _w + j;
+				_a.splice(v - j, 0, _a.splice(v, 1));
 			}
 		}
 		
@@ -308,8 +308,8 @@ package de.polygonal.ds
 		 */
 		public function contains(obj:*):Boolean
 		{
-			var k:int = size;
-			for (var i:int = 0; i < k; i++)
+			var v:int = size;
+			for (var i:int = 0; i < v; i++)
 			{
 				if (_a[i] === obj)
 					return true;
@@ -359,8 +359,8 @@ package de.polygonal.ds
 		{
 			var a:Array = _a.concat();
 			
-			var k:int = size;
-			if (a.length > k) a.length = k;
+			var v:int = size;
+			if (a.length > v) a.length = v;
 			return a;
 		}
 		

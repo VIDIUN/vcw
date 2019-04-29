@@ -1,9 +1,9 @@
-package com.kaltura.commands.liveStream
+package com.vidiun.commands.liveStream
 {
-	import com.kaltura.delegates.liveStream.LiveStreamDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.liveStream.LiveStreamDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class LiveStreamDelete extends KalturaCall
+	public class LiveStreamDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function LiveStreamDelete( entryId : String )

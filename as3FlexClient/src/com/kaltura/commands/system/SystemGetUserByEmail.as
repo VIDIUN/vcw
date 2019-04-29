@@ -1,9 +1,9 @@
-package com.kaltura.commands.system
+package com.vidiun.commands.system
 {
-	import com.kaltura.delegates.system.SystemGetUserByEmailDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.system.SystemGetUserByEmailDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemGetUserByEmail extends KalturaCall
+	public class SystemGetUserByEmail extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemGetUserByEmail( email : String )

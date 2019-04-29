@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaPlayableEntryFilter;
+	import com.vidiun.vo.VidiunPlayableEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaMediaEntryFilter extends KalturaPlayableEntryFilter
+	public dynamic class VidiunMediaEntryFilter extends VidiunPlayableEntryFilter
 	{
 		public var mediaTypeEqual : int = int.MIN_VALUE;
 		public var mediaTypeIn : String;

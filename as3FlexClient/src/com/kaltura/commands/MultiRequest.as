@@ -1,9 +1,9 @@
-package com.kaltura.commands
+package com.vidiun.commands
 {
-	import com.kaltura.delegates.MultiRequestDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.MultiRequestDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MultiRequest extends KalturaCall
+	public class MultiRequest extends VidiunCall
 	{
 		private var _addedParams:Object = new Object();
 		private var _mapParamArr : Array = new Array();
@@ -14,9 +14,9 @@ package com.kaltura.commands
 			service = 'multirequest';
 		}
 		
-		public function addAction( kalturaCall : KalturaCall ) :void
+		public function addAction( vidiunCall : VidiunCall ) :void
 		{
-			actions.push( kalturaCall );
+			actions.push( vidiunCall );
 		}
 		
 		public function mapMultiRequestParam( fromRequestIndex : int , 
@@ -45,11 +45,11 @@ package com.kaltura.commands
 				keyArray.push((j+1)+":action");
 				valueArr.push( actions[j].action );
 
-				var argsArr : Array = ((actions[j] as KalturaCall).args.toString()).split('&');
-				for(var k:int=0; k< argsArr.length; k++)
+				var argsArr : Array = ((actions[j] as VidiunCall).args.toString()).split('&');
+				for(var v:int=0; v< argsArr.length; v++)
 				{
 					var inMap : Boolean = false;
-					var key : String = decodeURIComponent(argsArr[k].split('=')[0]);
+					var key : String = decodeURIComponent(argsArr[v].split('=')[0]);
 					
 					//search the key in request map
 					for( var m:int=0; m<_mapParamArr.length; m++ )
@@ -62,10 +62,10 @@ package com.kaltura.commands
 						}	
 					}
 					
-					if( !inMap && argsArr[k] ) //if not in the multi request map
+					if( !inMap && argsArr[v] ) //if not in the multi request map
 					{
 						keyArray.push((j+1)+":"+key);
-						valueArr.push(  decodeURIComponent(argsArr[k].split('=')[1]) );
+						valueArr.push(  decodeURIComponent(argsArr[v].split('=')[1]) );
 					}
 				}
 			}

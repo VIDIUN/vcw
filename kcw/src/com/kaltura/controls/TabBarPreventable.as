@@ -1,6 +1,6 @@
-package com.kaltura.controls
+package com.vidiun.controls
 {
-	import com.kaltura.events.ItemSelectionEvent;
+	import com.vidiun.events.ItemSelectionEvent;
 
 	import flash.display.DisplayObject;
 	import flash.display.InteractiveObject;
@@ -15,7 +15,7 @@ package com.kaltura.controls
 
 	use namespace mx_internal;
 
-	[Event(name="itemPreSelection", type="com.kaltura.events.ItemSelectionEvent")]
+	[Event(name="itemPreSelection", type="com.vidiun.events.ItemSelectionEvent")]
 	public class TabBarPreventable extends TabBar
 	{
 

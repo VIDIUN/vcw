@@ -1,9 +1,9 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaUpdateThumbnailDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.media.MediaUpdateThumbnailDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaUpdateThumbnail extends KalturaCall
+	public class MediaUpdateThumbnail extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MediaUpdateThumbnail( entryId : String,timeOffset : int )

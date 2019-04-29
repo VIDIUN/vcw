@@ -1,9 +1,9 @@
-package com.kaltura.commands.conversionProfile
+package com.vidiun.commands.conversionProfile
 {
-	import com.kaltura.delegates.conversionProfile.ConversionProfileDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.conversionProfile.ConversionProfileDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ConversionProfileDelete extends KalturaCall
+	public class ConversionProfileDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function ConversionProfileDelete( id : int )

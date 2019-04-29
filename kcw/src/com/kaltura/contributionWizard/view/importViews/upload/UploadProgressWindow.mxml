@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -34,15 +34,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.model.UploadModelLocator;
+			import com.vidiun.contributionWizard.model.UploadModelLocator;
 			import mx.controls.Alert;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.model.importData.UploadCartStatusTypes;
-			import com.kaltura.vo.importees.UploadStatusTypes;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.model.importData.UploadCartStatusTypes;
+			import com.vidiun.vo.importees.UploadStatusTypes;
 			import mx.managers.PopUpManager;
-			import com.kaltura.net.PolledFileReference;
-			import com.kaltura.vo.importees.ImportFileVO;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.net.PolledFileReference;
+			import com.vidiun.vo.importees.ImportFileVO;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			[Bindable]
 			private var _model:WizardModelLocator = WizardModelLocator.getInstance();

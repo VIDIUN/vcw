@@ -1,12 +1,12 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaStatsKmcEvent extends BaseFlexVo
+	public dynamic class VidiunStatsVmcEvent extends BaseFlexVo
 	{
 		public var clientVer : String;
-		public var kmcEventActionPath : String;
-		public var kmcEventType : int = int.MIN_VALUE;
+		public var vmcEventActionPath : String;
+		public var vmcEventType : int = int.MIN_VALUE;
 		public var eventTimestamp : Number = NaN;
 		public var sessionId : String;
 		public var partnerId : int = int.MIN_VALUE;
@@ -19,8 +19,8 @@ package com.kaltura.vo
 		{
 			super.setupPropertyList();
 			propertyList.push('clientVer');
-			propertyList.push('kmcEventActionPath');
-			propertyList.push('kmcEventType');
+			propertyList.push('vmcEventActionPath');
+			propertyList.push('vmcEventType');
 			propertyList.push('eventTimestamp');
 			propertyList.push('sessionId');
 			propertyList.push('partnerId');
@@ -35,8 +35,8 @@ package com.kaltura.vo
 			var arr : Array;
 			arr = new Array();
 			arr.push('clientVer');
-			arr.push('kmcEventActionPath');
-			arr.push('kmcEventType');
+			arr.push('vmcEventActionPath');
+			arr.push('vmcEventType');
 			arr.push('eventTimestamp');
 			arr.push('sessionId');
 			arr.push('partnerId');
@@ -53,8 +53,8 @@ package com.kaltura.vo
 			var arr : Array;
 			arr = new Array();
 			arr.push('clientVer');
-			arr.push('kmcEventActionPath');
-			arr.push('kmcEventType');
+			arr.push('vmcEventActionPath');
+			arr.push('vmcEventType');
 			arr.push('eventTimestamp');
 			arr.push('sessionId');
 			arr.push('partnerId');

@@ -1,27 +1,27 @@
-package com.kaltura.commands.flavorParams
+package com.vidiun.commands.flavorParams
 {
-	import com.kaltura.vo.KalturaFlavorParamsFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.flavorParams.FlavorParamsListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunFlavorParamsFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.flavorParams.FlavorParamsListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorParamsList extends KalturaCall
+	public class FlavorParamsList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function FlavorParamsList( filter : KalturaFlavorParamsFilter=null,pager : KalturaFilterPager=null )
+		public function FlavorParamsList( filter : VidiunFlavorParamsFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaFlavorParamsFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunFlavorParamsFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'flavorparams';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

@@ -6,9 +6,9 @@
     		import mx.resources.IResourceManager;
     		import mx.resources.ResourceManager;
     		import mx.resources.ResourceBundle;
-    		import com.kaltura.vo.KalturaFilterPager;
-    		import com.kaltura.events.PagingEvent;
-    		import com.kaltura.utils.pager.PagerEvent;
+    		import com.vidiun.vo.VidiunFilterPager;
+    		import com.vidiun.events.PagingEvent;
+    		import com.vidiun.utils.pager.PagerEvent;
     		import mx.events.ItemClickEvent;
     		import mx.events.ListEvent;
 			import flash.events.TextEvent; 
@@ -37,7 +37,7 @@
     		[Bindable] public var showFirstPageFlag : Boolean = false;
     		[Bindable] public var showNextFlag : Boolean = true;
     		[Bindable] public var showPrvFlag : Boolean = true;
-    		[Bindable] public var kalturaFilterPager:KalturaFilterPager = new KalturaFilterPager();
+    		[Bindable] public var vidiunFilterPager:VidiunFilterPager = new VidiunFilterPager();
     		    		
     		//public functions
     		/////////////////////////////////////////////////////////////////
@@ -46,7 +46,7 @@
     			//if(selectedPage == _selectedPage) return;
     			
     			selectionChange(selectedPage);
-    			kalturaFilterPager.pageIndex = selectedPage;
+    			vidiunFilterPager.pageIndex = selectedPage;
     			if( _selectedPage<=_lastPage && _selectedPage>=_firstPage)
     			{		
     				numbers.htmlText = getCurrentPaging(_selectedPage-_oneSizeDelta,_selectedPage+_oneSizeDelta,_selectedPage);
@@ -151,8 +151,8 @@
              	selectedPage = 1;
              	_selectedPage = 1;
              	pageSize = int(rowInPageCb.selectedItem);
-             	kalturaFilterPager.pageSize = pageSize;
-             	kalturaFilterPager.pageIndex = 1;
+             	vidiunFilterPager.pageSize = pageSize;
+             	vidiunFilterPager.pageIndex = 1;
              	var pageEvent : PagingEvent = new PagingEvent(PagingEvent.ROWS_IN_PAGE_CHANGE , selectedPage , 1, int(rowInPageCb.selectedItem));
              	dispatchEvent( pageEvent ); 
              }
@@ -210,12 +210,12 @@
     </mx:Script>
    
     <mx:Metadata>
-    	[Event(name="nextPage", type="com.kaltura.events.PagingEvent")]
-    	[Event(name="prvPage", type="com.kaltura.events.PagingEvent")]
-    	[Event(name="firstPage", type="com.kaltura.events.PagingEvent")]
-    	[Event(name="lastPage", type="com.kaltura.events.PagingEvent")]
-    	[Event(name="getPageNum", type="com.kaltura.events.PagingEvent")]
-    	[Event(name="rowsInPageChange", type="com.kaltura.events.PagingEvent")]
+    	[Event(name="nextPage", type="com.vidiun.events.PagingEvent")]
+    	[Event(name="prvPage", type="com.vidiun.events.PagingEvent")]
+    	[Event(name="firstPage", type="com.vidiun.events.PagingEvent")]
+    	[Event(name="lastPage", type="com.vidiun.events.PagingEvent")]
+    	[Event(name="getPageNum", type="com.vidiun.events.PagingEvent")]
+    	[Event(name="rowsInPageChange", type="com.vidiun.events.PagingEvent")]
     </mx:Metadata>
     
    	<mx:HBox id="pagerContainer" horizontalCenter="0" verticalCenter="0" 

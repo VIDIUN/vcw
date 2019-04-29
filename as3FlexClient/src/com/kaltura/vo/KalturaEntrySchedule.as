@@ -1,7 +1,7 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
-	public dynamic class KalturaEntrySchedule extends BaseFlexVo
+	import com.vidiun.vo.BaseFlexVo;
+	public dynamic class VidiunEntrySchedule extends BaseFlexVo
 	{
 		public var id : int = int.MIN_VALUE;
 		public var partnerId : int = int.MIN_VALUE;

@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBatchJob;
+	import com.vidiun.vo.VidiunBatchJob;
 
 	[Bindable]
-	public dynamic class KalturaMetadataBatchJob extends KalturaBatchJob
+	public dynamic class VidiunMetadataBatchJob extends VidiunBatchJob
 	{
 		override protected function setupPropertyList():void
 		{

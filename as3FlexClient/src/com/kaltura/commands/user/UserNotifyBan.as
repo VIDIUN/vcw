@@ -1,9 +1,9 @@
-package com.kaltura.commands.user
+package com.vidiun.commands.user
 {
-	import com.kaltura.delegates.user.UserNotifyBanDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.user.UserNotifyBanDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UserNotifyBan extends KalturaCall
+	public class UserNotifyBan extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UserNotifyBan( userId : String )

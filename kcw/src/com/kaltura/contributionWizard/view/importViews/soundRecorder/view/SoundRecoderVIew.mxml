@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:VBox 
 	xmlns:mx="http://www.adobe.com/2006/mxml" 
-	xmlns:view="com.kaltura.contributionWizard.view.importViews.SoundRecorder.view.*"
+	xmlns:view="com.vidiun.contributionWizard.view.importViews.SoundRecorder.view.*"
 	xmlns:spinner="com.grakl.spinner.*"
-	creationComplete="creationCompleteHandler()" xmlns:view1="com.kaltura.contributionWizard.view.importViews.soundRecorder.view.*">
+	creationComplete="creationCompleteHandler()" xmlns:view1="com.vidiun.contributionWizard.view.importViews.soundRecorder.view.*">
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 			import mx.controls.Text;
 			[Bindable]
 			private var _names:Array;

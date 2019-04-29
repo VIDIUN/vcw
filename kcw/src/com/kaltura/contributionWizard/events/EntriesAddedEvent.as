@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.events
+package com.vidiun.contributionWizard.events
 {
 	import com.arc90.modular.AbstractModuleEvent;
 	import com.bjorn.event.ChainEvent;
@@ -14,7 +14,7 @@ package com.kaltura.contributionWizard.events
 		 *	  {
 		 *	   entryId		: "2345fd324",
 		 *	   mediaType	: "video",
-		 *	   kshowId		: "10534"
+		 *	   vshowId		: "10534"
 		 *	  }
 		 *	...
 		 *	]

@@ -1,13 +1,13 @@
-package com.kaltura.commands.playlist
+package com.vidiun.commands.playlist
 {
-	import com.kaltura.vo.KalturaPlaylist;
-	import com.kaltura.delegates.playlist.PlaylistAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunPlaylist;
+	import com.vidiun.delegates.playlist.PlaylistAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PlaylistAdd extends KalturaCall
+	public class PlaylistAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function PlaylistAdd( playlist : KalturaPlaylist,updateStats : Boolean=false )
+		public function PlaylistAdd( playlist : VidiunPlaylist,updateStats : Boolean=false )
 		{
 			service= 'playlist';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.playlist
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(playlist,'playlist');
+ 			keyValArr = vidiunObject2Arrays(playlist,'playlist');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'updateStats' );

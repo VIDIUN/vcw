@@ -1,9 +1,9 @@
-package com.kaltura.commands.category
+package com.vidiun.commands.category
 {
-	import com.kaltura.delegates.category.CategoryDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.category.CategoryDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class CategoryDelete extends KalturaCall
+	public class CategoryDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function CategoryDelete( id : int )

@@ -1,9 +1,9 @@
-package com.kaltura.commands.notification
+package com.vidiun.commands.notification
 {
-	import com.kaltura.delegates.notification.NotificationGetClientNotificationDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.notification.NotificationGetClientNotificationDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class NotificationGetClientNotification extends KalturaCall
+	public class NotificationGetClientNotification extends VidiunCall
 	{
 		public var filterFields : String;
 		public function NotificationGetClientNotification( entryId : String,type : int )

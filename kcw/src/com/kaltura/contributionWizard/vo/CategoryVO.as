@@ -1,6 +1,6 @@
-package com.kaltura.contributionWizard.vo
+package com.vidiun.contributionWizard.vo
 {
-	import com.kaltura.vo.KalturaCategory;
+	import com.vidiun.vo.VidiunCategory;
 	
 	import mx.collections.ArrayCollection;
 	
@@ -8,11 +8,11 @@ package com.kaltura.contributionWizard.vo
 	{
 		public var id:Number;
 		[Bindable]public var name:String;
-		public var category:KalturaCategory;
+		public var category:VidiunCategory;
 		public var children:ArrayCollection = new ArrayCollection();
 		
 		
-		public function CategoryVO(id:Number, name:String, category:KalturaCategory)
+		public function CategoryVO(id:Number, name:String, category:VidiunCategory)
 		{
 			this.id = id;
 			this.name = name;
@@ -26,7 +26,7 @@ package com.kaltura.contributionWizard.vo
 			clonedVo.name = this.name;
 			clonedVo.id = this.id;
 			
-			clonedVo.category = new KalturaCategory();
+			clonedVo.category = new VidiunCategory();
 			clonedVo.category.createdAt = this.category.createdAt;
 			clonedVo.category.depth = this.category.depth;
 			clonedVo.category.entriesCount = this.category.entriesCount;

@@ -118,8 +118,8 @@ package de.polygonal.ds
 		 */
 		public function clear():void
 		{
-			var k:int = _bits.length;
-			for (var i:int = 0; i < k; i++)
+			var v:int = _bits.length;
+			for (var i:int = 0; i < v; i++)
 				_bits[i] = 0;
 		}
 		
@@ -128,8 +128,8 @@ package de.polygonal.ds
 		 */
 		public function setAll():void
 		{
-			var k:int = _bits.length;
-			for (var i:int = 0; i < k; i++)
+			var v:int = _bits.length;
+			for (var i:int = 0; i < v; i++)
 				_bits[i] = int.MAX_VALUE;
 		}
 		

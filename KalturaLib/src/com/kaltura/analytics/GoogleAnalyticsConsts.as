@@ -1,4 +1,4 @@
-package com.kaltura.analytics
+package com.vidiun.analytics
 {     
 	public class GoogleAnalyticsConsts
 	{
@@ -22,7 +22,7 @@ package com.kaltura.analytics
 		public static const CONTENT_APPROVE_MODERATION : String = "Approve Moderation"; // V
 		public static const CONTENT_REJECT_MODERATION : String = "Reject Moderation";   // V
 		public static const CONTENT_BULK_UPLOAD : String = "Content Bulk Uploads"; // V
-		public static const CONTENT_ADMIN_KCW_UPLOAD : String = "Content Admin KCW Upload";  // V
+		public static const CONTENT_ADMIN_VCW_UPLOAD : String = "Content Admin VCW Upload";  // V
 		public static const CONTENT_GO_TO_PAGE : String = "Show rows";  // V
 		public static const CONTENT_NEXT_PAGE : String = "Next page/Page";  // V
 		public static const CONTENT_PREV_PAGE : String = "Previous page/Page";  // V

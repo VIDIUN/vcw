@@ -1,9 +1,9 @@
-package com.kaltura.commands.flavorAsset
+package com.vidiun.commands.flavorAsset
 {
-	import com.kaltura.delegates.flavorAsset.FlavorAssetGetWebPlayableByEntryIdDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.flavorAsset.FlavorAssetGetWebPlayableByEntryIdDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorAssetGetWebPlayableByEntryId extends KalturaCall
+	public class FlavorAssetGetWebPlayableByEntryId extends VidiunCall
 	{
 		public var filterFields : String;
 		public function FlavorAssetGetWebPlayableByEntryId( entryId : String )

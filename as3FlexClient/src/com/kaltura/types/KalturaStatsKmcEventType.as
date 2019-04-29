@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaStatsKmcEventType
+	public class VidiunStatsVmcEventType
 	{
 		public static const CONTENT_PAGE_VIEW : int = 1001;
 		public static const CONTENT_ADD_PLAYLIST : int = 1010;
@@ -18,7 +18,7 @@ package com.kaltura.types
 		public static const CONTENT_APPROVE_MODERATION : int = 1020;
 		public static const CONTENT_REJECT_MODERATION : int = 1021;
 		public static const CONTENT_BULK_UPLOAD : int = 1022;
-		public static const CONTENT_ADMIN_KCW_UPLOAD : int = 1023;
+		public static const CONTENT_ADMIN_VCW_UPLOAD : int = 1023;
 		public static const CONTENT_CONTENT_GO_TO_PAGE : int = 1057;
 		public static const CONTENT_ENTRY_DRILLDOWN : int = 1088;
 		public static const CONTENT_OPEN_PREVIEW_AND_EMBED : int = 1089;

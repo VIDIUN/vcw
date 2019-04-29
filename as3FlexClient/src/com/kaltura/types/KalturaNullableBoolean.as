@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaNullableBoolean
+	public class VidiunNullableBoolean
 	{
 		public static const NULL_VALUE : int = -1;
 		public static const FALSE_VALUE : int = 0;

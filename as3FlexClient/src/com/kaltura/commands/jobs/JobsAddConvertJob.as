@@ -1,14 +1,14 @@
-package com.kaltura.commands.jobs
+package com.vidiun.commands.jobs
 {
-	import com.kaltura.vo.KalturaBatchJob;
-	import com.kaltura.vo.KalturaConvertProfileJobData;
-	import com.kaltura.delegates.jobs.JobsAddConvertJobDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunBatchJob;
+	import com.vidiun.vo.VidiunConvertProfileJobData;
+	import com.vidiun.delegates.jobs.JobsAddConvertJobDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class JobsAddConvertJob extends KalturaCall
+	public class JobsAddConvertJob extends VidiunCall
 	{
 		public var filterFields : String;
-		public function JobsAddConvertJob( job : KalturaBatchJob,data : KalturaConvertProfileJobData )
+		public function JobsAddConvertJob( job : VidiunBatchJob,data : VidiunConvertProfileJobData )
 		{
 			service= 'jobs';
 			action= 'addConvertJob';
@@ -16,10 +16,10 @@ package com.kaltura.commands.jobs
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(job,'job');
+ 			keyValArr = vidiunObject2Arrays(job,'job');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(data,'data');
+ 			keyValArr = vidiunObject2Arrays(data,'data');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

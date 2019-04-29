@@ -1,12 +1,12 @@
-package com.kaltura.commands.bulkUpload
+package com.vidiun.commands.bulkUpload
 {
-	import com.kaltura.delegates.bulkUpload.BulkUploadAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.bulkUpload.BulkUploadAddDelegate;
+	import com.vidiun.net.VidiunCall;
 	
 	import flash.net.FileReference;
 	import flash.net.URLRequest;
 
-	public class BulkUploadAdd extends KalturaCall
+	public class BulkUploadAdd extends VidiunCall
 	{
 		public var filterFields : String;
 		private var _fr : FileReference;

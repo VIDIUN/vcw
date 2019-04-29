@@ -9,7 +9,7 @@
 	<property name="APP_ROOT" value="myApp"/>
 	<target name="main">
 		<antcall target="en_US"></antcall>
-		<antcall target="en_US_kaltura"></antcall>
+		<antcall target="en_US_vidiun"></antcall>
 	</target>
 	<target name="en_US">
 		<mxmlc>
@@ -19,12 +19,12 @@
 			<output>bin-debug/locale/advancededitor_en_US.swf</output>
 		</mxmlc>
 	</target>
-	<target name="en_US_kaltura">
+	<target name="en_US_vidiun">
 		<mxmlc>
-			<locale>en_US_kaltura</locale>
+			<locale>en_US_vidiun</locale>
 			<source-path>locale/{locale}</source-path>
 			<include-resource-bundles>advancededitor</include-resource-bundles>
-			<output>bin-debug/locale/advancededitor_en_US_kaltura.swf</output>
+			<output>bin-debug/locale/advancededitor_en_US_vidiun.swf</output>
 		</mxmlc>
 	</target>
 </project>

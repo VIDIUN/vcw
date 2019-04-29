@@ -1,13 +1,13 @@
-package com.kaltura.commands.uiConf
+package com.vidiun.commands.uiConf
 {
-	import com.kaltura.vo.KalturaUiConf;
-	import com.kaltura.delegates.uiConf.UiConfAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunUiConf;
+	import com.vidiun.delegates.uiConf.UiConfAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UiConfAdd extends KalturaCall
+	public class UiConfAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function UiConfAdd( uiConf : KalturaUiConf )
+		public function UiConfAdd( uiConf : VidiunUiConf )
 		{
 			service= 'uiconf';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.uiConf
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(uiConf,'uiConf');
+ 			keyValArr = vidiunObject2Arrays(uiConf,'uiConf');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

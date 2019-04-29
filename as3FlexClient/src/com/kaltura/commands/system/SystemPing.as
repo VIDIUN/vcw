@@ -1,9 +1,9 @@
-package com.kaltura.commands.system
+package com.vidiun.commands.system
 {
-	import com.kaltura.delegates.system.SystemPingDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.system.SystemPingDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemPing extends KalturaCall
+	public class SystemPing extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemPing(  )

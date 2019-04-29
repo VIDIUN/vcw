@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaWidgetSecurityType
+	public class VidiunWidgetSecurityType
 	{
 		public static const NONE : int = 1;
 		public static const TIMEHASH : int = 2;

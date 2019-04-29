@@ -1,16 +1,16 @@
-package com.kaltura.contributionWizard.command
+package com.vidiun.contributionWizard.command
 {
 	import com.adobe_cw.adobe.cairngorm.commands.ICommand;
 	import com.adobe_cw.adobe.cairngorm.commands.SequenceCommand;
 	import com.adobe_cw.adobe.cairngorm.control.CairngormEvent;
-	import com.kaltura.contributionWizard.events.SaveInjectedDataEvent;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.util.ContextDecorator;
-	import com.kaltura.contributionWizard.vo.ImportScreenVO;
-	import com.kaltura.utils.KConfigUtil;
-	import com.kaltura.utils.KUtils;
-	import com.kaltura.utils.ObjectHelpers;
-	import com.kaltura.utils.PathUtil;
+	import com.vidiun.contributionWizard.events.SaveInjectedDataEvent;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.util.ContextDecorator;
+	import com.vidiun.contributionWizard.vo.ImportScreenVO;
+	import com.vidiun.utils.VConfigUtil;
+	import com.vidiun.utils.VUtils;
+	import com.vidiun.utils.ObjectHelpers;
+	import com.vidiun.utils.PathUtil;
 	
 	import mx.utils.ObjectUtil;
 	import mx.utils.URLUtil;
@@ -44,18 +44,18 @@ package com.kaltura.contributionWizard.command
 			_model.context.isAnonymous	= _parameters["isanonymous"] == "true";
 			_model.context.partnerId	= parseInt( _parameters["partnerid"] ); // if null it'll become 0, needed for the preloader
 			_model.context.hasPartnerId = Boolean(_parameters["partnerid"]);
-			_model.context.sessionId	= _parameters["ks"] || _parameters["sessionid"] || "";//the latter is for backward compatibility
-			_model.context.kshowId		= String(_parameters["kshowid"]);
+			_model.context.sessionId	= _parameters["vs"] || _parameters["sessionid"] || "";//the latter is for backward compatibility
+			_model.context.vshowId		= String(_parameters["vshowid"]);
 			var hostCode:String 		= _parameters["host"];
 
-			_model.externalUrls.termsOfUseUrl 						= 	KConfigUtil.getDefaultValue(_parameters["termsofuse"], _model.externalUrls.termsOfUseUrl);
+			_model.externalUrls.termsOfUseUrl 						= 	VConfigUtil.getDefaultValue(_parameters["termsofuse"], _model.externalUrls.termsOfUseUrl);
 			_model.externalFunctions.addEntryFunction 				= 	_parameters["afteraddentry"];
 			_model.externalFunctions.onWizardFinishFunction 		= 	_parameters["close"];
 			_model.externalFunctions.wizardReadyFunction	 		= 	_parameters["wizardreadyhandler"];
 
 			_model.context.permissions								=	_parameters["permissions"];	
 
-			_model.externalUrls.servicesUrl							= 	_model.context.protocol + KUtils.hostFromCode(hostCode);
+			_model.externalUrls.servicesUrl							= 	_model.context.protocol + VUtils.hostFromCode(hostCode);
 
 			var fullUrl:String 										= 	_parameters["url"];
 			_model.context.sourceUrl 								=	PathUtil.getSourceUrl(fullUrl);
@@ -90,9 +90,9 @@ package com.kaltura.contributionWizard.command
 				_model.startupDefaults.showTags = _parameters["showtags"] == "true";
 				_model.startupDefaults.showTagsFlashvar = true;
 			}
-			if (_parameters["loadthumbnailwithks"])
+			if (_parameters["loadthumbnailwithvs"])
 			{
-				_model.loadThumbsWithKS = _parameters["loadthumbnailwithks"] == "true";
+				_model.loadThumbsWithVS = _parameters["loadthumbnailwithvs"] == "true";
 			}
 
 			//Default media type to show at startup
@@ -111,9 +111,9 @@ package com.kaltura.contributionWizard.command
 
 		private function getPreloaderUrl():String
 		{
-			var path:String = "/p/" + _model.context.partnerId + "/sp/" + _model.context.subPartnerId + "/kpreloader/ui_conf_id/" + _model.context.uiConfigId;
+			var path:String = "/p/" + _model.context.partnerId + "/sp/" + _model.context.subPartnerId + "/vpreloader/ui_conf_id/" + _model.context.uiConfigId;
 			//var url:String = PathUtil.getAbsoluteUrl(_model.context.sourceUrl, path);
-			var host:String = _model.context.cdnHost ? _model.context.cdnHost : "cdn.kaltura.com";
+			var host:String = _model.context.cdnHost ? _model.context.cdnHost : "cdn.vidiun.com";
 			var url:String = _model.context.protocol + host + path;
 			return url;
 		}
@@ -139,15 +139,15 @@ package com.kaltura.contributionWizard.command
 
 		private function saveGenericVars():void
 		{
-			var kVars:Object = {};
+			var vVars:Object = {};
 			for (var key:String in _parameters)
 			{
-				if (key.substr(0, 4) == "kvar")
+				if (key.substr(0, 4) == "vvar")
 				{
-					kVars[key.substr(4)] = _parameters[key];
+					vVars[key.substr(4)] = _parameters[key];
 				}
 			}
-			_model.context.injectedKVars = kVars;
+			_model.context.injectedVVars = vVars;
 		}
 
 		private function setUploadUrl():void

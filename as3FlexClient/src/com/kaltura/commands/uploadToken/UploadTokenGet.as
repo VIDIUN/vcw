@@ -1,9 +1,9 @@
-package com.kaltura.commands.uploadToken
+package com.vidiun.commands.uploadToken
 {
-	import com.kaltura.delegates.uploadToken.UploadTokenGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.uploadToken.UploadTokenGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UploadTokenGet extends KalturaCall
+	public class UploadTokenGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UploadTokenGet( uploadTokenId : String )

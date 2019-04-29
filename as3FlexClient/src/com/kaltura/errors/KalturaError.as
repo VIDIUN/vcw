@@ -1,9 +1,9 @@
-package com.kaltura.errors {
+package com.vidiun.errors {
 	
 	import flash.events.ErrorEvent;
 	import flash.net.URLVariables;
 	
-	public class KalturaError 
+	public class VidiunError 
 	{
 		//Data returned from the Service
 		public var errorCode:String;

@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,17 +20,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.base.vo
+package com.vidiun.base.vo
 {
 	import flash.events.EventDispatcher;
 
 	/**
-	 *the details of the user as described by the kaltura server.
+	 *the details of the user as described by the vidiun server.
 	 */
-	public class KalturaUser extends EventDispatcher
+	public class VidiunUser extends EventDispatcher
 	{
-		//the details of the user in kaltura server.
-		public var kuserId:uint;
+		//the details of the user in vidiun server.
+		public var vuserId:uint;
 		public var screenName:String;
 		public var partnerId:uint;
 		public var puserId:uint;
@@ -43,11 +43,11 @@ package com.kaltura.base.vo
 		public var gender:int; //0=undefined, 1=male, 2=female
 		public var registerationDate:Date;
 
-		public function KalturaUser (userXml:XML):void
+		public function VidiunUser (userXml:XML):void
 		{
 			if (!userXml)
 				return;
-			kuserId = uint (userXml.id);
+			vuserId = uint (userXml.id);
 			screenName = userXml.screenName;
 			partnerId = uint (userXml.partnerId);
 			puserId = uint (userXml.puserId);

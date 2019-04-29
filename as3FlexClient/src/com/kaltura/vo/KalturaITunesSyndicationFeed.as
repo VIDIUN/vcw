@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseSyndicationFeed;
+	import com.vidiun.vo.VidiunBaseSyndicationFeed;
 
 	[Bindable]
-	public dynamic class KalturaITunesSyndicationFeed extends KalturaBaseSyndicationFeed
+	public dynamic class VidiunITunesSyndicationFeed extends VidiunBaseSyndicationFeed
 	{
 		public var feedDescription : String;
 		public var language : String;

@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -21,10 +21,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 @ignore
 */
 
-package com.kaltura.contributionWizard.view.importViews
+package com.vidiun.contributionWizard.view.importViews
 {
-	import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
-	import com.kaltura.utils.IDisposable;
+	import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
+	import com.vidiun.utils.IDisposable;
 	
 	import mx.collections.ArrayCollection;
 
@@ -33,7 +33,7 @@ package com.kaltura.contributionWizard.view.importViews
 		/**
 		 *Called when the import view is being activated.
 		 * Import view activation happens whenever the active media provider MediaProviderVO changes while the import view is selected.
-		 * A sample use case: the user navigates from the upload view to the Kaltura search view.
+		 * A sample use case: the user navigates from the upload view to the Vidiun search view.
 		 * At this point the activate() method of the search view is invoked.
 		 * Now, if the user selects another media provider with the same immport view (e.g. you tube search) the activate method is re-invoked
 		 */

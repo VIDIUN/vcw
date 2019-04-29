@@ -1,9 +1,9 @@
-package com.kaltura.commands.liveStream
+package com.vidiun.commands.liveStream
 {
-	import com.kaltura.delegates.liveStream.LiveStreamGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.liveStream.LiveStreamGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class LiveStreamGet extends KalturaCall
+	public class LiveStreamGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function LiveStreamGet( entryId : String,version : int=-1 )

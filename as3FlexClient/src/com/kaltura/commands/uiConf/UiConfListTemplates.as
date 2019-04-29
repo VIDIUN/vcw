@@ -1,27 +1,27 @@
-package com.kaltura.commands.uiConf
+package com.vidiun.commands.uiConf
 {
-	import com.kaltura.vo.KalturaUiConfFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.uiConf.UiConfListTemplatesDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunUiConfFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.uiConf.UiConfListTemplatesDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UiConfListTemplates extends KalturaCall
+	public class UiConfListTemplates extends VidiunCall
 	{
 		public var filterFields : String;
-		public function UiConfListTemplates( filter : KalturaUiConfFilter=null,pager : KalturaFilterPager=null )
+		public function UiConfListTemplates( filter : VidiunUiConfFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaUiConfFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunUiConfFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'uiconf';
 			action= 'listTemplates';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

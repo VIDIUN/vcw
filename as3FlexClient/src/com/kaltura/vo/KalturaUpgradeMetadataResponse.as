@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaUpgradeMetadataResponse extends BaseFlexVo
+	public dynamic class VidiunUpgradeMetadataResponse extends BaseFlexVo
 	{
 		public var totalCount : int = int.MIN_VALUE;
 		public var lowerVersionCount : int = int.MIN_VALUE;

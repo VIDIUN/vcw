@@ -1,12 +1,12 @@
-package com.kaltura.delegates.baseEntry
+package com.vidiun.delegates.baseEntry
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class BaseEntryCountDelegate extends WebDelegateBase
 	{
-		public function BaseEntryCountDelegate(call:KalturaCall, config:KalturaConfig)
+		public function BaseEntryCountDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

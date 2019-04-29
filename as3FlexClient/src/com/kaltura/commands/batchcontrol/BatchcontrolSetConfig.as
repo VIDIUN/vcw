@@ -1,9 +1,9 @@
-package com.kaltura.commands.batchcontrol
+package com.vidiun.commands.batchcontrol
 {
-	import com.kaltura.delegates.batchcontrol.BatchcontrolSetConfigDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.batchcontrol.BatchcontrolSetConfigDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BatchcontrolSetConfig extends KalturaCall
+	public class BatchcontrolSetConfig extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BatchcontrolSetConfig( schedulerId : int,schedulerName : String,adminId : int,adminName : String,configParam : String,configValue : String,configParamPart : String='',workerId : int=undefined,workerName : String='' )

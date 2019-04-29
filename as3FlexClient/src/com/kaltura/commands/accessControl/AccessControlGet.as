@@ -1,9 +1,9 @@
-package com.kaltura.commands.accessControl
+package com.vidiun.commands.accessControl
 {
-	import com.kaltura.delegates.accessControl.AccessControlGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.accessControl.AccessControlGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AccessControlGet extends KalturaCall
+	public class AccessControlGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function AccessControlGet( id : int )

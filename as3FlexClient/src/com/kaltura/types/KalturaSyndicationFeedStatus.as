@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSyndicationFeedStatus
+	public class VidiunSyndicationFeedStatus
 	{
 		public static const DELETED : int = -1;
 		public static const ACTIVE : int = 1;

@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaFilter;
+	import com.vidiun.vo.VidiunFilter;
 
 	[Bindable]
-	public dynamic class KalturaMetadataProfileFilter extends KalturaFilter
+	public dynamic class VidiunMetadataProfileFilter extends VidiunFilter
 	{
 		public var idEqual : int = int.MIN_VALUE;
 		public var partnerIdEqual : int = int.MIN_VALUE;

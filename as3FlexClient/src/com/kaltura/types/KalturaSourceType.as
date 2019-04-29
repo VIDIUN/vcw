@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSourceType
+	public class VidiunSourceType
 	{
 		public static const FILE : int = 1;
 		public static const WEBCAM : int = 2;

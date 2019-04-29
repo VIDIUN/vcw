@@ -1,9 +1,9 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.delegates.baseEntry.BaseEntryApproveDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.baseEntry.BaseEntryApproveDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryApprove extends KalturaCall
+	public class BaseEntryApprove extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BaseEntryApprove( entryId : String )

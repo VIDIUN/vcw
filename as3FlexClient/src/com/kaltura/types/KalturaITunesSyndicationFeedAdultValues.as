@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaITunesSyndicationFeedAdultValues
+	public class VidiunITunesSyndicationFeedAdultValues
 	{
 		public static const YES : String = 'yes';
 		public static const NO : String = 'no';

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaStatsEventType
+	public class VidiunStatsEventType
 	{
 		public static const WIDGET_LOADED : int = 1;
 		public static const MEDIA_LOADED : int = 2;

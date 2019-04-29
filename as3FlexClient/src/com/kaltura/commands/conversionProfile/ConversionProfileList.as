@@ -1,27 +1,27 @@
-package com.kaltura.commands.conversionProfile
+package com.vidiun.commands.conversionProfile
 {
-	import com.kaltura.vo.KalturaConversionProfileFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.conversionProfile.ConversionProfileListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunConversionProfileFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.conversionProfile.ConversionProfileListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ConversionProfileList extends KalturaCall
+	public class ConversionProfileList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function ConversionProfileList( filter : KalturaConversionProfileFilter=null,pager : KalturaFilterPager=null )
+		public function ConversionProfileList( filter : VidiunConversionProfileFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaConversionProfileFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunConversionProfileFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'conversionprofile';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

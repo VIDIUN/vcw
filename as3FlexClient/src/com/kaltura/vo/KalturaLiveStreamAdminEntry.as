@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaLiveStreamEntry;
+	import com.vidiun.vo.VidiunLiveStreamEntry;
 
 	[Bindable]
-	public dynamic class KalturaLiveStreamAdminEntry extends KalturaLiveStreamEntry
+	public dynamic class VidiunLiveStreamAdminEntry extends VidiunLiveStreamEntry
 	{
 		public var encodingIP1 : String;
 		public var encodingIP2 : String;

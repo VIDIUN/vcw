@@ -1,12 +1,12 @@
-package com.kaltura.delegates.systemUser
+package com.vidiun.delegates.systemUser
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class SystemUserDeleteDelegate extends WebDelegateBase
 	{
-		public function SystemUserDeleteDelegate(call:KalturaCall, config:KalturaConfig)
+		public function SystemUserDeleteDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

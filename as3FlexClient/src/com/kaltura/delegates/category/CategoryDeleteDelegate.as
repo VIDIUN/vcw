@@ -1,12 +1,12 @@
-package com.kaltura.delegates.category
+package com.vidiun.delegates.category
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class CategoryDeleteDelegate extends WebDelegateBase
 	{
-		public function CategoryDeleteDelegate(call:KalturaCall, config:KalturaConfig)
+		public function CategoryDeleteDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

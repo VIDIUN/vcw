@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -23,27 +23,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
 <importViews:ImportModule 
-	xmlns:importViews="com.kaltura.contributionWizard.view.importViews.*"
+	xmlns:importViews="com.vidiun.contributionWizard.view.importViews.*"
 	layout="vertical"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:view="com.kaltura.contributionWizard.view.importViews.webcam.view.*"
-	implements="com.kaltura.contributionWizard.view.importViews.IImportModule"
-	xmlns:control="com.kaltura.contributionWizard.control.*" xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*">
+	xmlns:view="com.vidiun.contributionWizard.view.importViews.webcam.view.*"
+	implements="com.vidiun.contributionWizard.view.importViews.IImportModule"
+	xmlns:control="com.vidiun.contributionWizard.control.*" xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*">
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.view.importViews.browser.NavigationButtonsMode;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
-			import com.kaltura.contributionWizard.view.importViews.webcam.view.KRecorderView;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.importViews.browser.NavigationButtonsMode;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.view.importViews.webcam.view.VRecorderView;
 			import com.arc90.modular.CairngormEventDispatcherFactory;
-			import com.kaltura.contributionWizard.events.webcam.WebcamEvent;
-			import com.kaltura.contributionWizard.command.webcam.SetupConnectionCommand;
-			import com.kaltura.contributionWizard.model.WebcamModelLocator;
-			import com.kaltura.contributionWizard.view.events.ImportViewCompleteEvent;
+			import com.vidiun.contributionWizard.events.webcam.WebcamEvent;
+			import com.vidiun.contributionWizard.command.webcam.SetupConnectionCommand;
+			import com.vidiun.contributionWizard.model.WebcamModelLocator;
+			import com.vidiun.contributionWizard.view.events.ImportViewCompleteEvent;
 
 			private var _webcamModel:WebcamModelLocator = WebcamModelLocator.getInstance();
 
-			private var _recorder:KRecorderView;
+			private var _recorder:VRecorderView;
 
 			[Bindable]
 			private var _activeMediaProviderVo:MediaProviderVO;
@@ -52,7 +52,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				/* var evtSetupConnection:WebcamEvent = new WebcamEvent(WebcamEvent.SETUP_CONNECTION);
 				var evtLocateMediaEvent:WebcamEvent = new WebcamEvent(WebcamEvent.LOCATE_MEDIA);
 				CairngormEventDispatcherFactory.sequenceEvents([evtSetupConnection, evtLocateMediaEvent]).dispatch(); */
-				_recorder = new KRecorderView();
+				_recorder = new VRecorderView();
 				_recorder.percentWidth = 100;
 				_recorder.percentHeight = 100;
 				this.addChild(_recorder);

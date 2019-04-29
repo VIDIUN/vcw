@@ -1,13 +1,13 @@
-package com.kaltura.commands.stats
+package com.vidiun.commands.stats
 {
-	import com.kaltura.vo.KalturaStatsEvent;
-	import com.kaltura.delegates.stats.StatsCollectDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunStatsEvent;
+	import com.vidiun.delegates.stats.StatsCollectDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class StatsCollect extends KalturaCall
+	public class StatsCollect extends VidiunCall
 	{
 		public var filterFields : String;
-		public function StatsCollect( event : KalturaStatsEvent )
+		public function StatsCollect( event : VidiunStatsEvent )
 		{
 			service= 'stats';
 			action= 'collect';
@@ -15,7 +15,7 @@ package com.kaltura.commands.stats
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(event,'event');
+ 			keyValArr = vidiunObject2Arrays(event,'event');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

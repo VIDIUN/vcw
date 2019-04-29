@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaUploadResponse extends BaseFlexVo
+	public dynamic class VidiunUploadResponse extends BaseFlexVo
 	{
 		public var uploadTokenId : String;
 		public var fileSize : int = int.MIN_VALUE;

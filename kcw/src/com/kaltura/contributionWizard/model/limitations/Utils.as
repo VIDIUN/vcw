@@ -1,7 +1,7 @@
-package com.kaltura.contributionWizard.model.limitations
+package com.vidiun.contributionWizard.model.limitations
 {
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.vo.limitations.ImportTypeLimitationsVO;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.vo.limitations.ImportTypeLimitationsVO;
 	
 	import flash.utils.describeType;
 	

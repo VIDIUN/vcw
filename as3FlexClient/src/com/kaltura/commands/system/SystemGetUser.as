@@ -1,9 +1,9 @@
-package com.kaltura.commands.system
+package com.vidiun.commands.system
 {
-	import com.kaltura.delegates.system.SystemGetUserDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.system.SystemGetUserDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemGetUser extends KalturaCall
+	public class SystemGetUser extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemGetUser( userId : int )

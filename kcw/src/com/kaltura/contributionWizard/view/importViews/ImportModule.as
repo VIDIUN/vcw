@@ -1,8 +1,8 @@
-package com.kaltura.contributionWizard.view.importViews
+package com.vidiun.contributionWizard.view.importViews
 {
-	import com.kaltura.contributionWizard.view.importViews.browser.NavigationButtonsMode;
-	import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-	import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
+	import com.vidiun.contributionWizard.view.importViews.browser.NavigationButtonsMode;
+	import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+	import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
 
 	import flash.events.Event;
 

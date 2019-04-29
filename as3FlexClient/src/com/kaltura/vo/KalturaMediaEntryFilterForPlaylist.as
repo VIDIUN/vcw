@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaMediaEntryFilter;
+	import com.vidiun.vo.VidiunMediaEntryFilter;
 
 	[Bindable]
-	public dynamic class KalturaMediaEntryFilterForPlaylist extends KalturaMediaEntryFilter
+	public dynamic class VidiunMediaEntryFilterForPlaylist extends VidiunMediaEntryFilter
 	{
 		public var limit : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

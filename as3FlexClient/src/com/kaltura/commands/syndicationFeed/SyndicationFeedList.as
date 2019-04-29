@@ -1,27 +1,27 @@
-package com.kaltura.commands.syndicationFeed
+package com.vidiun.commands.syndicationFeed
 {
-	import com.kaltura.vo.KalturaBaseSyndicationFeedFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.syndicationFeed.SyndicationFeedListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunBaseSyndicationFeedFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.syndicationFeed.SyndicationFeedListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SyndicationFeedList extends KalturaCall
+	public class SyndicationFeedList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function SyndicationFeedList( filter : KalturaBaseSyndicationFeedFilter=null,pager : KalturaFilterPager=null )
+		public function SyndicationFeedList( filter : VidiunBaseSyndicationFeedFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaBaseSyndicationFeedFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunBaseSyndicationFeedFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'syndicationfeed';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

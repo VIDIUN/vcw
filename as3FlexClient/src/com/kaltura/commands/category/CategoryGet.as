@@ -1,9 +1,9 @@
-package com.kaltura.commands.category
+package com.vidiun.commands.category
 {
-	import com.kaltura.delegates.category.CategoryGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.category.CategoryGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class CategoryGet extends KalturaCall
+	public class CategoryGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function CategoryGet( id : int )

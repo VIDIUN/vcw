@@ -1,9 +1,9 @@
-package com.kaltura.commands.conversionProfile
+package com.vidiun.commands.conversionProfile
 {
-	import com.kaltura.delegates.conversionProfile.ConversionProfileRemoveFlavorParamsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.conversionProfile.ConversionProfileRemoveFlavorParamsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ConversionProfileRemoveFlavorParams extends KalturaCall
+	public class ConversionProfileRemoveFlavorParams extends VidiunCall
 	{
 		public var filterFields : String;
 		public function ConversionProfileRemoveFlavorParams( conversionProfileId : int,conversionParamsId : int )

@@ -1,13 +1,13 @@
-package com.kaltura.commands.EmailIngestionProfile
+package com.vidiun.commands.EmailIngestionProfile
 {
-	import com.kaltura.vo.KalturaMediaEntry;
-	import com.kaltura.delegates.EmailIngestionProfile.EmailIngestionProfileAddMediaEntryDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMediaEntry;
+	import com.vidiun.delegates.EmailIngestionProfile.EmailIngestionProfileAddMediaEntryDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class EmailIngestionProfileAddMediaEntry extends KalturaCall
+	public class EmailIngestionProfileAddMediaEntry extends VidiunCall
 	{
 		public var filterFields : String;
-		public function EmailIngestionProfileAddMediaEntry( mediaEntry : KalturaMediaEntry,uploadTokenId : String,emailProfId : int,fromAddress : String,emailMsgId : String )
+		public function EmailIngestionProfileAddMediaEntry( mediaEntry : VidiunMediaEntry,uploadTokenId : String,emailProfId : int,fromAddress : String,emailMsgId : String )
 		{
 			service= 'emailingestionprofile';
 			action= 'addMediaEntry';
@@ -15,7 +15,7 @@ package com.kaltura.commands.EmailIngestionProfile
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(mediaEntry,'mediaEntry');
+ 			keyValArr = vidiunObject2Arrays(mediaEntry,'mediaEntry');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'uploadTokenId' );

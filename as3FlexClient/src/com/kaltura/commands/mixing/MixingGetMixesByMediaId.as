@@ -1,9 +1,9 @@
-package com.kaltura.commands.mixing
+package com.vidiun.commands.mixing
 {
-	import com.kaltura.delegates.mixing.MixingGetMixesByMediaIdDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.mixing.MixingGetMixesByMediaIdDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MixingGetMixesByMediaId extends KalturaCall
+	public class MixingGetMixesByMediaId extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MixingGetMixesByMediaId( mediaEntryId : String )

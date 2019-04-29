@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:browser="com.kaltura.contributionWizard.view.importViews.browser.*"
-	xmlns:importViews="com.kaltura.contributionWizard.view.importViews.*">
+	xmlns:browser="com.vidiun.contributionWizard.view.importViews.browser.*"
+	xmlns:importViews="com.vidiun.contributionWizard.view.importViews.*">
 
 	<mx:Canvas
 		id="importSelectionScreen"

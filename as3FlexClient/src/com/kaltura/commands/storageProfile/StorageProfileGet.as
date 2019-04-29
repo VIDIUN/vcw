@@ -1,9 +1,9 @@
-package com.kaltura.commands.storageProfile
+package com.vidiun.commands.storageProfile
 {
-	import com.kaltura.delegates.storageProfile.StorageProfileGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.storageProfile.StorageProfileGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class StorageProfileGet extends KalturaCall
+	public class StorageProfileGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function StorageProfileGet( storageProfileId : int )

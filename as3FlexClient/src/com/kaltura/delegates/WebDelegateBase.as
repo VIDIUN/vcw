@@ -1,10 +1,10 @@
-package com.kaltura.delegates {
+package com.vidiun.delegates {
 	
-	import com.kaltura.config.IKalturaConfig;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.errors.KalturaError;
-	import com.kaltura.events.KalturaEvent;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.config.IVidiunConfig;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.errors.VidiunError;
+	import com.vidiun.events.VidiunEvent;
+	import com.vidiun.net.VidiunCall;
 	
 	import flash.events.ErrorEvent;
 	import flash.events.Event;
@@ -20,27 +20,27 @@ package com.kaltura.delegates {
 	import flash.net.URLRequestMethod;
 	import flash.utils.Timer;
 	
-	public class WebDelegateBase extends EventDispatcher implements IKalturaCallDelegate {
+	public class WebDelegateBase extends EventDispatcher implements IVidiunCallDelegate {
 		
 		private static const CONNECT_TIME : int = 120000; //60 secs
 		private static const LOAD_TIME : int = 120000; //60 secs
 		protected var connectTimer:Timer;
 		protected var loadTimer:Timer;
 		
-		protected var _call:KalturaCall;
-		protected var _config:KalturaConfig;
+		protected var _call:VidiunCall;
+		protected var _config:VidiunConfig;
 		
 		protected var loader:URLLoader;
 		protected var fileRef:FileReference;
 		
 		//Setters & getters 
-		public function get call():KalturaCall { return _call; }
-		public function set call(newVal:KalturaCall):void { _call = newVal; }
+		public function get call():VidiunCall { return _call; }
+		public function set call(newVal:VidiunCall):void { _call = newVal; }
 
-		public function get config():IKalturaConfig { return _config; }
-		public function set config(newVal:IKalturaConfig):void { _config = newVal as KalturaConfig; }
+		public function get config():IVidiunConfig { return _config; }
+		public function set config(newVal:IVidiunConfig):void { _config = newVal as VidiunConfig; }
 		
-		public function WebDelegateBase(call:KalturaCall = null , config:KalturaConfig = null) 
+		public function WebDelegateBase(call:VidiunCall = null , config:VidiunConfig = null) 
 		{
 			this.call = call;
 			this.config = config;
@@ -64,11 +64,11 @@ package com.kaltura.delegates {
 		}
 		
 		protected function onConnectTimeout(event:TimerEvent):void {
-			var kError:KalturaError = new KalturaError();
-			//kError.errorCode =
-			kError.errorMsg = "Connection Timeout: " + CONNECT_TIME/1000 + " sec with no post command from kaltura client.";
-			_call.handleError(kError);
-			dispatchEvent(new KalturaEvent(KalturaEvent.FAILED, false, false, false, null, kError));
+			var vError:VidiunError = new VidiunError();
+			//vError.errorCode =
+			vError.errorMsg = "Connection Timeout: " + CONNECT_TIME/1000 + " sec with no post command from vidiun client.";
+			_call.handleError(vError);
+			dispatchEvent(new VidiunEvent(VidiunEvent.FAILED, false, false, false, null, vError));
 			
 			loadTimer.stop();
 			close();
@@ -79,10 +79,10 @@ package com.kaltura.delegates {
 			
 			close();
 			
-			var kError:KalturaError = new KalturaError();
-			kError.errorMsg = "Post Timeout: "+ LOAD_TIME/1000 + " sec with no post result.";
-			_call.handleError(kError);
-			dispatchEvent(new KalturaEvent(KalturaEvent.FAILED, false, false, false, null, kError));
+			var vError:VidiunError = new VidiunError();
+			vError.errorMsg = "Post Timeout: "+ LOAD_TIME/1000 + " sec with no post result.";
+			_call.handleError(vError);
+			dispatchEvent(new VidiunEvent(VidiunEvent.FAILED, false, false, false, null, vError));
 		}
 
 		protected function execute():void {
@@ -110,8 +110,8 @@ package com.kaltura.delegates {
 			if(_config.partnerId != null && _call.args["partnerId"] == -1)
 				_call.setRequestArgument("partnerId", _config.partnerId); 
 				
-			if (_config.ks != null)
-				_call.setRequestArgument("ks", _config.ks);
+			if (_config.vs != null)
+				_call.setRequestArgument("vs", _config.vs);
 
 			if(_config.clientTag != null)
 				_call.setRequestArgument("clientTag", _config.clientTag);
@@ -119,7 +119,7 @@ package com.kaltura.delegates {
 			_call.setRequestArgument("ignoreNull", _config.ignoreNull);
 			
 			//Create signature hash.
-			//call.setRequestArgument("kalsig", getMD5Checksum(call));
+			//call.setRequestArgument("vidsig", getMD5Checksum(call));
 		}
 		
 		protected function sendRequest():void {
@@ -167,32 +167,32 @@ package com.kaltura.delegates {
 			}
 			catch( e:Error )
 			{
-				var kErr : KalturaError = new KalturaError();
-				kErr.errorCode = String(e.errorID);
-				kErr.errorMsg = e.message;
-				_call.handleError( kErr );
+				var vErr : VidiunError = new VidiunError();
+				vErr.errorCode = String(e.errorID);
+				vErr.errorMsg = e.message;
+				_call.handleError( vErr );
 			} 
 		}
 		
 		protected function onError( event:ErrorEvent ):void {
 			clean();
-			var kError:KalturaError = createKalturaError( event, loader.data);
+			var vError:VidiunError = createVidiunError( event, loader.data);
 			
-			if(!kError)
+			if(!vError)
 			{
-				kError.errorMsg = event.text;
-				//kError.errorCode;
+				vError.errorMsg = event.text;
+				//vError.errorCode;
 			}
 				
-			call.handleError(kError);
+			call.handleError(vError);
 			
-			dispatchEvent(new KalturaEvent(KalturaEvent.FAILED, false, false, false, null, kError));
+			dispatchEvent(new VidiunEvent(VidiunEvent.FAILED, false, false, false, null, vError));
 		}
 		
 		protected function handleResult(result:XML):void {
 			clean();
 			
-			var error:KalturaError = validateKalturaResponse(result);
+			var error:VidiunError = validateVidiunResponse(result);
 			
 			if (error == null) {
 				var digestedResult : Object = parse(result);
@@ -218,24 +218,24 @@ package com.kaltura.delegates {
 		public function parse( result : XML ) : * { return null; }
 		
 		//Overide this to create validation object and fill it
-		protected function validateKalturaResponse(result:String) : KalturaError 
+		protected function validateVidiunResponse(result:String) : VidiunError 
 		{ 
-			var kError : KalturaError = null;
+			var vError : VidiunError = null;
 			var xml : XML = XML(result);
 			if(xml.result.hasOwnProperty('error')){
-				kError = new KalturaError();
-				kError.errorCode = String(xml.result.error.code);
-				kError.errorMsg = xml.result.error.message;
-				dispatchEvent(new KalturaEvent(KalturaEvent.FAILED, false, false, false, null, kError));	
+				vError = new VidiunError();
+				vError.errorCode = String(xml.result.error.code);
+				vError.errorMsg = xml.result.error.message;
+				dispatchEvent(new VidiunEvent(VidiunEvent.FAILED, false, false, false, null, vError));	
 			}
 			
-			return kError;
+			return vError;
 		}
 		
 		//Overide this to create error object and fill it
-		protected function createKalturaError( event : ErrorEvent , loaderData : * ) : KalturaError 
+		protected function createVidiunError( event : ErrorEvent , loaderData : * ) : VidiunError 
 		{ 
-			var ke : KalturaError = new KalturaError();
+			var ke : VidiunError = new VidiunError();
 			return ke; 
 		}
 	}

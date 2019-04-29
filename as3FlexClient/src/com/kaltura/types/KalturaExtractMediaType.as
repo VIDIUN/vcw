@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaExtractMediaType
+	public class VidiunExtractMediaType
 	{
 		public static const ENTRY_INPUT : int = 0;
 		public static const FLAVOR_INPUT : int = 1;

@@ -104,7 +104,7 @@ package com.adobe.images
 	            var c:uint;
 	            for (var n:uint = 0; n < 256; n++) {
 	                c = n;
-	                for (var k:uint = 0; k < 8; k++) {
+	                for (var v:uint = 0; v < 8; v++) {
 	                    if (c & 1) {
 	                        c = uint(uint(0xedb88320) ^ 
 	                            uint(c >>> 1));

@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,19 +20,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
 	import com.adobe_cw.adobe.cairngorm.business.ServiceLocator;
-	import com.kaltura.contributionWizard.business.factories.WizardConfigurationFactory;
-	import com.kaltura.contributionWizard.model.MediaProviders;
-	import com.kaltura.contributionWizard.model.StartupDefaultsVO;
-	import com.kaltura.contributionWizard.model.WizardModelLocator;
-	import com.kaltura.contributionWizard.model.importTypesConfiguration.ImportTypesConfig;
-	import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-	import com.kaltura.contributionWizard.vo.UIConfigVO;
-	import com.kaltura.contributionWizard.vo.limitations.LimitationsVO;
-	import com.kaltura.contributionWizard.vo.providers.WebcamParametersVO;
-	import com.kaltura.net.TemplateURLVariables;
+	import com.vidiun.contributionWizard.business.factories.WizardConfigurationFactory;
+	import com.vidiun.contributionWizard.model.MediaProviders;
+	import com.vidiun.contributionWizard.model.StartupDefaultsVO;
+	import com.vidiun.contributionWizard.model.WizardModelLocator;
+	import com.vidiun.contributionWizard.model.importTypesConfiguration.ImportTypesConfig;
+	import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+	import com.vidiun.contributionWizard.vo.UIConfigVO;
+	import com.vidiun.contributionWizard.vo.limitations.LimitationsVO;
+	import com.vidiun.contributionWizard.vo.providers.WebcamParametersVO;
+	import com.vidiun.net.TemplateURLVariables;
 	
 	import flash.net.URLVariables;
 	
@@ -54,8 +54,8 @@ package com.kaltura.contributionWizard.business
 	   {
 	   		var urlVars:URLVariables = getConfigURLVars(uiConfigId);
 	   		
-	   		//WORKAROUNG FOR THE EXTRA CALLS WITHOUT PARAMS WHEN LOADED FROM THE KSE 
-	   		if(!urlVars.ks && !urlVars.partnerId) return null;
+	   		//WORKAROUNG FOR THE EXTRA CALLS WITHOUT PARAMS WHEN LOADED FROM THE VSE 
+	   		if(!urlVars.vs && !urlVars.partnerId) return null;
 	   		
 			var call : AsyncToken = service.send( urlVars );
 			call.addResponder( this );

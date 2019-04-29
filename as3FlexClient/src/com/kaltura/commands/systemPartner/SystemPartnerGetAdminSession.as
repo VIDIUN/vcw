@@ -1,9 +1,9 @@
-package com.kaltura.commands.systemPartner
+package com.vidiun.commands.systemPartner
 {
-	import com.kaltura.delegates.systemPartner.SystemPartnerGetAdminSessionDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.systemPartner.SystemPartnerGetAdminSessionDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemPartnerGetAdminSession extends KalturaCall
+	public class SystemPartnerGetAdminSession extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemPartnerGetAdminSession( partnerId : int )

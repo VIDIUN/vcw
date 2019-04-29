@@ -1,27 +1,27 @@
-package com.kaltura.commands.accessControl
+package com.vidiun.commands.accessControl
 {
-	import com.kaltura.vo.KalturaAccessControlFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.accessControl.AccessControlListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunAccessControlFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.accessControl.AccessControlListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AccessControlList extends KalturaCall
+	public class AccessControlList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function AccessControlList( filter : KalturaAccessControlFilter=null,pager : KalturaFilterPager=null )
+		public function AccessControlList( filter : VidiunAccessControlFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaAccessControlFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunAccessControlFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'accesscontrol';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

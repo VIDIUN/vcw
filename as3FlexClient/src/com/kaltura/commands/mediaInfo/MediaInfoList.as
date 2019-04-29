@@ -1,27 +1,27 @@
-package com.kaltura.commands.mediaInfo
+package com.vidiun.commands.mediaInfo
 {
-	import com.kaltura.vo.KalturaMediaInfoFilter;
-	import com.kaltura.vo.KalturaFilterPager;
-	import com.kaltura.delegates.mediaInfo.MediaInfoListDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunMediaInfoFilter;
+	import com.vidiun.vo.VidiunFilterPager;
+	import com.vidiun.delegates.mediaInfo.MediaInfoListDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MediaInfoList extends KalturaCall
+	public class MediaInfoList extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MediaInfoList( filter : KalturaMediaInfoFilter=null,pager : KalturaFilterPager=null )
+		public function MediaInfoList( filter : VidiunMediaInfoFilter=null,pager : VidiunFilterPager=null )
 		{
-			if(filter== null)filter= new KalturaMediaInfoFilter();
-			if(pager== null)pager= new KalturaFilterPager();
+			if(filter== null)filter= new VidiunMediaInfoFilter();
+			if(pager== null)pager= new VidiunFilterPager();
 			service= 'adminconsole_mediainfo';
 			action= 'list';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
- 			keyValArr = kalturaObject2Arrays(pager,'pager');
+ 			keyValArr = vidiunObject2Arrays(pager,'pager');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

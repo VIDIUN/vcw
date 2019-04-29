@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaSyndicationFeedEntryCount extends BaseFlexVo
+	public dynamic class VidiunSyndicationFeedEntryCount extends BaseFlexVo
 	{
 		public var totalEntryCount : int = int.MIN_VALUE;
 		public var actualEntryCount : int = int.MIN_VALUE;

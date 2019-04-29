@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.enums
+package com.vidiun.contributionWizard.enums
 {
 	public class FlashPlaybackType
 	{

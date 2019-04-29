@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaConvartableJobData;
+	import com.vidiun.vo.VidiunConvartableJobData;
 
 	[Bindable]
-	public dynamic class KalturaExtractMediaJobData extends KalturaConvartableJobData
+	public dynamic class VidiunExtractMediaJobData extends VidiunConvartableJobData
 	{
 		public var flavorAssetId : String;
 		override protected function setupPropertyList():void

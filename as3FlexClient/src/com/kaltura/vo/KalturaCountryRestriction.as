@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseRestriction;
+	import com.vidiun.vo.VidiunBaseRestriction;
 
 	[Bindable]
-	public dynamic class KalturaCountryRestriction extends KalturaBaseRestriction
+	public dynamic class VidiunCountryRestriction extends VidiunBaseRestriction
 	{
 		public var countryRestrictionType : int = int.MIN_VALUE;
 		public var countryList : String;

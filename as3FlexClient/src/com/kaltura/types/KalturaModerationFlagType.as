@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaModerationFlagType
+	public class VidiunModerationFlagType
 	{
 		public static const SEXUAL_CONTENT : int = 1;
 		public static const VIOLENT_REPULSIVE : int = 2;

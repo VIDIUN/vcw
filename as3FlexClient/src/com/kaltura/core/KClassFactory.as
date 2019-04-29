@@ -1,12 +1,12 @@
-package com.kaltura.core
+package com.vidiun.core
 {
 	import flash.utils.getDefinitionByName;
 	
-	public class KClassFactory 
+	public class VClassFactory 
 	{
 	 	public var generator:Class;
 	 	
-	    public function KClassFactory(generator:Class = null)
+	    public function VClassFactory(generator:Class = null)
 	    {
 			super();
 	
@@ -45,15 +45,15 @@ package com.kaltura.core
 	        			
 	        			for each( var item:XML in prop.children() )
 	        			{
-	        				cls = getDefinitionByName('com.kaltura.vo.'+ item.objectType) as Class;
-	        				obj = (new KClassFactory( cls )).newInstanceFromXML( XMLList(item) );
+	        				cls = getDefinitionByName('com.vidiun.vo.'+ item.objectType) as Class;
+	        				obj = (new VClassFactory( cls )).newInstanceFromXML( XMLList(item) );
 	        				instance[arrName].push(obj);		
 	        			}
 	        		}
 	        		else //if complex object and not an array
 	        		{
-	        			cls = getDefinitionByName('com.kaltura.vo.'+ prop.objectType) as Class;
-	        			obj = (new KClassFactory( cls )).newInstanceFromXML(  XMLList(prop) );
+	        			cls = getDefinitionByName('com.vidiun.vo.'+ prop.objectType) as Class;
+	        			obj = (new VClassFactory( cls )).newInstanceFromXML(  XMLList(prop) );
 	        			instance[prop.name()] = obj;
 	        		}
 	        	}

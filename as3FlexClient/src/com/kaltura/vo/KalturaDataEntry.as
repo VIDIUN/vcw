@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseEntry;
+	import com.vidiun.vo.VidiunBaseEntry;
 
 	[Bindable]
-	public dynamic class KalturaDataEntry extends KalturaBaseEntry
+	public dynamic class VidiunDataEntry extends VidiunBaseEntry
 	{
 		public var dataContent : String;
 		override protected function setupPropertyList():void

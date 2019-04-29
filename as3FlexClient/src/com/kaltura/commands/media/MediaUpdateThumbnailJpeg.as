@@ -1,11 +1,11 @@
-package com.kaltura.commands.media
+package com.vidiun.commands.media
 {
-	import com.kaltura.delegates.media.MediaUpdateThumbnailJpegDelegate;
-	import com.kaltura.net.KalturaFileCall;
+	import com.vidiun.delegates.media.MediaUpdateThumbnailJpegDelegate;
+	import com.vidiun.net.VidiunFileCall;
 
 	import flash.utils.ByteArray;
 
-	public class MediaUpdateThumbnailJpeg extends KalturaFileCall
+	public class MediaUpdateThumbnailJpeg extends VidiunFileCall
 	{
 		public function MediaUpdateThumbnailJpeg( entryId : String, fileData : ByteArray )
 		{

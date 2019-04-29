@@ -7,9 +7,9 @@
 -->
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.events.ChangePermissionLevelEvent;
-			import com.kaltura.contributionWizard.enums.PermissionLevels;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.events.ChangePermissionLevelEvent;
+			import com.vidiun.contributionWizard.enums.PermissionLevels;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
 
 			[Bindable]
 			private var _permissionLevel:int;

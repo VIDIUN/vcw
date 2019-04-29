@@ -1,12 +1,12 @@
-package com.kaltura.delegates.report
+package com.vidiun.delegates.report
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class ReportGetUrlForReportAsCsvDelegate extends WebDelegateBase
 	{
-		public function ReportGetUrlForReportAsCsvDelegate(call:KalturaCall, config:KalturaConfig)
+		public function ReportGetUrlForReportAsCsvDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

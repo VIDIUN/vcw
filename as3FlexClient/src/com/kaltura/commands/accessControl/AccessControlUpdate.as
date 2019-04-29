@@ -1,13 +1,13 @@
-package com.kaltura.commands.accessControl
+package com.vidiun.commands.accessControl
 {
-	import com.kaltura.vo.KalturaAccessControl;
-	import com.kaltura.delegates.accessControl.AccessControlUpdateDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunAccessControl;
+	import com.vidiun.delegates.accessControl.AccessControlUpdateDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class AccessControlUpdate extends KalturaCall
+	public class AccessControlUpdate extends VidiunCall
 	{
 		public var filterFields : String;
-		public function AccessControlUpdate( id : int,accessControl : KalturaAccessControl )
+		public function AccessControlUpdate( id : int,accessControl : VidiunAccessControl )
 		{
 			service= 'accesscontrol';
 			action= 'update';
@@ -17,7 +17,7 @@ package com.kaltura.commands.accessControl
 			var keyValArr : Array = new Array();
 			keyArr.push( 'id' );
 			valueArr.push( id );
- 			keyValArr = kalturaObject2Arrays(accessControl,'accessControl');
+ 			keyValArr = vidiunObject2Arrays(accessControl,'accessControl');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

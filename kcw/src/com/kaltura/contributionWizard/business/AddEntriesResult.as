@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
 	/**
 	 * This class represents an "AddEntries" result object 

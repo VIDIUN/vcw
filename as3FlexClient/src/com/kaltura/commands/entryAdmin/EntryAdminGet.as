@@ -1,9 +1,9 @@
-package com.kaltura.commands.entryAdmin
+package com.vidiun.commands.entryAdmin
 {
-	import com.kaltura.delegates.entryAdmin.EntryAdminGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.entryAdmin.EntryAdminGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class EntryAdminGet extends KalturaCall
+	public class EntryAdminGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function EntryAdminGet( entryId : String,version : int=-1 )

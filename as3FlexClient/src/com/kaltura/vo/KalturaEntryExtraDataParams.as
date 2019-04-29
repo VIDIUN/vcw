@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaEntryExtraDataParams extends BaseFlexVo
+	public dynamic class VidiunEntryExtraDataParams extends BaseFlexVo
 	{
 		public var referrer : String;
 		override protected function setupPropertyList():void

@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseJobFilter;
+	import com.vidiun.vo.VidiunBaseJobFilter;
 
 	[Bindable]
-	public dynamic class KalturaBatchJobFilter extends KalturaBaseJobFilter
+	public dynamic class VidiunBatchJobFilter extends VidiunBaseJobFilter
 	{
 		public var entryIdEqual : String;
 		public var jobTypeEqual : int = int.MIN_VALUE;

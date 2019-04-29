@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadata
+package com.vidiun.commands.metadata
 {
-	import com.kaltura.delegates.metadata.MetadataInvalidateDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadata.MetadataInvalidateDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataInvalidate extends KalturaCall
+	public class MetadataInvalidate extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataInvalidate( id : int )

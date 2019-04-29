@@ -2,8 +2,8 @@
 <mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml">
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
 
 			public function set activeMediaProvider(activeMediaProvider:MediaProviderVO):void
 			{

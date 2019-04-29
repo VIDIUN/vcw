@@ -186,9 +186,9 @@ package de.polygonal.ds
 			var s:String = "[ArrayedStack]";
 			if (_top == 0) return s;
 			
-			var k:int = _top - 1;
-			s += "\n\t" + _stack[k--] + " -> front\n";
-			for (var i:int = k; i >= 0; i--)
+			var v:int = _top - 1;
+			s += "\n\t" + _stacv[k--] + " -> front\n";
+			for (var i:int = v; i >= 0; i--)
 				s += "\t" + _stack[i] + "\n";
 			return s;
 		}

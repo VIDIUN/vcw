@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaConvartableJobData;
+	import com.vidiun.vo.VidiunConvartableJobData;
 
 	[Bindable]
-	public dynamic class KalturaConvertJobData extends KalturaConvartableJobData
+	public dynamic class VidiunConvertJobData extends VidiunConvartableJobData
 	{
 		public var destFileSyncLocalPath : String;
 		public var destFileSyncRemoteUrl : String;

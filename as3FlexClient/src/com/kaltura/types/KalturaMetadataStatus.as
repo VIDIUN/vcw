@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaMetadataStatus
+	public class VidiunMetadataStatus
 	{
 		public static const VALID : int = 1;
 		public static const INVALID : int = 2;

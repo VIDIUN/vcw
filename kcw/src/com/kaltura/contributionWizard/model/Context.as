@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,9 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.model
+package com.vidiun.contributionWizard.model
 {
-	import com.kaltura.KalturaClient;
+	import com.vidiun.VidiunClient;
 	
 	import mx.utils.UIDUtil;
 	
@@ -31,7 +31,7 @@ package com.kaltura.contributionWizard.model
   {
     public static const DEFAULT_UI_CONFIG_ID:String = "2";
     
-    public var kcwSessionId : String = UIDUtil.createUID(); 
+    public var vcwSessionId : String = UIDUtil.createUID(); 
     public var userId:String;
 	
 	/**
@@ -53,7 +53,7 @@ package com.kaltura.contributionWizard.model
 	/**
 	 * depracated as of v2.X
 	 */
-    public var kshowId:String;
+    public var vshowId:String;
 	
     public var uiConfigId:String = DEFAULT_UI_CONFIG_ID;
 	public var fileSystemMode:Boolean = false;
@@ -73,7 +73,7 @@ package com.kaltura.contributionWizard.model
     public var sourceUrl:String;
 
     /**
-     *The hosting server name, e.g. "kaltura.com"
+     *The hosting server name, e.g. "vidiun.com"
      */
     public var hostName:String;
     
@@ -93,7 +93,7 @@ package com.kaltura.contributionWizard.model
 	 * The PS3 - new flex client API
 	 * 
 	 */
-	public var kc:KalturaClient;
+	public var kc:VidiunClient;
 
     public var defaultUrlVars:Object;
 
@@ -109,7 +109,7 @@ package com.kaltura.contributionWizard.model
 
     public var reportNavigationMode:Boolean = true;
 
-    public var injectedKVars:Object;
+    public var injectedVVars:Object;
 
 
   }

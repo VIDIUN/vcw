@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -28,34 +28,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	dataProvider="{_model.mediaProviders.visibleMediaProviders}"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
 	labelFunction="providerNameFactory"
-	xmlns:controls="com.kaltura.controls.*"
-	xmlns:util="com.kaltura.contributionWizard.util.*"
-	xmlns:importViews="com.kaltura.contributionWizard.view.importViews.*" xmlns:ac="com.adobe.ac.*">
+	xmlns:controls="com.vidiun.controls.*"
+	xmlns:util="com.vidiun.contributionWizard.util.*"
+	xmlns:importViews="com.vidiun.contributionWizard.view.importViews.*" xmlns:ac="com.adobe.ac.*">
 
 	<mx:Metadata>
-		[Event(type="com.kaltura.contributionWizard.view.events.MediaProviderViewEvent", name="changeMediaProvider")]
+		[Event(type="com.vidiun.contributionWizard.view.events.MediaProviderViewEvent", name="changeMediaProvider")]
 	</mx:Metadata>
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.resources.ResourcesUtils;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.events.ItemSelectionEvent;
+			import com.vidiun.resources.ResourcesUtils;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.events.ItemSelectionEvent;
 			import mx.core.EventPriority;
 			import mx.events.CollectionEvent;
 			import mx.collections.IList;
 			import mx.collections.ICollectionView;
-			import com.kaltura.contributionWizard.view.events.MediaProviderViewEvent;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.view.events.MediaProviderViewEvent;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
 			import mx.controls.NavBar;
-			import com.kaltura.contributionWizard.model.MediaProviders;
-			import com.kaltura.contributionWizard.events.MediaProviderEvent;
+			import com.vidiun.contributionWizard.model.MediaProviders;
+			import com.vidiun.contributionWizard.events.MediaProviderEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
 			import mx.events.PropertyChangeEvent;
 			import mx.binding.utils.ChangeWatcher;
 			import mx.collections.ArrayCollection;
 
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			[Bindable]
 			private var _model:WizardModelLocator = WizardModelLocator.getInstance();

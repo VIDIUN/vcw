@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaCategoryOrderBy
+	public class VidiunCategoryOrderBy
 	{
 		public static const DEPTH_ASC : String = '+depth';
 		public static const DEPTH_DESC : String = '-depth';

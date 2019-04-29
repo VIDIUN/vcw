@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.view.importViews.browser
+package com.vidiun.contributionWizard.view.importViews.browser
 {
 	[Bindable]
 	public class NavigationButtonsMode

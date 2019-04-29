@@ -1,9 +1,9 @@
-package com.kaltura.commands.flavorParams
+package com.vidiun.commands.flavorParams
 {
-	import com.kaltura.delegates.flavorParams.FlavorParamsGetByConversionProfileIdDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.flavorParams.FlavorParamsGetByConversionProfileIdDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorParamsGetByConversionProfileId extends KalturaCall
+	public class FlavorParamsGetByConversionProfileId extends VidiunCall
 	{
 		public var filterFields : String;
 		public function FlavorParamsGetByConversionProfileId( conversionProfileId : int )

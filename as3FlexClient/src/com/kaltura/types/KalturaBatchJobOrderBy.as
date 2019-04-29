@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaBatchJobOrderBy
+	public class VidiunBatchJobOrderBy
 	{
 		public static const STATUS_ASC : String = '+status';
 		public static const STATUS_DESC : String = '-status';

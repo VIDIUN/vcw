@@ -90,8 +90,8 @@ package de.polygonal.ds
 		 */
 		public function fill(obj:*):void
 		{
-			var k:int = size;
-			for (var i:int = 0; i < k; i++)
+			var v:int = size;
+			for (var i:int = 0; i < v; i++)
 				_a[i] = obj;
 		}
 		
@@ -178,8 +178,8 @@ package de.polygonal.ds
 		 */
 		public function contains(obj:*):Boolean
 		{
-			var k:int = size;
-			for (var i:int = 0; i < k; i++)
+			var v:int = size;
+			for (var i:int = 0; i < v; i++)
 			{
 				if (_a[i] === obj)
 					return true;
@@ -230,8 +230,8 @@ package de.polygonal.ds
 		{
 			var a:Array = _a.concat();
 			
-			var k:int = size;
-			if (a.length > k) a.length = k;
+			var v:int = size;
+			if (a.length > v) a.length = v;
 			return a;
 		}
 		

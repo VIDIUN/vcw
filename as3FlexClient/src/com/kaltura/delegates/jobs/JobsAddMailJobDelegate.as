@@ -1,12 +1,12 @@
-package com.kaltura.delegates.jobs
+package com.vidiun.delegates.jobs
 {
 	import flash.utils.getDefinitionByName;
-	import com.kaltura.config.KalturaConfig;
-	import com.kaltura.net.KalturaCall;
-	import com.kaltura.delegates.WebDelegateBase;
+	import com.vidiun.config.VidiunConfig;
+	import com.vidiun.net.VidiunCall;
+	import com.vidiun.delegates.WebDelegateBase;
 	public class JobsAddMailJobDelegate extends WebDelegateBase
 	{
-		public function JobsAddMailJobDelegate(call:KalturaCall, config:KalturaConfig)
+		public function JobsAddMailJobDelegate(call:VidiunCall, config:VidiunConfig)
 		{
 			super(call, config);
 		}

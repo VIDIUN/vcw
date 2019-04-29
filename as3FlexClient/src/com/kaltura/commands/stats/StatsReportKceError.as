@@ -1,21 +1,21 @@
-package com.kaltura.commands.stats
+package com.vidiun.commands.stats
 {
-	import com.kaltura.vo.KalturaCEError;
-	import com.kaltura.delegates.stats.StatsReportKceErrorDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunCEError;
+	import com.vidiun.delegates.stats.StatsReportVceErrorDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class StatsReportKceError extends KalturaCall
+	public class StatsReportVceError extends VidiunCall
 	{
 		public var filterFields : String;
-		public function StatsReportKceError( kalturaCEError : KalturaCEError )
+		public function StatsReportVceError( vidiunCEError : VidiunCEError )
 		{
 			service= 'stats';
-			action= 'reportKceError';
+			action= 'reportVceError';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(kalturaCEError,'kalturaCEError');
+ 			keyValArr = vidiunObject2Arrays(vidiunCEError,'vidiunCEError');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );
@@ -24,7 +24,7 @@ package com.kaltura.commands.stats
 		override public function execute() : void
 		{
 			setRequestArgument('filterFields',filterFields);
-			delegate = new StatsReportKceErrorDelegate( this , config );
+			delegate = new StatsReportVceErrorDelegate( this , config );
 		}
 	}
 }

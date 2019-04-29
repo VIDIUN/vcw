@@ -1,9 +1,9 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.delegates.baseEntry.BaseEntryDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.baseEntry.BaseEntryDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BaseEntryDelete extends KalturaCall
+	public class BaseEntryDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BaseEntryDelete( entryId : String )

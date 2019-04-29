@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaWidgetListResponse extends BaseFlexVo
+	public dynamic class VidiunWidgetListResponse extends BaseFlexVo
 	{
 		public var objects : Array = new Array();
 		public var totalCount : int = int.MIN_VALUE;

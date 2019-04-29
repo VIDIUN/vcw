@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaDocumentEntryOrderBy
+	public class VidiunDocumentEntryOrderBy
 	{
 		public static const NAME_ASC : String = '+name';
 		public static const NAME_DESC : String = '-name';

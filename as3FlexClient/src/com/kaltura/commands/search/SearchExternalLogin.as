@@ -1,9 +1,9 @@
-package com.kaltura.commands.search
+package com.vidiun.commands.search
 {
-	import com.kaltura.delegates.search.SearchExternalLoginDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.search.SearchExternalLoginDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SearchExternalLogin extends KalturaCall
+	public class SearchExternalLogin extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SearchExternalLogin( searchSource : int,userName : String,password : String )

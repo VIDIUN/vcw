@@ -38,10 +38,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="classHeaderTableLabel">Class</td><td class="classSignature">public class ContributionWizard</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ContributionWizard <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> com.kaltura.core.KApplication</td>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ContributionWizard <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> com.vidiun.core.VApplication</td>
 </tr>
 <tr>
-<td class="classHeaderTableLabel">Implements</td><td><a href="../com/kaltura/contributionWizard/IContributionWizard.html">IContributionWizard</a></td>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../com/vidiun/contributionWizard/IContributionWizard.html">IContributionWizard</a></td>
 </tr>
 </table>
 <p></p>
@@ -109,7 +109,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#setParameters()">setParameters</a>(parameters:Object):void</div>
 <div class="summaryTableDescription">
-    A set of parameters that defines the essential environmental information for the contribution wizard to work with kaltura services
+    A set of parameters that defines the essential environmental information for the contribution wizard to work with vidiun services
         defaultMediaType -  An optional parameter, that indicates the default media type screen to show at startup.</div>
 </td><td class="summaryTableOwnerCol">ContributionWizard</td>
 </tr>
@@ -222,16 +222,16 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public function setParameters(parameters:Object):void</code><p>
-    A set of parameters that defines the essential environmental information for the contribution wizard to work with kaltura services
+    A set of parameters that defines the essential environmental information for the contribution wizard to work with vidiun services
         defaultMediaType -  An optional parameter, that indicates the default media type screen to show at startup.
           The media type is given as a string (e.g. "image", "video", "audio").
         defaultMediaProviderName - An optional parameter, that indicates the default selected media provider.
-           The provider is given as the provider name, e.g "kaltura".
-    userId - Deprecated in PS3 (KCW 2.0 and above)
+           The provider is given as the provider name, e.g "vidiun".
+    userId - Deprecated in PS3 (VCW 2.0 and above)
     isAnonymous
     sessionId
     partnerId
-    kshow_id - Deprecated in PS3 (KCW 2.0 and above)
+    vshow_id - Deprecated in PS3 (VCW 2.0 and above)
     host - A uint code that indicates the host URL (see HostURLFactory for the enumeration)
     terms_of_use
     quick_edit - If false, entries are automatically added to the roughcut end, otherwise, entries will not be automatically added to the roughcut

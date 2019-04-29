@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBatchJobFilter;
+	import com.vidiun.vo.VidiunBatchJobFilter;
 
 	[Bindable]
-	public dynamic class KalturaBatchJobFilterExt extends KalturaBatchJobFilter
+	public dynamic class VidiunBatchJobFilterExt extends VidiunBatchJobFilter
 	{
 		public var jobTypeAndSubTypeIn : String;
 		override protected function setupPropertyList():void

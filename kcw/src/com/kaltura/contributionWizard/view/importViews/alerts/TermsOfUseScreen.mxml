@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -29,17 +29,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	xmlns:mx="http://www.adobe.com/2006/mxml" currentState="{getCurrentState(isAnonUser)}" >
 
 	<mx:Metadata>
-		[Event(name="userCertified", type="com.kaltura.contributionWizard.view.events.TermsOfUseEvent")]
+		[Event(name="userCertified", type="com.vidiun.contributionWizard.view.events.TermsOfUseEvent")]
 	</mx:Metadata>
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.contributionWizard.events.CreditsEvent;
-			import com.kaltura.contributionWizard.vo.CreditsVO;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.view.events.TermsOfUseEvent;
+			import com.vidiun.contributionWizard.events.CreditsEvent;
+			import com.vidiun.contributionWizard.vo.CreditsVO;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.view.events.TermsOfUseEvent;
 			import mx.managers.PopUpManager;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
 
 			public static const REGISTERED_USER_STATE:String = "";
 			public static const ANON_USER_STATE:String = "anonUserState";

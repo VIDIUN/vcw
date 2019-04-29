@@ -1,10 +1,10 @@
-package com.kaltura.commands.baseEntry
+package com.vidiun.commands.baseEntry
 {
-	import com.kaltura.delegates.baseEntry.BaseEntryUpdateThumbnailJpegDelegate;
-	import com.kaltura.net.KalturaFileCall;
+	import com.vidiun.delegates.baseEntry.BaseEntryUpdateThumbnailJpegDelegate;
+	import com.vidiun.net.VidiunFileCall;
 	import flash.utils.ByteArray;
 
-	public class BaseEntryUpdateThumbnailJpeg extends KalturaFileCall
+	public class BaseEntryUpdateThumbnailJpeg extends VidiunFileCall
 	{
 		public function BaseEntryUpdateThumbnailJpeg( entryId : String, fileData : ByteArray )
 		{

@@ -1,9 +1,9 @@
-package com.kaltura.commands.report
+package com.vidiun.commands.report
 {
-	import com.kaltura.delegates.report.ReportGetGraphDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.report.ReportGetGraphDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class ReportGetGraph extends KalturaCall
+	public class ReportGetGraph extends VidiunCall
 	{
 		public var filterFields : String;
 		public function ReportGetGraph(  )

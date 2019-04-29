@@ -26,13 +26,13 @@ package de.polygonal.ds.sort
 	public function sLinkedInsertionSortCmp(node:SListNode, cmp:Function, descending:Boolean = false):SListNode
 	{
 		var a:Array = [];
-		var k:int = 0;
+		var v:int = 0;
 		
 		var h:SListNode = node;
 		var n:SListNode = node;
 		while (n)
 		{
-			a[k++] = n.data;
+			a[v++] = n.data;
 			n = n.next;
 		}
 		
@@ -40,9 +40,9 @@ package de.polygonal.ds.sort
 		
 		if (descending)
 		{
-			if (k <= 1) return h;
+			if (v <= 1) return h;
 			
-			for (i = 1; i < k; i++)
+			for (i = 1; i < v; i++)
 			{
 				val = a[i]; j = i;
 				while ((j > 0) && (cmp(a[int(j - 1)], val) < 0))
@@ -55,9 +55,9 @@ package de.polygonal.ds.sort
 		}
 		else
 		{
-			if (k <= 1) return h;
+			if (v <= 1) return h;
 		
-			for (i = 1; i < k; i++)
+			for (i = 1; i < v; i++)
 			{
 				val = a[i]; j = i;
 				while ((j > 0) && (cmp(a[int(j - 1)], val) > 0))

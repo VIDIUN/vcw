@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.business.factories.serialization.importUrlVo.concrete
+package com.vidiun.contributionWizard.business.factories.serialization.importUrlVo.concrete
 {
 	/**
 	 * This class is used for decoding entry values to url variables that will be send to the server 
@@ -7,7 +7,7 @@ package com.kaltura.contributionWizard.business.factories.serialization.importUr
 	 */	
 	public class BaseImportEnrtyDecoder
 	{
-		import com.kaltura.vo.importees.BaseImportVO;
+		import com.vidiun.vo.importees.BaseImportVO;
 		import flash.net.URLVariables;
 		import com.adobe.cairngorm.vo.IValueObject;
 		

@@ -1,4 +1,4 @@
-package com.kaltura.contributionWizard.events
+package com.vidiun.contributionWizard.events
 {
 	import com.bjorn.event.ChainEvent;
 	

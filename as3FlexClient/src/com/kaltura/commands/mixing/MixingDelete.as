@@ -1,9 +1,9 @@
-package com.kaltura.commands.mixing
+package com.vidiun.commands.mixing
 {
-	import com.kaltura.delegates.mixing.MixingDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.mixing.MixingDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MixingDelete extends KalturaCall
+	public class MixingDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MixingDelete( entryId : String )

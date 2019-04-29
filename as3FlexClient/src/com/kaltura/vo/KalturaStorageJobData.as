@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaJobData;
+	import com.vidiun.vo.VidiunJobData;
 
 	[Bindable]
-	public dynamic class KalturaStorageJobData extends KalturaJobData
+	public dynamic class VidiunStorageJobData extends VidiunJobData
 	{
 		public var serverUrl : String;
 		public var serverUsername : String;

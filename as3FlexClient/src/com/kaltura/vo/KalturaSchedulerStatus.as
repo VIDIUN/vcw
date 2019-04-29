@@ -1,7 +1,7 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
-	public dynamic class KalturaSchedulerStatus extends BaseFlexVo
+	import com.vidiun.vo.BaseFlexVo;
+	public dynamic class VidiunSchedulerStatus extends BaseFlexVo
 	{
 		public var id : int = int.MIN_VALUE;
 		public var createdAt : int = int.MIN_VALUE;

@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaPartnerUsage extends BaseFlexVo
+	public dynamic class VidiunPartnerUsage extends BaseFlexVo
 	{
 		public var hostingGB : Number = NaN;
 		public var Percent : Number = NaN;

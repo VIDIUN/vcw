@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaSearchOperator;
+	import com.vidiun.vo.VidiunSearchOperator;
 
 	[Bindable]
-	public dynamic class KalturaMetadataSearchItem extends KalturaSearchOperator
+	public dynamic class VidiunMetadataSearchItem extends VidiunSearchOperator
 	{
 		public var metadataProfileId : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

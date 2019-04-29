@@ -1,9 +1,9 @@
-package com.kaltura.commands.systemUser
+package com.vidiun.commands.systemUser
 {
-	import com.kaltura.delegates.systemUser.SystemUserSetNewPasswordDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.systemUser.SystemUserSetNewPasswordDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SystemUserSetNewPassword extends KalturaCall
+	public class SystemUserSetNewPassword extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SystemUserSetNewPassword( userId : int,password : String )

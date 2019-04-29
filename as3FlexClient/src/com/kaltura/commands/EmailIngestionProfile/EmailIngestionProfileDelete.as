@@ -1,9 +1,9 @@
-package com.kaltura.commands.EmailIngestionProfile
+package com.vidiun.commands.EmailIngestionProfile
 {
-	import com.kaltura.delegates.EmailIngestionProfile.EmailIngestionProfileDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.EmailIngestionProfile.EmailIngestionProfileDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class EmailIngestionProfileDelete extends KalturaCall
+	public class EmailIngestionProfileDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function EmailIngestionProfileDelete( id : int )

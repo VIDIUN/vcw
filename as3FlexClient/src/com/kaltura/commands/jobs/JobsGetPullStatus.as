@@ -1,9 +1,9 @@
-package com.kaltura.commands.jobs
+package com.vidiun.commands.jobs
 {
-	import com.kaltura.delegates.jobs.JobsGetPullStatusDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.jobs.JobsGetPullStatusDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class JobsGetPullStatus extends KalturaCall
+	public class JobsGetPullStatus extends VidiunCall
 	{
 		public var filterFields : String;
 		public function JobsGetPullStatus( job_id : int )

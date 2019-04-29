@@ -1,9 +1,9 @@
-package com.kaltura.commands.syndicationFeed
+package com.vidiun.commands.syndicationFeed
 {
-	import com.kaltura.delegates.syndicationFeed.SyndicationFeedGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.syndicationFeed.SyndicationFeedGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SyndicationFeedGet extends KalturaCall
+	public class SyndicationFeedGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SyndicationFeedGet( id : String )

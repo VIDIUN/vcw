@@ -1,9 +1,9 @@
-package com.kaltura.commands.playlist
+package com.vidiun.commands.playlist
 {
-	import com.kaltura.delegates.playlist.PlaylistExecuteFromFiltersDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.playlist.PlaylistExecuteFromFiltersDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class PlaylistExecuteFromFilters extends KalturaCall
+	public class PlaylistExecuteFromFilters extends VidiunCall
 	{
 		public var filterFields : String;
 		public function PlaylistExecuteFromFilters( filters : Array,totalResults : int,detailed : String='' )

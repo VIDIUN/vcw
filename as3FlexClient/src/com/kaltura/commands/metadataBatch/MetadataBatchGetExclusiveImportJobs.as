@@ -1,30 +1,30 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.vo.KalturaExclusiveLockKey;
-	import com.kaltura.vo.KalturaBatchJobFilter;
-	import com.kaltura.delegates.metadataBatch.MetadataBatchGetExclusiveImportJobsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunExclusiveLockKey;
+	import com.vidiun.vo.VidiunBatchJobFilter;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchGetExclusiveImportJobsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchGetExclusiveImportJobs extends KalturaCall
+	public class MetadataBatchGetExclusiveImportJobs extends VidiunCall
 	{
 		public var filterFields : String;
-		public function MetadataBatchGetExclusiveImportJobs( lockKey : KalturaExclusiveLockKey,maxExecutionTime : int,numberOfJobs : int,filter : KalturaBatchJobFilter=null )
+		public function MetadataBatchGetExclusiveImportJobs( lockKey : VidiunExclusiveLockKey,maxExecutionTime : int,numberOfJobs : int,filter : VidiunBatchJobFilter=null )
 		{
-			if(filter== null)filter= new KalturaBatchJobFilter();
+			if(filter== null)filter= new VidiunBatchJobFilter();
 			service= 'metadata_metadatabatch';
 			action= 'getExclusiveImportJobs';
 
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(lockKey,'lockKey');
+ 			keyValArr = vidiunObject2Arrays(lockKey,'lockKey');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			keyArr.push( 'maxExecutionTime' );
 			valueArr.push( maxExecutionTime );
 			keyArr.push( 'numberOfJobs' );
 			valueArr.push( numberOfJobs );
- 			keyValArr = kalturaObject2Arrays(filter,'filter');
+ 			keyValArr = vidiunObject2Arrays(filter,'filter');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

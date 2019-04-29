@@ -1,9 +1,9 @@
-package com.kaltura.commands.search
+package com.vidiun.commands.search
 {
-	import com.kaltura.delegates.search.SearchSearchUrlDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.search.SearchSearchUrlDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SearchSearchUrl extends KalturaCall
+	public class SearchSearchUrl extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SearchSearchUrl( mediaType : int,url : String )

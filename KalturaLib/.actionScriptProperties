@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties mainApplicationPath="KalturaLib.as" projectUUID="a64af8f8-1aae-4ed1-abc1-8070a6164205" version="6">
+<actionScriptProperties mainApplicationPath="VidiunLib.as" projectUUID="a64af8f8-1aae-4ed1-abc1-8070a6164205" version="6">
   <compiler additionalCompilerArguments="-source-path locale/{locale}   -locale en_US" autoRSLOrdering="true" copyDependentFiles="false" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath>
       <compilerSourcePathEntry kind="1" linkType="1" path="locale/{locale}"/>
@@ -22,8 +22,8 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
-    <application path="KalturaLib.as"/>
-    <application path="KApplication.mxml"/>
+    <application path="VidiunLib.as"/>
+    <application path="VApplication.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

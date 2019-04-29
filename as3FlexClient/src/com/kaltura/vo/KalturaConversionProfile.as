@@ -1,10 +1,10 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaCropDimensions;
+	import com.vidiun.vo.VidiunCropDimensions;
 
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaConversionProfile extends BaseFlexVo
+	public dynamic class VidiunConversionProfile extends BaseFlexVo
 	{
 		public var id : int = int.MIN_VALUE;
 		public var partnerId : int = int.MIN_VALUE;
@@ -13,7 +13,7 @@ package com.kaltura.vo
 		public var createdAt : int = int.MIN_VALUE;
 		public var flavorParamsIds : String;
 		public var isDefault : int = int.MIN_VALUE;
-		public var cropDimensions : KalturaCropDimensions;
+		public var cropDimensions : VidiunCropDimensions;
 		public var clipStart : int = int.MIN_VALUE;
 		public var clipDuration : int = int.MIN_VALUE;
 		override protected function setupPropertyList():void

@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaStorageJobData;
+	import com.vidiun.vo.VidiunStorageJobData;
 
 	[Bindable]
-	public dynamic class KalturaStorageDeleteJobData extends KalturaStorageJobData
+	public dynamic class VidiunStorageDeleteJobData extends VidiunStorageJobData
 	{
 		override protected function setupPropertyList():void
 		{

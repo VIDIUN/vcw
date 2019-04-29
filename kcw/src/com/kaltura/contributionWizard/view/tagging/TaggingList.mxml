@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -23,26 +23,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <mx:List
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:tagging="com.kaltura.contributionWizard.view.tagging.*">
+	xmlns:tagging="com.vidiun.contributionWizard.view.tagging.*">
 
 	<mx:Script>
 		<![CDATA[
-			import com.kaltura.vo.KalturaCategory;
-			import com.kaltura.contributionWizard.events.ValidateAllMetaDataEvent;
-			import com.kaltura.contributionWizard.events.ValidateMetaDataEvent;
+			import com.vidiun.vo.VidiunCategory;
+			import com.vidiun.contributionWizard.events.ValidateAllMetaDataEvent;
+			import com.vidiun.contributionWizard.events.ValidateMetaDataEvent;
 			import mx.utils.StringUtil;
 			import mx.events.FlexEvent;
 			import mx.collections.ArrayCollection;
-			import com.kaltura.contributionWizard.view.events.TaggingViewEvent;
+			import com.vidiun.contributionWizard.view.events.TaggingViewEvent;
 			import mx.validators.ValidationResult;
 			import mx.events.ValidationResultEvent;
-			import com.kaltura.vo.MediaMetaDataVO;
-			import com.kaltura.contributionWizard.model.importTypesConfiguration.tagging.TaggingConfig;
-			import com.kaltura.contributionWizard.events.TaggingEvent;
+			import com.vidiun.vo.MediaMetaDataVO;
+			import com.vidiun.contributionWizard.model.importTypesConfiguration.tagging.TaggingConfig;
+			import com.vidiun.contributionWizard.events.TaggingEvent;
 			import com.adobe_cw.adobe.cairngorm.control.CairngormEventDispatcher;
 			import mx.controls.Text;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.vo.importees.BaseImportVO;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.vo.importees.BaseImportVO;
 			import mx.controls.Alert;
 
 			[Bindable]

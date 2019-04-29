@@ -1,13 +1,13 @@
-package com.kaltura.commands.flavorParams
+package com.vidiun.commands.flavorParams
 {
-	import com.kaltura.vo.KalturaFlavorParams;
-	import com.kaltura.delegates.flavorParams.FlavorParamsAddDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.VidiunFlavorParams;
+	import com.vidiun.delegates.flavorParams.FlavorParamsAddDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class FlavorParamsAdd extends KalturaCall
+	public class FlavorParamsAdd extends VidiunCall
 	{
 		public var filterFields : String;
-		public function FlavorParamsAdd( flavorParams : KalturaFlavorParams )
+		public function FlavorParamsAdd( flavorParams : VidiunFlavorParams )
 		{
 			service= 'flavorparams';
 			action= 'add';
@@ -15,7 +15,7 @@ package com.kaltura.commands.flavorParams
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(flavorParams,'flavorParams');
+ 			keyValArr = vidiunObject2Arrays(flavorParams,'flavorParams');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

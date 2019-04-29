@@ -23,9 +23,9 @@ package de.polygonal.ds.sort
 {
 	public function arrayedInsertionSort(a:Array):void
 	{
-		var k:Number = a.length;
+		var v:Number = a.length;
 		var j:int, val:Number;
-		for (var i:int = 1; i < k; i++)
+		for (var i:int = 1; i < v; i++)
 		{
 			val = a[i]; j = i;
 			while ((j > 0) && (a[int(j - 1)] > val))

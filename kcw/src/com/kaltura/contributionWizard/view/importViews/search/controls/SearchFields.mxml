@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--/*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -25,20 +25,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <mx:Canvas
 	verticalScrollPolicy="off" horizontalScrollPolicy="off"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:auth="com.kaltura.contributionWizard.view.importViews.search.*"
-	xmlns:util="com.kaltura.contributionWizard.util.*"
+	xmlns:auth="com.vidiun.contributionWizard.view.importViews.search.*"
+	xmlns:util="com.vidiun.contributionWizard.util.*"
 	xmlns:ac="com.adobe.ac.*" xmlns:code="http://code.google.com/p/flexlib/">
 	<mx:Script>
 		<![CDATA[
 			import mx.events.FlexEvent;
 			import mx.managers.FocusManager;
 			import com.arc90.modular.CairngormEventDispatcherFactory;
-			import com.kaltura.contributionWizard.view.resources.ResourceBundleNames;
-			import com.kaltura.contributionWizard.vo.providers.MediaProviderVO;
-			import com.kaltura.contributionWizard.model.WizardModelLocator;
-			import com.kaltura.contributionWizard.vo.PageSearchDirection;
-			import com.kaltura.contributionWizard.events.SearchMediaEvent;
-			import com.kaltura.contributionWizard.vo.SearchMediaRequestVO;
+			import com.vidiun.contributionWizard.view.resources.ResourceBundleNames;
+			import com.vidiun.contributionWizard.vo.providers.MediaProviderVO;
+			import com.vidiun.contributionWizard.model.WizardModelLocator;
+			import com.vidiun.contributionWizard.vo.PageSearchDirection;
+			import com.vidiun.contributionWizard.events.SearchMediaEvent;
+			import com.vidiun.contributionWizard.vo.SearchMediaRequestVO;
 
 
 			public function get activeMediaProvider():MediaProviderVO

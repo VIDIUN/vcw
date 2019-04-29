@@ -1,9 +1,9 @@
 /*
-This file is part of the Kaltura Collaborative Media Suite which allows users
+This file is part of the Vidiun Collaborative Media Suite which allows users
 to do with audio, video, and animation what Wiki platfroms allow them to do with
 text.
 
-Copyright (C) 2006-2008  Kaltura Inc.
+Copyright (C) 2006-2008  Vidiun Inc.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -20,18 +20,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 @ignore
 */
-package com.kaltura.contributionWizard.model
+package com.vidiun.contributionWizard.model
 {
 	import com.adobe_cw.adobe.cairngorm.model.IModelLocator;
-	import com.kaltura.contributionWizard.business.factories.WizardConfigurationFactory;
-	import com.kaltura.contributionWizard.enums.KCWWorkflowState;
-	import com.kaltura.contributionWizard.model.importData.ImportData;
-	import com.kaltura.contributionWizard.model.importTypesConfiguration.ImportTypesConfig;
-	import com.kaltura.contributionWizard.model.soundPlayer.SoundPlayerContext;
-	import com.kaltura.contributionWizard.vo.UIConfigVO;
-	import com.kaltura.contributionWizard.vo.limitations.LimitationError;
-	import com.kaltura.contributionWizard.vo.limitations.LimitationsVO;
-	import com.kaltura.dataStructures.HashMap;
+	import com.vidiun.contributionWizard.business.factories.WizardConfigurationFactory;
+	import com.vidiun.contributionWizard.enums.VCWWorkflowState;
+	import com.vidiun.contributionWizard.model.importData.ImportData;
+	import com.vidiun.contributionWizard.model.importTypesConfiguration.ImportTypesConfig;
+	import com.vidiun.contributionWizard.model.soundPlayer.SoundPlayerContext;
+	import com.vidiun.contributionWizard.vo.UIConfigVO;
+	import com.vidiun.contributionWizard.vo.limitations.LimitationError;
+	import com.vidiun.contributionWizard.vo.limitations.LimitationsVO;
+	import com.vidiun.dataStructures.HashMap;
 	
 	import flash.utils.Dictionary;
 	
@@ -42,7 +42,7 @@ package com.kaltura.contributionWizard.model
 	public class WizardModelLocator implements IModelLocator
 	{
 
-		public var workflowState:String = KCWWorkflowState.PRELOADING;
+		public var workflowState:String = VCWWorkflowState.PRELOADING;
 
 		public var context:Context;
 
@@ -104,9 +104,9 @@ package com.kaltura.contributionWizard.model
 		public var wereEntriesAdded:Boolean = false;
 		
 		/**
-		 * Whether to load thumbnails with KS or not 
+		 * Whether to load thumbnails with VS or not 
 		 */		
-		public var loadThumbsWithKS:Boolean = false;
+		public var loadThumbsWithVS:Boolean = false;
 		
 		//-----------------------------Singleton implementation----------------------------- //
 		private static var _modelLocator : WizardModelLocator;

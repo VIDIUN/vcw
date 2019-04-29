@@ -1,20 +1,20 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
 	import com.adobe.cairngorm.vo.IValueObject;
-	import com.kaltura.vo.KalturaAccessControl;
-	import com.kaltura.vo.KalturaBaseRestriction;
-	import com.kaltura.vo.KalturaCountryRestriction;
-	import com.kaltura.vo.KalturaDirectoryRestriction;
-	import com.kaltura.vo.KalturaPreviewRestriction;
-	import com.kaltura.vo.KalturaSessionRestriction;
-	import com.kaltura.vo.KalturaSiteRestriction;
+	import com.vidiun.vo.VidiunAccessControl;
+	import com.vidiun.vo.VidiunBaseRestriction;
+	import com.vidiun.vo.VidiunCountryRestriction;
+	import com.vidiun.vo.VidiunDirectoryRestriction;
+	import com.vidiun.vo.VidiunPreviewRestriction;
+	import com.vidiun.vo.VidiunSessionRestriction;
+	import com.vidiun.vo.VidiunSiteRestriction;
 	
 	import flash.events.Event;
 	
 	import mx.utils.ObjectProxy;
 	
 	/**
-	 * This class is a wrapper for the KalturaAccessControl VO.
+	 * This class is a wrapper for the VidiunAccessControl VO.
 	 * 
 	 * 
 	 * 
@@ -29,9 +29,9 @@ package com.kaltura.vo
 		private var _selected:Boolean = false;
 		
 		/**
-		 *  KalturaAccessControl VO, hold all the profile properties
+		 *  VidiunAccessControl VO, hold all the profile properties
 		 */		
-		public var profile:KalturaAccessControl;
+		public var profile:VidiunAccessControl;
 		
 		/**
 		 * Constructor 
@@ -39,7 +39,7 @@ package com.kaltura.vo
 		 */				
 		public function AccessControlProfileVO()
 		{
-			profile = new KalturaAccessControl();
+			profile = new VidiunAccessControl();
 		}
 		
 		/**
@@ -78,38 +78,38 @@ package com.kaltura.vo
 			newAcp.profile.id = this.profile.id;
 			newAcp.profile.isDefault = this.profile.isDefault;
 			
-			for each(var restriction:KalturaBaseRestriction in this.profile.restrictions)
+			for each(var restriction:VidiunBaseRestriction in this.profile.restrictions)
 			{
-				if(restriction is KalturaSiteRestriction)
+				if(restriction is VidiunSiteRestriction)
 				{
-					var ksr:KalturaSiteRestriction = new KalturaSiteRestriction();
-					ksr.siteRestrictionType = (restriction as KalturaSiteRestriction).siteRestrictionType;
-					ksr.siteList = (restriction as KalturaSiteRestriction).siteList;
-					newAcp.profile.restrictions.push(ksr);
+					var vsr:VidiunSiteRestriction = new VidiunSiteRestriction();
+					vsr.siteRestrictionType = (restriction as VidiunSiteRestriction).siteRestrictionType;
+					vsr.siteList = (restriction as VidiunSiteRestriction).siteList;
+					newAcp.profile.restrictions.push(vsr);
 				}
-				else if(restriction is KalturaCountryRestriction)
+				else if(restriction is VidiunCountryRestriction)
 				{
-					var kcr:KalturaCountryRestriction = new KalturaCountryRestriction();
-					kcr.countryRestrictionType = (restriction as KalturaCountryRestriction).countryRestrictionType;
-					kcr.countryList = (restriction as KalturaCountryRestriction).countryList;
-					newAcp.profile.restrictions.push(kcr);
+					var vcr:VidiunCountryRestriction = new VidiunCountryRestriction();
+					vcr.countryRestrictionType = (restriction as VidiunCountryRestriction).countryRestrictionType;
+					vcr.countryList = (restriction as VidiunCountryRestriction).countryList;
+					newAcp.profile.restrictions.push(vcr);
 				}
-				else if(restriction is KalturaPreviewRestriction)
+				else if(restriction is VidiunPreviewRestriction)
 				{
-					var kpr:KalturaPreviewRestriction = new KalturaPreviewRestriction();
-					kpr.previewLength = (restriction as KalturaPreviewRestriction).previewLength;
-					newAcp.profile.restrictions.push(kpr);
+					var vpr:VidiunPreviewRestriction = new VidiunPreviewRestriction();
+					vpr.previewLength = (restriction as VidiunPreviewRestriction).previewLength;
+					newAcp.profile.restrictions.push(vpr);
 				}
-				else if(restriction is KalturaSessionRestriction)
+				else if(restriction is VidiunSessionRestriction)
 				{
-					var kser:KalturaSessionRestriction = new KalturaSessionRestriction();
-					newAcp.profile.restrictions.push(kser);
+					var vser:VidiunSessionRestriction = new VidiunSessionRestriction();
+					newAcp.profile.restrictions.push(vser);
 				}
-				else if(restriction is KalturaDirectoryRestriction)
+				else if(restriction is VidiunDirectoryRestriction)
 				{
-					var kdr:KalturaDirectoryRestriction = new KalturaDirectoryRestriction();
-					kdr.directoryRestrictionType = (restriction as KalturaDirectoryRestriction).directoryRestrictionType;
-					newAcp.profile.restrictions.push(kdr);
+					var vdr:VidiunDirectoryRestriction = new VidiunDirectoryRestriction();
+					vdr.directoryRestrictionType = (restriction as VidiunDirectoryRestriction).directoryRestrictionType;
+					newAcp.profile.restrictions.push(vdr);
 				}
 			}
 

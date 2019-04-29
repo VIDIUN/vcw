@@ -1,9 +1,9 @@
-package com.kaltura.commands.batchcontrol
+package com.vidiun.commands.batchcontrol
 {
-	import com.kaltura.delegates.batchcontrol.BatchcontrolGetCommandDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.batchcontrol.BatchcontrolGetCommandDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class BatchcontrolGetCommand extends KalturaCall
+	public class BatchcontrolGetCommand extends VidiunCall
 	{
 		public var filterFields : String;
 		public function BatchcontrolGetCommand( commandId : int )

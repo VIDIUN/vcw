@@ -1,6 +1,6 @@
-package com.kaltura.contributionWizard.business
+package com.vidiun.contributionWizard.business
 {
-	import com.kaltura.vo.importees.ImportURLVO;
+	import com.vidiun.vo.importees.ImportURLVO;
 	
 	import flash.events.ErrorEvent;
 	import flash.events.Event;

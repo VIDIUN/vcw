@@ -1,8 +1,8 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaMetadataProfileField extends BaseFlexVo
+	public dynamic class VidiunMetadataProfileField extends BaseFlexVo
 	{
 		public var id : int = int.MIN_VALUE;
 		public var xPath : String;

@@ -1,9 +1,9 @@
-package com.kaltura.commands.entrySchedule
+package com.vidiun.commands.entrySchedule
 {
-	import com.kaltura.delegates.entrySchedule.EntryScheduleGetByEntryIdDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.entrySchedule.EntryScheduleGetByEntryIdDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class EntryScheduleGetByEntryId extends KalturaCall
+	public class EntryScheduleGetByEntryId extends VidiunCall
 	{
 		public var filterFields : String;
 		public function EntryScheduleGetByEntryId( entryId : String )

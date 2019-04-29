@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaSessionType
+	public class VidiunSessionType
 	{
 		public static const USER : int = 0;
 		public static const ADMIN : int = 2;

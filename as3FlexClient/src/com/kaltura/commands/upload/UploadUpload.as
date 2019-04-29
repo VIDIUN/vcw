@@ -1,10 +1,10 @@
-package com.kaltura.commands.upload
+package com.vidiun.commands.upload
 {
-	import com.kaltura.vo.File;
-	import com.kaltura.delegates.upload.UploadUploadDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.vo.File;
+	import com.vidiun.delegates.upload.UploadUploadDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UploadUpload extends KalturaCall
+	public class UploadUpload extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UploadUpload( fileData : file )
@@ -15,7 +15,7 @@ package com.kaltura.commands.upload
 			var keyArr : Array = new Array();
 			var valueArr : Array = new Array();
 			var keyValArr : Array = new Array();
- 			keyValArr = kalturaObject2Arrays(fileData,'fileData');
+ 			keyValArr = vidiunObject2Arrays(fileData,'fileData');
 			keyArr = keyArr.concat( keyValArr[0] );
 			valueArr = valueArr.concat( keyValArr[1] );
 			applySchema( keyArr , valueArr );

@@ -1,9 +1,9 @@
-package com.kaltura.commands.jobs
+package com.vidiun.commands.jobs
 {
-	import com.kaltura.delegates.jobs.JobsGetRemoteConvertStatusDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.jobs.JobsGetRemoteConvertStatusDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class JobsGetRemoteConvertStatus extends KalturaCall
+	public class JobsGetRemoteConvertStatus extends VidiunCall
 	{
 		public var filterFields : String;
 		public function JobsGetRemoteConvertStatus( job_id : int )

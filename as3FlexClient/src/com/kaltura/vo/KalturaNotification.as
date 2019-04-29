@@ -1,9 +1,9 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaBaseJob;
+	import com.vidiun.vo.VidiunBaseJob;
 
 	[Bindable]
-	public dynamic class KalturaNotification extends KalturaBaseJob
+	public dynamic class VidiunNotification extends VidiunBaseJob
 	{
 		public var puserId : String;
 		public var type : int = int.MIN_VALUE;

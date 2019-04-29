@@ -1,9 +1,9 @@
-package com.kaltura.commands.user
+package com.vidiun.commands.user
 {
-	import com.kaltura.delegates.user.UserGetDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.user.UserGetDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class UserGet extends KalturaCall
+	public class UserGet extends VidiunCall
 	{
 		public var filterFields : String;
 		public function UserGet( userId : String )

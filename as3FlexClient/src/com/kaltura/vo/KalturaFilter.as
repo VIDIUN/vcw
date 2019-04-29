@@ -1,13 +1,13 @@
-package com.kaltura.vo
+package com.vidiun.vo
 {
-	import com.kaltura.vo.KalturaSearchItem;
+	import com.vidiun.vo.VidiunSearchItem;
 
-	import com.kaltura.vo.BaseFlexVo;
+	import com.vidiun.vo.BaseFlexVo;
 	[Bindable]
-	public dynamic class KalturaFilter extends BaseFlexVo
+	public dynamic class VidiunFilter extends BaseFlexVo
 	{
 		public var orderBy : String;
-		public var advancedSearch : KalturaSearchItem;
+		public var advancedSearch : VidiunSearchItem;
 		override protected function setupPropertyList():void
 		{
 			super.setupPropertyList();

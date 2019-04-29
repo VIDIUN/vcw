@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaMetadataOrderBy
+	public class VidiunMetadataOrderBy
 	{
 		public static const METADATA_PROFILE_VERSION_ASC : String = '+metadataProfileVersion';
 		public static const METADATA_PROFILE_VERSION_DESC : String = '-metadataProfileVersion';

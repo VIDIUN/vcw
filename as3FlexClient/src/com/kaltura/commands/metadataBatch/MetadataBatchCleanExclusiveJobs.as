@@ -1,9 +1,9 @@
-package com.kaltura.commands.metadataBatch
+package com.vidiun.commands.metadataBatch
 {
-	import com.kaltura.delegates.metadataBatch.MetadataBatchCleanExclusiveJobsDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.metadataBatch.MetadataBatchCleanExclusiveJobsDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class MetadataBatchCleanExclusiveJobs extends KalturaCall
+	public class MetadataBatchCleanExclusiveJobs extends VidiunCall
 	{
 		public var filterFields : String;
 		public function MetadataBatchCleanExclusiveJobs(  )

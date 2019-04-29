@@ -144,7 +144,7 @@ package com.adobe.crypto
 				
 				// 80 steps to process each block
 				// TODO: unroll for faster execution, or 4 loops of
-				// 20 each to avoid the k and f function calls
+				// 20 each to avoid the v and f function calls
 				for ( var t:int = 0; t < 80; t++ ) {
 					
 					if ( t < 16 ) {
@@ -156,7 +156,7 @@ package com.adobe.crypto
 					}
 					
 					// 6.1.d
-					var temp:int = IntUtil.rol( a, 5 ) + f( t, b, c, d ) + e + int( w[ t ] ) + k( t );
+					var temp:int = IntUtil.rol( a, 5 ) + f( t, b, c, d ) + e + int( w[ t ] ) + v( t );
 					
 					e = d;
 					d = c;
@@ -200,7 +200,7 @@ package com.adobe.crypto
 		/**
 		 *  Determines the constant value based on t
 		 */
-		private static function k( t:int ):int {
+		private static function v( t:int ):int {
 			if ( t < 20 ) {
 				return 0x5a827999;
 			} else if ( t < 40 ) {

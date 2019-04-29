@@ -1,9 +1,9 @@
-package com.kaltura.commands.syndicationFeed
+package com.vidiun.commands.syndicationFeed
 {
-	import com.kaltura.delegates.syndicationFeed.SyndicationFeedDeleteDelegate;
-	import com.kaltura.net.KalturaCall;
+	import com.vidiun.delegates.syndicationFeed.SyndicationFeedDeleteDelegate;
+	import com.vidiun.net.VidiunCall;
 
-	public class SyndicationFeedDelete extends KalturaCall
+	public class SyndicationFeedDelete extends VidiunCall
 	{
 		public var filterFields : String;
 		public function SyndicationFeedDelete( id : String )

@@ -1,6 +1,6 @@
-package com.kaltura.types
+package com.vidiun.types
 {
-	public class KalturaVideoCodec
+	public class VidiunVideoCodec
 	{
 		public static const NONE : String = '';
 		public static const VP6 : String = 'vp6';
